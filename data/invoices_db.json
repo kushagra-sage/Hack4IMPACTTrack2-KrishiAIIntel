@@ -1,0 +1,4952 @@
+[
+  {
+    "doc_id": "90019561961_1_v1_pg1",
+    "dealer_name": "Krushi Tractors",
+    "model_name": "Sonalika International Tractor Ds",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.756
+  },
+  {
+    "doc_id": "173441333_1_pg28",
+    "dealer_name": "Chamundeswari Agencies",
+    "model_name": "Swaraj 843 XM",
+    "horse_power": null,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.858
+  },
+  {
+    "doc_id": "172576446_2_pg26",
+    "dealer_name": "K D Tractors",
+    "model_name": "Mahindra Yuvo 415 DI",
+    "horse_power": 39,
+    "asset_cost": 796000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.79
+  },
+  {
+    "doc_id": "90019275252_1_v2_pg1",
+    "dealer_name": "M/S Raj Tractors",
+    "model_name": "New Holland 3630 TX Plus",
+    "horse_power": 55,
+    "asset_cost": 998000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.731
+  },
+  {
+    "doc_id": "90018792533_OTHERS_v1_pg1",
+    "dealer_name": "Ak.. Tractors",
+    "model_name": "माहिद्व ट्रैक्टर",
+    "horse_power": 21,
+    "asset_cost": 633000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.747
+  },
+  {
+    "doc_id": "90018778186_OTHERS_v1_pg1",
+    "dealer_name": "महिंद्रा ट्रैक्टर्स",
+    "model_name": "575 Sp Plus पेंटल",
+    "horse_power": 47,
+    "asset_cost": 825000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.892
+  },
+  {
+    "doc_id": "173892975_1_pg13",
+    "dealer_name": "Aman Automobiles",
+    "model_name": "Air Cooled/Water Cooled Desel Tractor",
+    "horse_power": 24,
+    "asset_cost": 390000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.845
+  },
+  {
+    "doc_id": "173156632_2_pg22",
+    "dealer_name": "Ishwar Motors",
+    "model_name": "P.T.Euro.49U.L21",
+    "horse_power": 39,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.86
+  },
+  {
+    "doc_id": "90019757162_OTHERS_v1_pg1",
+    "dealer_name": "M.S. Jagalur Mahalingappa Enterprises",
+    "model_name": "Mf 1035 Di J Mahashakti With Dura Brake Dc",
+    "horse_power": 39,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.835
+  },
+  {
+    "doc_id": "90018526738_175106832_2_pg20",
+    "dealer_name": "Mpt Tractors Private Limited",
+    "model_name": "265 D1 Yuvo Techt Pstrlt",
+    "horse_power": 33,
+    "asset_cost": 632017,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.856
+  },
+  {
+    "doc_id": "90019389310_2_v1_pg1",
+    "dealer_name": "माँ विजासन ट्रैक्टर",
+    "model_name": "सोनालिका ट्रैक्टर लि.",
+    "horse_power": 50,
+    "asset_cost": 830000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.694
+  },
+  {
+    "doc_id": "90019413779_None_v1_pg1",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf 244 Di",
+    "horse_power": null,
+    "asset_cost": 758200,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.79
+  },
+  {
+    "doc_id": "172561841_pg1",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "Di-745 Iii Hdm+4Wd",
+    "horse_power": 50,
+    "asset_cost": 911769,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.78
+  },
+  {
+    "doc_id": "90019070619_OTHERS_v1_pg1",
+    "dealer_name": "Maurya Tractors",
+    "model_name": "Tractor Escort",
+    "horse_power": 63,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.738
+  },
+  {
+    "doc_id": "90018711224_OTHERS_v2_pg1",
+    "dealer_name": "Sharma Tractors",
+    "model_name": "New Holland Ford Tractor Model",
+    "horse_power": 86,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.874
+  },
+  {
+    "doc_id": "90018512084_175159349_2_pg33",
+    "dealer_name": "M/S. Bhavani Agro Engg. Services",
+    "model_name": "Swaraj Targel 630 Single / Double Clutch Tractor With Super Deluxe Seat. Bigger Rear Tyres 8.3 X 20",
+    "horse_power": 29,
+    "asset_cost": 510000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.678
+  },
+  {
+    "doc_id": "90018923174_OTHERS_v1_pg1",
+    "dealer_name": "मे.बनकर पाटील ट्रैक्स",
+    "model_name": "Powertrac Tractor Pt.413G",
+    "horse_power": 41,
+    "asset_cost": 635000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.714
+  },
+  {
+    "doc_id": "90018695808_OTHERS_v1_pg1",
+    "dealer_name": "Aadhi Bhagavan Tractors And Implements",
+    "model_name": "4515-2Wd-48 Hp",
+    "horse_power": 48,
+    "asset_cost": 880000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.787
+  },
+  {
+    "doc_id": "172756379_1_pg4",
+    "dealer_name": "M/S. Nimar Motors 'Tractor Division'",
+    "model_name": "Mf 6026 Mac Pro",
+    "horse_power": 26,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.831
+  },
+  {
+    "doc_id": "90019396259_OTHERS_v1_pg1",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf 241 D Daynatrack",
+    "horse_power": 49,
+    "asset_cost": 758200,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.86
+  },
+  {
+    "doc_id": "90019327661_OTHERS_v2_pg1",
+    "dealer_name": "M/S. Shree Laxmi Tractors",
+    "model_name": "One 245 Pdh 496",
+    "horse_power": 49,
+    "asset_cost": 760000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.619
+  },
+  {
+    "doc_id": "90019133518_OTHERS_v2_pg1",
+    "dealer_name": "Singh Farming Solutions",
+    "model_name": "5905 4Wd Ac Cabin",
+    "horse_power": 63,
+    "asset_cost": 1900000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.799
+  },
+  {
+    "doc_id": "173686358_1_pg39",
+    "dealer_name": "B.G. Shettar & Sons",
+    "model_name": "Swaraj 717/724/834/735/843/742/744/855/960/963/969 Tractor Xt",
+    "horse_power": 50,
+    "asset_cost": 820000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.839
+  },
+  {
+    "doc_id": "172682048_1_pg20",
+    "dealer_name": "Jai Ambay Tractor Co",
+    "model_name": "John Deere 5210",
+    "horse_power": 50,
+    "asset_cost": 830000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.707
+  },
+  {
+    "doc_id": "90019540987_OTHERS_v1_pg1",
+    "dealer_name": "मे.बनकर पाटील ट्रैक्टर्स",
+    "model_name": "Powertrac Tractor",
+    "horse_power": 50,
+    "asset_cost": 710000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.822
+  },
+  {
+    "doc_id": "90019109032_OTHERS_v1_pg1",
+    "dealer_name": "Gk Tractors",
+    "model_name": "Farmtrac Model H5",
+    "horse_power": null,
+    "asset_cost": 970000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.81
+  },
+  {
+    "doc_id": "173766989_1_pg6",
+    "dealer_name": "राम ट्रेक्सर्स",
+    "model_name": "Nh-3630 Tx Super-110P",
+    "horse_power": 50,
+    "asset_cost": 1120000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.744
+  },
+  {
+    "doc_id": "172865861_2_pg30",
+    "dealer_name": "Sabar Agrotech Massey Ferguson",
+    "model_name": "Mf 2035 Di",
+    "horse_power": 40,
+    "asset_cost": 790000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.849
+  },
+  {
+    "doc_id": "90019492324_2_v1_pg1",
+    "dealer_name": "Kaler & Gill Tractors",
+    "model_name": "Swaraj Tractors",
+    "horse_power": 48,
+    "asset_cost": 770000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.681
+  },
+  {
+    "doc_id": "173679851_1_pg30",
+    "dealer_name": "Balaji Tractors",
+    "model_name": "Dth45 Iii P.P. Cib Ps-50 Hp",
+    "horse_power": 50,
+    "asset_cost": 715000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.76
+  },
+  {
+    "doc_id": "90018535123_OTHERS_v1_pg1",
+    "dealer_name": "सोनालिका इंटरनेशनल ट्रैक्सर",
+    "model_name": "डी.आय.पी-12 08B Ps Pp हॉस पावर 45 Hp डायर साईब",
+    "horse_power": 45,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.819
+  },
+  {
+    "doc_id": "173649668_2_pg21",
+    "dealer_name": "Sri Ranganatha Eicher Tractors",
+    "model_name": "480",
+    "horse_power": 45,
+    "asset_cost": 650000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.698
+  },
+  {
+    "doc_id": "172571502_1_pg21",
+    "dealer_name": "नेशनल ट्रैक्टर सेल्स",
+    "model_name": "Mf 741 Di 45 Hp",
+    "horse_power": 45,
+    "asset_cost": 638500,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.809
+  },
+  {
+    "doc_id": "90019463369_OTHERS_v1_pg1",
+    "dealer_name": "भाव्या मोटर्स",
+    "model_name": "New Holland 3630 TX Plus",
+    "horse_power": 49,
+    "asset_cost": 1030000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.843
+  },
+  {
+    "doc_id": "173597797_3_pg3",
+    "dealer_name": "Sandeep Eicher",
+    "model_name": "524Hp/242 Extra Premium",
+    "horse_power": null,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.791
+  },
+  {
+    "doc_id": "90018816473_1_v1_pg1",
+    "dealer_name": "Ams Tractors",
+    "model_name": "Powertrac Tractor",
+    "horse_power": 28,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.738
+  },
+  {
+    "doc_id": "90019292808_OTHERS_v1_pg1",
+    "dealer_name": "संगम इंटरप्राइजेस",
+    "model_name": "Sonalika DI 60",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.913
+  },
+  {
+    "doc_id": "90019035429_1_v1_pg2",
+    "dealer_name": "Dm.Oaic,Ganjam",
+    "model_name": "744 Fe 4X4 N1",
+    "horse_power": null,
+    "asset_cost": 923637,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.412
+  },
+  {
+    "doc_id": "172936612_3_pg1",
+    "dealer_name": "The Orissa Agro Industries Corporation Ltd.",
+    "model_name": "Escorts Ltd 45 F25",
+    "horse_power": 49,
+    "asset_cost": 873999,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.824
+  },
+  {
+    "doc_id": "90018750491_OTHERS_v1_pg1",
+    "dealer_name": "स्वराज ट्रैक्टर",
+    "model_name": "स्वराज ट्रैक्टर मॉडल 8552 एफ",
+    "horse_power": 52,
+    "asset_cost": 820000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.824
+  },
+  {
+    "doc_id": "172963371_2_pg33",
+    "dealer_name": "અનંતા એન્જિટેક",
+    "model_name": "મેસી ડરગુયશન Mf-24F Dynatrack 4Wd",
+    "horse_power": 46,
+    "asset_cost": 1000000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.818
+  },
+  {
+    "doc_id": "90018912857_175257879_3_pg7",
+    "dealer_name": "Sandeep Eicher",
+    "model_name": "35 Hp/333-3 Cylinder Super Di",
+    "horse_power": 35,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.881
+  },
+  {
+    "doc_id": "90018914372_175263381_1_pg18",
+    "dealer_name": "Shree Sai Automobiles",
+    "model_name": "Farmtrac 60 Powermaxx",
+    "horse_power": 55,
+    "asset_cost": 830000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.81
+  },
+  {
+    "doc_id": "90018855987_175331555_1_pg20",
+    "dealer_name": "नेशनल ट्रैक्टर सेल्स",
+    "model_name": "Mf 1035 Di",
+    "horse_power": 36,
+    "asset_cost": 132172,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.824
+  },
+  {
+    "doc_id": "90019780900_1_v1_pg1",
+    "dealer_name": "Shirram Tractor",
+    "model_name": "Tacer-55",
+    "horse_power": 55,
+    "asset_cost": 1030000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.752
+  },
+  {
+    "doc_id": "90018948531_175654157_1_pg11",
+    "dealer_name": "Suhas Automotives",
+    "model_name": "60.5 Di Ms",
+    "horse_power": 49,
+    "asset_cost": 875000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.829
+  },
+  {
+    "doc_id": "90019306445_1_v1_pg1",
+    "dealer_name": "M/S. Shree Motors",
+    "model_name": "Swaraj 735 FE",
+    "horse_power": 48,
+    "asset_cost": 806456,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.84
+  },
+  {
+    "doc_id": "172966285_1_pg11",
+    "dealer_name": "नेशनल ट्रैक्टर सेल्स",
+    "model_name": "Mf 841 Di",
+    "horse_power": 49,
+    "asset_cost": 797965,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.866
+  },
+  {
+    "doc_id": "90019327661_OTHERS_v1_pg1",
+    "dealer_name": "M/S. Shree Laxmi Tractors",
+    "model_name": "245 Pd",
+    "horse_power": null,
+    "asset_cost": 760000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.622
+  },
+  {
+    "doc_id": "173106837_1_pg41",
+    "dealer_name": "Pathan Motors And Tractors",
+    "model_name": "Di-745 Iii Power Plus Otb Ps",
+    "horse_power": 49,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.653
+  },
+  {
+    "doc_id": "90019104930_Quotation_pg1",
+    "dealer_name": "Vst Tractor",
+    "model_name": "Vstzotermtractor",
+    "horse_power": 49,
+    "asset_cost": 890000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.695
+  },
+  {
+    "doc_id": "172615270_3_pg24",
+    "dealer_name": "Raigarh Automobiles (P) Ltd.",
+    "model_name": "Mahindra Yuvo 415 DI",
+    "horse_power": 40,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.887
+  },
+  {
+    "doc_id": "90019494171_OTHERS_v2_pg1",
+    "dealer_name": "Shree Sai Automobiles",
+    "model_name": "Farmtrac 60 Powermaxx",
+    "horse_power": 55,
+    "asset_cost": 750001,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.859
+  },
+  {
+    "doc_id": "90019206687_OTHERS_v1_pg2",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd., Baripada",
+    "model_name": "Tafe Mf246 Uwd Model Tractor [46 Hp]",
+    "horse_power": 46,
+    "asset_cost": 980792,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.835
+  },
+  {
+    "doc_id": "90019320565_None_v1_pg1",
+    "dealer_name": "Katyayani Enterprises",
+    "model_name": "Sos Xp Plus",
+    "horse_power": 50,
+    "asset_cost": 790000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.731
+  },
+  {
+    "doc_id": "172726090_3_pg9",
+    "dealer_name": "M/S. Sarwamangala Tractor",
+    "model_name": "Swaraj 735 FE",
+    "horse_power": 40,
+    "asset_cost": 759000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.817
+  },
+  {
+    "doc_id": "90019292808_OTHERS_v2_pg1",
+    "dealer_name": "संगम इंटरप्राईजेजस",
+    "model_name": "Sonalika D2-745 टी",
+    "horse_power": 50,
+    "asset_cost": 720000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.85
+  },
+  {
+    "doc_id": "90018919209_175382110_3_pg6",
+    "dealer_name": "स्टारलाइन फ्रेक्स प्रा. लीमिटेड",
+    "model_name": "M.T.211 D.P.M.",
+    "horse_power": null,
+    "asset_cost": 660000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.85
+  },
+  {
+    "doc_id": "172946013_2_pg23",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd., Baripada",
+    "model_name": "Mahindra Yuvo Tech+ 575 Di Ywd Model Tractor",
+    "horse_power": 47,
+    "asset_cost": 925039,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.784
+  },
+  {
+    "doc_id": "90019735954_OTHERS_v1_pg1",
+    "dealer_name": "Mundel Trade Private Limited",
+    "model_name": "Mf-241 Di 42Hp Tractor",
+    "horse_power": 42,
+    "asset_cost": 580000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.725
+  },
+  {
+    "doc_id": "90019028089_OTHERS_v1_pg1",
+    "dealer_name": "Kiran Motors",
+    "model_name": "John Deere Tractor",
+    "horse_power": 75,
+    "asset_cost": 1010000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.636
+  },
+  {
+    "doc_id": "173688640_1_pg45",
+    "dealer_name": "Guru Kirpa Automobiles",
+    "model_name": "Swaraj 835 Gxk I Pto Tractor",
+    "horse_power": null,
+    "asset_cost": 825000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.851
+  },
+  {
+    "doc_id": "90019548453_OTHERS_v1_pg1",
+    "dealer_name": "Madhu Pavan Automobiles",
+    "model_name": "New Holland 3230 NX",
+    "horse_power": 75,
+    "asset_cost": 180000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.74
+  },
+  {
+    "doc_id": "90019616535_OTHERS_v1_pg1",
+    "dealer_name": "M/S. Dashmesh Automobiles",
+    "model_name": "Swaraj",
+    "horse_power": null,
+    "asset_cost": 653000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.77
+  },
+  {
+    "doc_id": "173465836_1_pg45",
+    "dealer_name": "Nataraja Tractors",
+    "model_name": "Sonalika International Tractors Di.1498X00Rpl.",
+    "horse_power": null,
+    "asset_cost": 770000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.806
+  },
+  {
+    "doc_id": "173900637_2_pg25",
+    "dealer_name": "M. Vikas",
+    "model_name": "734-Di Powerplus-1",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.849
+  },
+  {
+    "doc_id": "90018884704_175199372_3_pg7",
+    "dealer_name": "Balkrishna Tractors",
+    "model_name": "Eicher Model:495 To 415 H.P Tractor",
+    "horse_power": null,
+    "asset_cost": 845000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.762
+  },
+  {
+    "doc_id": "90019100521_OTHERS_v1_pg1",
+    "dealer_name": "Sri Siddeshwara Motors & Services",
+    "model_name": "Bahrin 24Hp",
+    "horse_power": 24,
+    "asset_cost": 630000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.86
+  },
+  {
+    "doc_id": "172928246_1_pg23",
+    "dealer_name": "Namdev Tractors",
+    "model_name": "P1_Euro50_Nxt",
+    "horse_power": 52,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.813
+  },
+  {
+    "doc_id": "90018937344_1_v1_pg1",
+    "dealer_name": "कोथारी एग्रो केमिस्ट",
+    "model_name": "Digitrac Pp",
+    "horse_power": 50,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.719
+  },
+  {
+    "doc_id": "90018961897_1_v2_pg1",
+    "dealer_name": "Mukati Tractor & Auto Parts",
+    "model_name": "Solis Tractor Model 4515.2 W.D.",
+    "horse_power": 48,
+    "asset_cost": 865000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.835
+  },
+  {
+    "doc_id": "173599285_2_pg32",
+    "dealer_name": "Jai Kudargarhi Tractors",
+    "model_name": "Yuva Tech+ 415 Dt",
+    "horse_power": 41,
+    "asset_cost": 760000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.555
+  },
+  {
+    "doc_id": "90018869256_OTHERS_v1_pg1",
+    "dealer_name": "Mundel Trade Private Limited",
+    "model_name": "Mf-244 Di 42Hp Tractor",
+    "horse_power": 42,
+    "asset_cost": 690000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.726
+  },
+  {
+    "doc_id": "90019025553_OTHERS_v1_pg1",
+    "dealer_name": "Parvez Tractors",
+    "model_name": null,
+    "horse_power": 37,
+    "asset_cost": 720000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.725
+  },
+  {
+    "doc_id": "172960101_3_pg1",
+    "dealer_name": "Eicher Tractor",
+    "model_name": "25 Hp",
+    "horse_power": 25,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.876
+  },
+  {
+    "doc_id": "90019290546_1_v2_pg1",
+    "dealer_name": "M/S. Jai Durga Tractors",
+    "model_name": "D2112",
+    "horse_power": null,
+    "asset_cost": 500000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.884
+  },
+  {
+    "doc_id": "90019290546_1_v1_pg1",
+    "dealer_name": "M/S. Jai Durga Tractors",
+    "model_name": "D2-112",
+    "horse_power": null,
+    "asset_cost": 500000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.884
+  },
+  {
+    "doc_id": "173484632_2_pg28",
+    "dealer_name": "Sir Branson Motors",
+    "model_name": "New Holland 3630 TX Plus",
+    "horse_power": 50,
+    "asset_cost": 1200000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.873
+  },
+  {
+    "doc_id": "90019275252_175947343_1_pg14",
+    "dealer_name": "M/S Raj Tractors",
+    "model_name": "Mr 3620 Tx Blue Star",
+    "horse_power": 55,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.768
+  },
+  {
+    "doc_id": "90019488321_1_v1_pg1",
+    "dealer_name": "कोशिक ट्रैक्सर्स",
+    "model_name": "Mf 246 Dt 4Wd (46 Ap)",
+    "horse_power": null,
+    "asset_cost": 900000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.9
+  },
+  {
+    "doc_id": "90019441822_OTHERS_v1_pg1",
+    "dealer_name": "आर.एस.ट्रैक्टर हाऊस,निफाड",
+    "model_name": "Digitech Pp46I",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.904
+  },
+  {
+    "doc_id": "174037696_1_pg7",
+    "dealer_name": "Nirmal Automobiles",
+    "model_name": "Farmtrac Tractor",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.788
+  },
+  {
+    "doc_id": "90019272204_OTHERS_v1_pg1",
+    "dealer_name": "Nagaur Motors & Tractors",
+    "model_name": "Massey-Ferguson 1035 Di Tractor With Flat Top Fenders Mf 1035 Dtr 82.24 (95 Hp)",
+    "horse_power": 95,
+    "asset_cost": 567300,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.645
+  },
+  {
+    "doc_id": "90018953627_1_v1_pg1",
+    "dealer_name": "Sai Om Tractors",
+    "model_name": "Escorts Farstrac",
+    "horse_power": null,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.808
+  },
+  {
+    "doc_id": "172656573_1_pg4",
+    "dealer_name": "Madav Motore Pachore",
+    "model_name": "485, Sc, Fl",
+    "horse_power": 45,
+    "asset_cost": 760000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.833
+  },
+  {
+    "doc_id": "90019542405_OTHERS_v1_pg1",
+    "dealer_name": "M/S. Karthikeya International Tractors",
+    "model_name": "Sonalika Tiger",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.85
+  },
+  {
+    "doc_id": "172759522_3_pg2",
+    "dealer_name": "Khodiyar Farm Equipments",
+    "model_name": "Eicher 242",
+    "horse_power": 78,
+    "asset_cost": 318000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.897
+  },
+  {
+    "doc_id": "173695126_1_pg19",
+    "dealer_name": "Guru Kirpa Automobiles",
+    "model_name": "Swaraj 855 FE",
+    "horse_power": null,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.902
+  },
+  {
+    "doc_id": "90018907907_OTHERS_v1_pg1",
+    "dealer_name": "Sri Mahalakshmi International Tractors",
+    "model_name": "Sonalika Di 730, 35, 740, 745, 750, 55, 60 Tractor H.P. 30, 35, 40, 50, 55, 60",
+    "horse_power": 30,
+    "asset_cost": 580000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.878
+  },
+  {
+    "doc_id": "173061033_3_pg2",
+    "dealer_name": "पेटेल मोटर्स",
+    "model_name": "X-Trac",
+    "horse_power": 24,
+    "asset_cost": 1000000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.846
+  },
+  {
+    "doc_id": "173355468_3_pg15",
+    "dealer_name": "करसा ट्रेक्स",
+    "model_name": "Yuvo Tech Plus",
+    "horse_power": 47,
+    "asset_cost": 740000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.871
+  },
+  {
+    "doc_id": "173146045_2_pg19",
+    "dealer_name": "Swastik Agro Solutions",
+    "model_name": "Mahindra Novo-605-4Wd",
+    "horse_power": 48,
+    "asset_cost": 910000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.861
+  },
+  {
+    "doc_id": "90019631438_OTHERS_v1_pg1",
+    "dealer_name": "Swaraj",
+    "model_name": "724 X M",
+    "horse_power": 24,
+    "asset_cost": 525000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.899
+  },
+  {
+    "doc_id": "172810838_3_pg4",
+    "dealer_name": "Baba Agriculture & Automobiles",
+    "model_name": "Mahindra Tractor",
+    "horse_power": 50,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.847
+  },
+  {
+    "doc_id": "173484083_3_pg2",
+    "dealer_name": "Mahindra M/S Shivnath Tractors",
+    "model_name": "575 Vvwd Di",
+    "horse_power": 57,
+    "asset_cost": 845000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.0
+  },
+  {
+    "doc_id": "90019390356_2_v1_pg1",
+    "dealer_name": "Auto Union (Jodhpur)",
+    "model_name": "Mf/Tafe Tractor Mf 1035 Ac Ms",
+    "horse_power": 29,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.693
+  },
+  {
+    "doc_id": "90018469803_OTHERS_v3_pg1",
+    "dealer_name": "Mohit Tractors & Motors",
+    "model_name": "Sonalika International Tractor",
+    "horse_power": null,
+    "asset_cost": 650000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.716
+  },
+  {
+    "doc_id": "90019008626_OTHERS_v1_pg1",
+    "dealer_name": "नेशनल ट्रैकर सेल्स",
+    "model_name": "Mf 241 Di Y2Hp",
+    "horse_power": null,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.832
+  },
+  {
+    "doc_id": "173208707_2_pg22",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "Pto 46Hp",
+    "horse_power": 46,
+    "asset_cost": 823870,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.835
+  },
+  {
+    "doc_id": "90019481745_OTHERS_v2_pg1",
+    "dealer_name": "M/S. Shree Basava Tractors",
+    "model_name": "575 Dlx Plus",
+    "horse_power": 44,
+    "asset_cost": 830000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.776
+  },
+  {
+    "doc_id": "90018769506_175246108_1_pg35",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf-241 Di",
+    "horse_power": null,
+    "asset_cost": 639000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.782
+  },
+  {
+    "doc_id": "173779463_1_pg5",
+    "dealer_name": "Ishwar Motors",
+    "model_name": "Powertrac Tractor Model Dli1.T.Rac.Lp.43.I.E.",
+    "horse_power": 47,
+    "asset_cost": 600000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.899
+  },
+  {
+    "doc_id": "90018822745_175200356_2_pg39",
+    "dealer_name": "बलोदिया ट्रेक्टर्स",
+    "model_name": "742Xt",
+    "horse_power": 45,
+    "asset_cost": 687680,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.805
+  },
+  {
+    "doc_id": "90018884261_175345612_3_pg7",
+    "dealer_name": "श्री शक्ति ट्रेक्स",
+    "model_name": "ट्रैक्टर मेसी फर्डर एमआई=244",
+    "horse_power": 45,
+    "asset_cost": 1050000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.823
+  },
+  {
+    "doc_id": "90019265192_OTHERS_v1_pg1",
+    "dealer_name": "Shri Muralidhar Motors",
+    "model_name": "Massey Tractor Model M.Fergo Power Up",
+    "horse_power": null,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.79
+  },
+  {
+    "doc_id": "173221807_2_pg26",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf841D",
+    "horse_power": 49,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.821
+  },
+  {
+    "doc_id": "172675384_1_pg13",
+    "dealer_name": "Kaler & Gill Tractors",
+    "model_name": "Swaraj Tractors",
+    "horse_power": null,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.637
+  },
+  {
+    "doc_id": "90018503974_OTHERS_v1_pg1",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf 84 Di (42 Hp)",
+    "horse_power": 42,
+    "asset_cost": 158965,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.758
+  },
+  {
+    "doc_id": "173727239_2_pg26",
+    "dealer_name": "Khodiyar Farm Equipments",
+    "model_name": "Eicher 242",
+    "horse_power": null,
+    "asset_cost": 328079,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.912
+  },
+  {
+    "doc_id": "90018919209_OTHERS_v1_pg1",
+    "dealer_name": "स्टरलागन ट्रेक्स मा. लीमीटेड",
+    "model_name": "Mp 453",
+    "horse_power": 49,
+    "asset_cost": 660001,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.779
+  },
+  {
+    "doc_id": "173210220_2_pg16",
+    "dealer_name": "Pathan Motors And Tractors",
+    "model_name": "Di 745 Iii Power Plus Dib Ps",
+    "horse_power": 47,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.785
+  },
+  {
+    "doc_id": "90019501081_OTHERS_v1_pg1",
+    "dealer_name": "शिव शक्ति ट्रेक्सर्स",
+    "model_name": "Mf241 Ft Sona -14Hp",
+    "horse_power": null,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.868
+  },
+  {
+    "doc_id": "90019268802_OTHERS_v1_pg1",
+    "dealer_name": "Kubota Escorts Kabota Limited",
+    "model_name": "Escorts 335",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.0
+  },
+  {
+    "doc_id": "173643744_1_pg17",
+    "dealer_name": "Harsh Enterprises",
+    "model_name": "Pt-439",
+    "horse_power": 41,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.636
+  },
+  {
+    "doc_id": "90019306534_2_v1_pg1",
+    "dealer_name": "Punitheshwar Tractors",
+    "model_name": "Df-745Dl",
+    "horse_power": 50,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.653
+  },
+  {
+    "doc_id": "90018866223_175262018_2_pg12",
+    "dealer_name": "Baba Agriculture & Automobiles",
+    "model_name": "Yavo Tech+ 575 Dl",
+    "horse_power": 49,
+    "asset_cost": 810000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.782
+  },
+  {
+    "doc_id": "90019392984_OTHERS_v1_pg1",
+    "dealer_name": "Sandeep Eicher",
+    "model_name": "3636 Hp/333-3 Cylinder Super Di",
+    "horse_power": null,
+    "asset_cost": 720000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.865
+  },
+  {
+    "doc_id": "90018869965_OTHERS_v1_pg1",
+    "dealer_name": "स्टारलाइन ड्रेक्सर म. लीमिटेड",
+    "model_name": "Mf 271 D",
+    "horse_power": 63,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.818
+  },
+  {
+    "doc_id": "90019676275_OTHERS_v1_pg1",
+    "dealer_name": "गुरुकृपा ट्रॅक्स",
+    "model_name": "Fj 32 Bagban",
+    "horse_power": 32,
+    "asset_cost": 595000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.873
+  },
+  {
+    "doc_id": "90019538958_OTHERS_v1_pg1",
+    "dealer_name": "Prakash Agro Care",
+    "model_name": "Mahindra Diesel Agriculture Tractor Oja 2130 4 Wd",
+    "horse_power": 30,
+    "asset_cost": 555000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.0
+  },
+  {
+    "doc_id": "172684055_1_pg35",
+    "dealer_name": "Rajyalakshmi Agencies",
+    "model_name": "Swaraj 735 FE",
+    "horse_power": 40,
+    "asset_cost": 780000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.782
+  },
+  {
+    "doc_id": "172607979_4_pg1",
+    "dealer_name": "Krishna Traders",
+    "model_name": "Pt 434 Ds Plus Hr",
+    "horse_power": 39,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.762
+  },
+  {
+    "doc_id": "172847544_1_pg23",
+    "dealer_name": "M/S Sri Kalabhairaveshwara Motors",
+    "model_name": "Vst Shakthi Mt 932",
+    "horse_power": 30,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.781
+  },
+  {
+    "doc_id": "90018777351_OTHERS_v1_pg1",
+    "dealer_name": "Shivshanta Motors",
+    "model_name": "Swaraj 843 XM",
+    "horse_power": 24,
+    "asset_cost": 600000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.793
+  },
+  {
+    "doc_id": "90019393371_OTHERS_v1_pg1",
+    "dealer_name": "Balaji Borwells",
+    "model_name": "Sonalika GT 22",
+    "horse_power": 39,
+    "asset_cost": 650000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.773
+  },
+  {
+    "doc_id": "173255857_3_pg5",
+    "dealer_name": "Magar Industries",
+    "model_name": "Solis Tractor 4515 4Wd",
+    "horse_power": null,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.83
+  },
+  {
+    "doc_id": "172937945_3_pg8",
+    "dealer_name": "M/S Shivnath Tractors",
+    "model_name": "Mahindra Tractor 575 Sw",
+    "horse_power": 49,
+    "asset_cost": 865000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.689
+  },
+  {
+    "doc_id": "90018791802_1_v1_pg1",
+    "dealer_name": "Baba Jagannath Tractors",
+    "model_name": "Mf 245 D1",
+    "horse_power": 50,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.655
+  },
+  {
+    "doc_id": "90018790122_175101938_1_pg7",
+    "dealer_name": "विश्वकर्मा कृषि सेवा केन्द्र",
+    "model_name": "Di 550 Ps Multispeed Suttel Tack",
+    "horse_power": 50,
+    "asset_cost": 960000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.866
+  },
+  {
+    "doc_id": "90018866223_1_v1_pg1",
+    "dealer_name": "Baba Agriculture & Automobiles",
+    "model_name": "Yuvo Tech+ 935 Dl Hwd",
+    "horse_power": 49,
+    "asset_cost": 810000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.815
+  },
+  {
+    "doc_id": "90019298491_1_v1_pg1",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "Eicher 380 Model Tractor",
+    "horse_power": 40,
+    "asset_cost": 737355,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.817
+  },
+  {
+    "doc_id": "90018465649_175159546_1_pg5",
+    "dealer_name": "Vipin Motors",
+    "model_name": "Digitrac Pp 46.1",
+    "horse_power": 50,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.91
+  },
+  {
+    "doc_id": "90019547901_OTHERS_v1_pg1",
+    "dealer_name": "आर.एस.ट्रॅक्टर हाऊस,निफाड",
+    "model_name": "47 Burellade",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.87
+  },
+  {
+    "doc_id": "90019568335_1_v1_pg1",
+    "dealer_name": "Sonalika International",
+    "model_name": "Kapalika 2104K Tractor",
+    "horse_power": 49,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.795
+  },
+  {
+    "doc_id": "90019493117_OTHERS_v1_pg1",
+    "dealer_name": "शिव शक्ति ट्रैक्सर",
+    "model_name": "Mf 1035 नो महाशयक्षिका",
+    "horse_power": 49,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.692
+  },
+  {
+    "doc_id": "173216984_2_pg34",
+    "dealer_name": "M/S. Jasman Tractors",
+    "model_name": "Yuvo Tech + Uo5 Dt(39 Hp)",
+    "horse_power": 39,
+    "asset_cost": 796000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.779
+  },
+  {
+    "doc_id": "172655019_3_pg11",
+    "dealer_name": "श्री विनायक ट्रेक्सर्स",
+    "model_name": "3032 Nx",
+    "horse_power": 38,
+    "asset_cost": 950001,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.837
+  },
+  {
+    "doc_id": "90019729306_OTHERS_v1_pg1",
+    "dealer_name": "भाव्या मोटर्स",
+    "model_name": "New Holland 3230 NX",
+    "horse_power": 42,
+    "asset_cost": 730000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.814
+  },
+  {
+    "doc_id": "90019241519_OTHERS_v1_pg1",
+    "dealer_name": "Kiran Motors",
+    "model_name": "John Deere Tractor",
+    "horse_power": 55,
+    "asset_cost": 870000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.598
+  },
+  {
+    "doc_id": "172717541_1_pg17",
+    "dealer_name": "Super Sonalika Tractors",
+    "model_name": "Sonalika Di-745 Iii Power Plus Db Ps(47Hp)",
+    "horse_power": 47,
+    "asset_cost": 820000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.784
+  },
+  {
+    "doc_id": "90019480454_OTHERS_v1_pg1",
+    "dealer_name": "Visok Traders",
+    "model_name": "Eicher Tractor Model 251",
+    "horse_power": 24,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.735
+  },
+  {
+    "doc_id": "172961598_1_pg14",
+    "dealer_name": "Kisan Tractors",
+    "model_name": "Eicher Tractor Model 425",
+    "horse_power": 45,
+    "asset_cost": 760000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.777
+  },
+  {
+    "doc_id": "173678841_1_pg20",
+    "dealer_name": "Balaji Tractors",
+    "model_name": "Dt-35 Oib Ps 39-Hp",
+    "horse_power": 39,
+    "asset_cost": 560000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.715
+  },
+  {
+    "doc_id": "90019665101_OTHERS_v1_pg1",
+    "dealer_name": "Ushamotors",
+    "model_name": "Escort/Farmtrac Tractor Model...39...Promax Dcps",
+    "horse_power": null,
+    "asset_cost": 630000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.78
+  },
+  {
+    "doc_id": "172761287_4_pg15",
+    "dealer_name": "नायक ऑटो केर",
+    "model_name": "Eicher Tractor",
+    "horse_power": 40,
+    "asset_cost": 650000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.884
+  },
+  {
+    "doc_id": "173684775_2_pg29",
+    "dealer_name": "Raj Auto Traders Pvt. Ltd.",
+    "model_name": "Mahindra Model No. Yo5 Yovo Tech Plus",
+    "horse_power": 39,
+    "asset_cost": 795000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.838
+  },
+  {
+    "doc_id": "173679254_3_pg2",
+    "dealer_name": "Sandeep Eicher",
+    "model_name": "Trailer Wheel 4/2",
+    "horse_power": null,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.823
+  },
+  {
+    "doc_id": "90019681429_1_v1_pg1",
+    "dealer_name": "Patil & Company",
+    "model_name": "3620 Tx Plus",
+    "horse_power": null,
+    "asset_cost": 900000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.832
+  },
+  {
+    "doc_id": "90018963264_1_v1_pg1",
+    "dealer_name": "M/S Ridhi Sidhi Motors",
+    "model_name": "Farmtrac Tractor Model No: Ft Champion Xp 41",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.768
+  },
+  {
+    "doc_id": "90019576953_OTHERS_v1_pg1",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf - 245 Di - J - Mahashakti",
+    "horse_power": null,
+    "asset_cost": 639700,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.713
+  },
+  {
+    "doc_id": "90019347483_1_v2_pg1",
+    "dealer_name": "Jai Kissan Tractors",
+    "model_name": "Sonalika Tractor Model D1-35",
+    "horse_power": 39,
+    "asset_cost": 535000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.757
+  },
+  {
+    "doc_id": "173140531_2_pg29",
+    "dealer_name": "Coppercity Tractors",
+    "model_name": "Gt-22",
+    "horse_power": 22,
+    "asset_cost": 480000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.798
+  },
+  {
+    "doc_id": "172804164_1_pg14",
+    "dealer_name": "M/S Shri Parasnath Enterprises",
+    "model_name": "Mahindra Tractor",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.752
+  },
+  {
+    "doc_id": "172846075_3_pg11",
+    "dealer_name": "श्री बजरंग ट्रैक्टर्स",
+    "model_name": "सोनालिका 55 टाइगर",
+    "horse_power": 55,
+    "asset_cost": 1300000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.737
+  },
+  {
+    "doc_id": "173466121_1_pg15",
+    "dealer_name": "पोरवाल मोटर्स",
+    "model_name": "सोनालिका इंटरनेशनल ट्रेक्सर",
+    "horse_power": 42,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.824
+  },
+  {
+    "doc_id": "172615659_4_pg18",
+    "dealer_name": "Sultania Tractors",
+    "model_name": "380 Sp+",
+    "horse_power": 40,
+    "asset_cost": 680000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.767
+  },
+  {
+    "doc_id": "172968418_3_pg10",
+    "dealer_name": "मनप्रीत ट्रेक्स",
+    "model_name": "Di35Rx Ps (39Hp)",
+    "horse_power": 39,
+    "asset_cost": 580000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.814
+  },
+  {
+    "doc_id": "172764517_4_pg16",
+    "dealer_name": "मनोरमा ट्रैक्टर्स",
+    "model_name": "सोनालिका इंटरनेशनल ट्रैक्टर",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.818
+  },
+  {
+    "doc_id": "90019575948_1_v1_pg1",
+    "dealer_name": "અમર ટ્રેક્ટર્સ & મોટર્સ",
+    "model_name": "યુવો ટેક પ્લસ",
+    "horse_power": 47,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.769
+  },
+  {
+    "doc_id": "173608042_1_pg40",
+    "dealer_name": "Dhanvi Motors",
+    "model_name": "Sonalika Bangban-30",
+    "horse_power": 30,
+    "asset_cost": 620000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.803
+  },
+  {
+    "doc_id": "172960345_pg18",
+    "dealer_name": "आर.एस.ट्रॅक्टर हाउस,निफाड",
+    "model_name": "पावरट्रक ट्रैक्टर Pt439 Plus",
+    "horse_power": 41,
+    "asset_cost": 651000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.818
+  },
+  {
+    "doc_id": "172965689_pg3",
+    "dealer_name": "Swaraj Shinde Tractors",
+    "model_name": "Swaraj 724 Xm Orchard",
+    "horse_power": 24,
+    "asset_cost": 625000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.84
+  },
+  {
+    "doc_id": "90019449658_1_v1_pg1",
+    "dealer_name": "Nagaur Motors & Tractors",
+    "model_name": "Mf 1035 Di J Tractor",
+    "horse_power": 35,
+    "asset_cost": 531900,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.854
+  },
+  {
+    "doc_id": "90019326759_None_v1_pg1",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf - 241 Di Mahashakti",
+    "horse_power": null,
+    "asset_cost": 611500,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.762
+  },
+  {
+    "doc_id": "172808806_pg14",
+    "dealer_name": "मे. माधवलक्ष्मी ऑटोमोबाईल्स",
+    "model_name": "सोनालिका इंटरनेशनल ट्रॅक्टर (डी.आय.ईमन) मोडल Rx-32 Baghah होर्स पॉवर 32 Hp दायर साईज",
+    "horse_power": 32,
+    "asset_cost": 611000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.814
+  },
+  {
+    "doc_id": "173588817_2_pg29",
+    "dealer_name": "Tiwari Automobiles",
+    "model_name": "557 Hp 50",
+    "horse_power": 50,
+    "asset_cost": 950000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.616
+  },
+  {
+    "doc_id": "90019541466_OTHERS_v1_pg1",
+    "dealer_name": "Shreenath Tractors",
+    "model_name": "5270 Llwd",
+    "horse_power": 50,
+    "asset_cost": 1000000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.824
+  },
+  {
+    "doc_id": "173313344_1_pg19",
+    "dealer_name": "M/S Bharat Tractors",
+    "model_name": "Sonalika Di745 Iii Ps Power Plus Oib",
+    "horse_power": 50,
+    "asset_cost": 665000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.756
+  },
+  {
+    "doc_id": "90019497482_OTHERS_v1_pg1",
+    "dealer_name": "Solis Yanmar",
+    "model_name": "Solis H115 Wmd",
+    "horse_power": null,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.72
+  },
+  {
+    "doc_id": "173254922_3_pg3",
+    "dealer_name": "Magar Industries",
+    "model_name": "Solis Tractor 4515 Zvwd",
+    "horse_power": null,
+    "asset_cost": 872000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.775
+  },
+  {
+    "doc_id": "172928152_2_pg34",
+    "dealer_name": "करसा ट्रेक्स",
+    "model_name": "योवो4 Wd",
+    "horse_power": null,
+    "asset_cost": 675000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.774
+  },
+  {
+    "doc_id": "173483259_2_pg24",
+    "dealer_name": "Choudhary Tractors",
+    "model_name": "Eicher Air Cooled Tractor",
+    "horse_power": 24,
+    "asset_cost": 705000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.825
+  },
+  {
+    "doc_id": "90018813452_175117537_1_pg5",
+    "dealer_name": "Gaurav Bhanu Tractors",
+    "model_name": "Digitrac Pp 46 I",
+    "horse_power": 50,
+    "asset_cost": 890000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.832
+  },
+  {
+    "doc_id": "90019101436_OTHERS_v1_pg1",
+    "dealer_name": "स्वराज",
+    "model_name": "स्वराज ट्रैक्टर्स",
+    "horse_power": 52,
+    "asset_cost": 950001,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.834
+  },
+  {
+    "doc_id": "90018935513_OTHERS_v2_pg1",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf - 1035 Di",
+    "horse_power": 39,
+    "asset_cost": 704400,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.613
+  },
+  {
+    "doc_id": "90018694760_175394784_2_pg34",
+    "dealer_name": "Eicher Tractors M/S Gayatri Tractors",
+    "model_name": "Eicher Model",
+    "horse_power": 38,
+    "asset_cost": 650000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.66
+  },
+  {
+    "doc_id": "90019288772_OTHERS_v1_pg1",
+    "dealer_name": "Sri Guru Motors",
+    "model_name": "Mahindra JIVO 245 DI",
+    "horse_power": 20,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.832
+  },
+  {
+    "doc_id": "172744044_2_pg27",
+    "dealer_name": "The Orissa Agro Industries Corporation Ltd.",
+    "model_name": "New Traction Name - Swaraj",
+    "horse_power": 48,
+    "asset_cost": 923637,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.841
+  },
+  {
+    "doc_id": "172822122_3_pg3",
+    "dealer_name": "विपुल ट्रैक्सर्स",
+    "model_name": "सोनालिका ट्रैक्सर Di - 4.8 Rx 4Wd Hp 42",
+    "horse_power": 42,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.78
+  },
+  {
+    "doc_id": "90018503974_175272915_1_pg15",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf...841 Di (12 Hp)",
+    "horse_power": null,
+    "asset_cost": 158965,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.69
+  },
+  {
+    "doc_id": "90019537586_OTHERS_v2_pg1",
+    "dealer_name": "M/S. Shree Amba Motors",
+    "model_name": "Mf245 Di Hp:49 Model Tractor",
+    "horse_power": 49,
+    "asset_cost": 670000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.729
+  },
+  {
+    "doc_id": "172935426_3_pg4",
+    "dealer_name": "Sunshine Motors",
+    "model_name": "Kubota Tractor Mu5502 (4Wd)",
+    "horse_power": 55,
+    "asset_cost": 1000000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.838
+  },
+  {
+    "doc_id": "172863544_2_pg20",
+    "dealer_name": "Sabar Agrotech",
+    "model_name": "Tafe Mf 241 Df C42 Hp",
+    "horse_power": 61,
+    "asset_cost": 830000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.772
+  },
+  {
+    "doc_id": "172579986_2_pg31",
+    "dealer_name": "The Orissa Agro Industries Corporation Ltd.",
+    "model_name": "Swasa",
+    "horse_power": 48,
+    "asset_cost": 933754,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.748
+  },
+  {
+    "doc_id": "90018910828_175277985_1_pg5",
+    "dealer_name": "साई मोटर्स",
+    "model_name": "स्वयं टेक्सर '744 Fe' मॉडल 48 Hp",
+    "horse_power": 48,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.692
+  },
+  {
+    "doc_id": "172566189_1_pg10",
+    "dealer_name": "Sri Amutham Tractors",
+    "model_name": "Sonalika Tiger",
+    "horse_power": 55,
+    "asset_cost": 1200000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.849
+  },
+  {
+    "doc_id": "172809327_1_pg40",
+    "dealer_name": "Balaji Tractors",
+    "model_name": "Kubota Tractor Mu4501 (2Wd - Std) 45Hp",
+    "horse_power": 45,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.723
+  },
+  {
+    "doc_id": "172677667_2_pg30",
+    "dealer_name": "Santosh Motors",
+    "model_name": "Swaraj 735 FE",
+    "horse_power": 39,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.793
+  },
+  {
+    "doc_id": "173686375_1_pg40",
+    "dealer_name": "Jeevan Tractors",
+    "model_name": "Promaxx-42-Scps",
+    "horse_power": 42,
+    "asset_cost": 790000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.857
+  },
+  {
+    "doc_id": "90018984759_OTHERS_v1_pg1",
+    "dealer_name": "Sri Gayathri Automotives",
+    "model_name": "551 4Wd",
+    "horse_power": 49,
+    "asset_cost": 1030000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.572
+  },
+  {
+    "doc_id": "173224947_2_pg17",
+    "dealer_name": "Santosh Motors",
+    "model_name": "Swaraj 735 FE",
+    "horse_power": 39,
+    "asset_cost": 735000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.819
+  },
+  {
+    "doc_id": "90019714854_6_v1_pg1",
+    "dealer_name": "Sapna Tractor",
+    "model_name": "Solis 4415 2Wd",
+    "horse_power": 48,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.719
+  },
+  {
+    "doc_id": "90019258415_1_v1_pg1",
+    "dealer_name": "Hanumat Tractors",
+    "model_name": "John Deere 5075E",
+    "horse_power": 75,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.768
+  },
+  {
+    "doc_id": "90018918722_175278173_1_pg22",
+    "dealer_name": "Shri Krishna Motors",
+    "model_name": "Sonalika DI 60",
+    "horse_power": 39,
+    "asset_cost": 640000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.658
+  },
+  {
+    "doc_id": "172684006_1_pg42",
+    "dealer_name": "Rajyalakshmi Agencies",
+    "model_name": "Swaraj 735-Xt-H0Hp",
+    "horse_power": null,
+    "asset_cost": 770000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.776
+  },
+  {
+    "doc_id": "90018736250_OTHERS_v1_pg1",
+    "dealer_name": "Jeevan & Company",
+    "model_name": "Sonalka Tractors Model 21-745 M Powerplus",
+    "horse_power": 50,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.561
+  },
+  {
+    "doc_id": "90018695808_175276404_1_pg26",
+    "dealer_name": "Aadhi Bhagavan Tractors And Implements",
+    "model_name": "4L515-2Wd",
+    "horse_power": 48,
+    "asset_cost": 880000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.788
+  },
+  {
+    "doc_id": "172926866_3_pg2",
+    "dealer_name": "Govind Tractors",
+    "model_name": "New Holland 3230 NX",
+    "horse_power": 41,
+    "asset_cost": 809872,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.85
+  },
+  {
+    "doc_id": "90018909946_OTHERS_v1_pg1",
+    "dealer_name": "महिंद्रा ट्रैक्सर्स",
+    "model_name": "575 Sp Plus",
+    "horse_power": null,
+    "asset_cost": 860000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.859
+  },
+  {
+    "doc_id": "90019329217_OTHERS_v1_pg1",
+    "dealer_name": "स्वराज टेक्स्ट सेल्स स्पेसिएस",
+    "model_name": "टारगेट 630 डीप्स",
+    "horse_power": 29,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.819
+  },
+  {
+    "doc_id": "173450105_3_pg6",
+    "dealer_name": null,
+    "model_name": null,
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.824
+  },
+  {
+    "doc_id": "173618168_2_pg27",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "M&M Yuvo Tech+ 575 Di",
+    "horse_power": null,
+    "asset_cost": 925039,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.435
+  },
+  {
+    "doc_id": "90019261328_OTHERS_v1_pg1",
+    "dealer_name": "Vipin Motors",
+    "model_name": "Digitrac-Ppg3T",
+    "horse_power": 50,
+    "asset_cost": 950000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.845
+  },
+  {
+    "doc_id": "90018953788_Android_417_T_1_1_90018953788_pg1",
+    "dealer_name": "Madhu Pavan Automobiles",
+    "model_name": "New Holland 3230 NX",
+    "horse_power": 47,
+    "asset_cost": 890000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.779
+  },
+  {
+    "doc_id": "90018935306_1_v1_pg1",
+    "dealer_name": "कोथारी एम्ब्रो केमिस्ट",
+    "model_name": "Pp46I",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.726
+  },
+  {
+    "doc_id": "90019109032_OTHERS_v2_pg1",
+    "dealer_name": "Gk Tractors",
+    "model_name": "Farmtrac 60 Powermaxx",
+    "horse_power": 50,
+    "asset_cost": 970000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.724
+  },
+  {
+    "doc_id": "90018723959_OTHERS_v1_pg1",
+    "dealer_name": "Agrimet Automobiles Pvt. Ltd.",
+    "model_name": "नई टॉयल",
+    "horse_power": 49,
+    "asset_cost": 810000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.813
+  },
+  {
+    "doc_id": "90018935306_1_v2_pg1",
+    "dealer_name": "कोथारी एग्रो कैरियर्स",
+    "model_name": "Pp46I",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.786
+  },
+  {
+    "doc_id": "90019613512_OTHERS_v1_pg1",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf - 241 Di Mahashakti",
+    "horse_power": null,
+    "asset_cost": 611500,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.824
+  },
+  {
+    "doc_id": "173996052_1_pg9",
+    "dealer_name": "Sheela Motors",
+    "model_name": "Mahindra Arjun 555 DI",
+    "horse_power": 50,
+    "asset_cost": 730000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.571
+  },
+  {
+    "doc_id": "90019767539_1_v1_pg1",
+    "dealer_name": "Charbhua Tractor & Compressor",
+    "model_name": "Powertrac 439 Plus",
+    "horse_power": 45,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.812
+  },
+  {
+    "doc_id": "90019634938_OTHERS_v1_pg1",
+    "dealer_name": "Usha Motors",
+    "model_name": "Champion F12(35 Ar)",
+    "horse_power": 38,
+    "asset_cost": 560000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.75
+  },
+  {
+    "doc_id": "90019566523_OTHERS_v1_pg1",
+    "dealer_name": "Gs Automobile",
+    "model_name": "Sonalka-Pl-745",
+    "horse_power": 20,
+    "asset_cost": 620000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.46
+  },
+  {
+    "doc_id": "172826770_1_pg14",
+    "dealer_name": "राजस्थान ट्रैक्टर मशीनरी",
+    "model_name": "Ft-60 Classic - 50 Hp",
+    "horse_power": 50,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.81
+  },
+  {
+    "doc_id": "90019715731_OTHERS_v1_pg1",
+    "dealer_name": "विपुल ट्रैक्सर्स",
+    "model_name": "सोनालिका ट्रैक्सर Di-Tiger 745 Iii 49 Hp",
+    "horse_power": 49,
+    "asset_cost": 930000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.739
+  },
+  {
+    "doc_id": "172960101_2_pg34",
+    "dealer_name": "Nayak Auto Care",
+    "model_name": "X-Trac",
+    "horse_power": 25,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.91
+  },
+  {
+    "doc_id": "173652542_3_pg7",
+    "dealer_name": "અનંતા એન્જીટેક",
+    "model_name": "મેસ્સી ડ્રાગ્યુશન Mf-241 Di Dynatruck Ps-42Hp",
+    "horse_power": 42,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.856
+  },
+  {
+    "doc_id": "90019259471_OTHERS_v1_pg1",
+    "dealer_name": "Suhas Automotives",
+    "model_name": "Mahindra Diesel Agricultural Tractor 305 Jiv0",
+    "horse_power": 23,
+    "asset_cost": 555000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.862
+  },
+  {
+    "doc_id": "90019055868_OTHERS_v2_pg1",
+    "dealer_name": "Ishwar Motors",
+    "model_name": "पॉवरट्रैक ट्रेक्टर मंडल Diiitrac Pp Ybiei 50 Hp",
+    "horse_power": 50,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.895
+  },
+  {
+    "doc_id": "172864137_2_pg27",
+    "dealer_name": "Sabar Agrotech",
+    "model_name": "Tafe Mf 1035 Di C25 Hp",
+    "horse_power": 25,
+    "asset_cost": 720000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.844
+  },
+  {
+    "doc_id": "173401982_1_pg51",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "Pto",
+    "horse_power": 42,
+    "asset_cost": 734722,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.828
+  },
+  {
+    "doc_id": "172819725_1_pg42",
+    "dealer_name": "Swaraj",
+    "model_name": "Swaraj 843 Xm-2 Wd-42 Hp Tractor",
+    "horse_power": 42,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.774
+  },
+  {
+    "doc_id": "90019537808_OTHERS_v1_pg1",
+    "dealer_name": "Shivashankar Marketing",
+    "model_name": "3630 Super Plus",
+    "horse_power": 49,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.84
+  },
+  {
+    "doc_id": "172811933_2_pg24",
+    "dealer_name": "Aadhyaa Motors",
+    "model_name": "Sonalika Tiger",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.665
+  },
+  {
+    "doc_id": "90019543659_3_v1_pg1",
+    "dealer_name": "बालाजी ट्रैक्टर्स, नसरसलागंज",
+    "model_name": "सोनालिका इंटरनेशनल डेक्सर Di",
+    "horse_power": null,
+    "asset_cost": 103000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.82
+  },
+  {
+    "doc_id": "172745711_3_pg8",
+    "dealer_name": "The Orissa Agro Industries Corporation Ltd.",
+    "model_name": "International Tractors Ltd.",
+    "horse_power": 50,
+    "asset_cost": 909903,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.749
+  },
+  {
+    "doc_id": "90018412738_OTHERS_v1_pg1",
+    "dealer_name": "M/S. Hiremath Tractors",
+    "model_name": "Eicher 242",
+    "horse_power": 50,
+    "asset_cost": 987000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.779
+  },
+  {
+    "doc_id": "173479625_2_pg34",
+    "dealer_name": "Chandra Tractors",
+    "model_name": "One Eicher Tractors Model 188, 242, 312, 333, 368, 380, 480 485, 548, 551, 557, 650",
+    "horse_power": 36,
+    "asset_cost": 620000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.486
+  },
+  {
+    "doc_id": "172679241_1_pg25",
+    "dealer_name": "Chamundeswari Agencies",
+    "model_name": "Swaraj 735 FE",
+    "horse_power": 40,
+    "asset_cost": 720000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.699
+  },
+  {
+    "doc_id": "90018407639_OTHERS_v1_pg1",
+    "dealer_name": "Suhas Automotives",
+    "model_name": "Mahindra Diesel Agricultural Tractor",
+    "horse_power": 55,
+    "asset_cost": 875000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.886
+  },
+  {
+    "doc_id": "173470257_2_pg23",
+    "dealer_name": "Raj Motors",
+    "model_name": "Tractor Model 3630 Tx Plus",
+    "horse_power": 49,
+    "asset_cost": 950000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.743
+  },
+  {
+    "doc_id": "173472885_2_pg24",
+    "dealer_name": "शुभम ट्रेडर्स",
+    "model_name": "ट्रैक्टर मॉडल पीई एच.पी.",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.832
+  },
+  {
+    "doc_id": "172932638_3_pg1",
+    "dealer_name": "Jay Bhagwati Tractors",
+    "model_name": "Steeltrac 18",
+    "horse_power": null,
+    "asset_cost": 373400,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.701
+  },
+  {
+    "doc_id": "90018887350_1_v2_pg1",
+    "dealer_name": "Mahantra Tractor Co.",
+    "model_name": "Eicher Tractor",
+    "horse_power": 60,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.0
+  },
+  {
+    "doc_id": "90018455419_OTHERS_v2_pg1",
+    "dealer_name": "Ajay Tractors And Motors",
+    "model_name": "New Holland Ford Tractor Model 3600-2",
+    "horse_power": 50,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.806
+  },
+  {
+    "doc_id": "173186866_1_pg16",
+    "dealer_name": "Baba Jagannath Tractors",
+    "model_name": "Mf 245 D1 - 50 Hp",
+    "horse_power": 50,
+    "asset_cost": 670000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.709
+  },
+  {
+    "doc_id": "173686992_1_pg29",
+    "dealer_name": "Guru Kirpa Automobiles",
+    "model_name": "Swaraj 855 FE",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.917
+  },
+  {
+    "doc_id": "90019705325_1_v1_pg1",
+    "dealer_name": "M/S. Sukhwah Farm Services",
+    "model_name": "Nave 605 Ps",
+    "horse_power": null,
+    "asset_cost": 875000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.691
+  },
+  {
+    "doc_id": "90018911592_OTHERS_v2_pg1",
+    "dealer_name": "Mk Agro Tech",
+    "model_name": "Sonalika International Tractors D1-42Rxoib",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.833
+  },
+  {
+    "doc_id": "173215327_3_pg12",
+    "dealer_name": "चिपुल ट्रेक्टर्स",
+    "model_name": "सोनालिका ट्रैक्टर",
+    "horse_power": null,
+    "asset_cost": 799000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.7
+  },
+  {
+    "doc_id": "90018869965_175601032_2_pg33",
+    "dealer_name": "स्टारलाइन फ्रेक्स प्रा. लिमीटेड",
+    "model_name": "Mc 2111 L.T.D.",
+    "horse_power": 69,
+    "asset_cost": 690000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.754
+  },
+  {
+    "doc_id": "90019490936_1_v1_pg1",
+    "dealer_name": "Shirram Tractor",
+    "model_name": "Sonalika Tiger",
+    "horse_power": null,
+    "asset_cost": 1000000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.815
+  },
+  {
+    "doc_id": "90018917958_175403610_2_pg31",
+    "dealer_name": "Shakti Motors, Betul",
+    "model_name": "New Holland Ford Tractor Model 3600-2 Allmandac",
+    "horse_power": 49,
+    "asset_cost": 802000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.724
+  },
+  {
+    "doc_id": "90019071645_Android_417_T_2_1_90019071645_pg1",
+    "dealer_name": "Madhu Pavan Automobiles",
+    "model_name": "Nh13032 Sc+Ps+Hxdrive+36X78 Rear Type - 35Hp",
+    "horse_power": 35,
+    "asset_cost": 680000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.881
+  },
+  {
+    "doc_id": "172674674_2_pg26",
+    "dealer_name": "Odisha Agro Industries Corporation Ltd.",
+    "model_name": "Di 47 Rx + Wd",
+    "horse_power": null,
+    "asset_cost": 909903,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.779
+  },
+  {
+    "doc_id": "90019012095_175379096_2_pg9",
+    "dealer_name": "Naganaray Enterprises",
+    "model_name": "New Mahindra Self Start Tractor Model Yuvo Tech +",
+    "horse_power": 44,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.666
+  },
+  {
+    "doc_id": "90019576505_OTHERS_v1_pg1",
+    "dealer_name": "Agarwal Automobiles",
+    "model_name": "Escort Tractor",
+    "horse_power": 37,
+    "asset_cost": 740000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.747
+  },
+  {
+    "doc_id": "90019513023_OTHERS_v1_pg1",
+    "dealer_name": "Lakhani Tractors",
+    "model_name": "Mahindra Tractor Model 605 No.Vo-4Wd",
+    "horse_power": 49,
+    "asset_cost": 1071937,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.859
+  },
+  {
+    "doc_id": "90018694760_175394784_2_pg31",
+    "dealer_name": "M/S Gayatri Tractors",
+    "model_name": "Eicher Model",
+    "horse_power": 35,
+    "asset_cost": 650000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.579
+  },
+  {
+    "doc_id": "172610467_2_pg21",
+    "dealer_name": "Sabar Agrotech",
+    "model_name": "Tafe Mf 241 Cf",
+    "horse_power": 42,
+    "asset_cost": 830000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.84
+  },
+  {
+    "doc_id": "172858047_3_pg3",
+    "dealer_name": "सोनालिका ट्रेक्स",
+    "model_name": "D142 Ps",
+    "horse_power": 42,
+    "asset_cost": 755000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.839
+  },
+  {
+    "doc_id": "90019488806_OTHERS_v2_pg1",
+    "dealer_name": "श्री बाळाजी एच्छो सेल्स",
+    "model_name": "ट्रैक्टर पावरटेक माइल्ड",
+    "horse_power": 50,
+    "asset_cost": 840000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.866
+  },
+  {
+    "doc_id": "173467126_1_pg16",
+    "dealer_name": "Usha Motors",
+    "model_name": "Us Classic Smart",
+    "horse_power": 48,
+    "asset_cost": 725000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.826
+  },
+  {
+    "doc_id": "90019603825_OTHERS_v1_pg1",
+    "dealer_name": "जैन ट्रेक्टर्स",
+    "model_name": "Mf 246, Di माहल Tractor Hp-44",
+    "horse_power": 44,
+    "asset_cost": 730000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.892
+  },
+  {
+    "doc_id": "173115555_1_pg32",
+    "dealer_name": "Auto Union (Jodhpur)",
+    "model_name": "Mf/Tafe Tractor",
+    "horse_power": 42,
+    "asset_cost": 530020,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.683
+  },
+  {
+    "doc_id": "90018747361_OTHERS_v2_pg1",
+    "dealer_name": "Shree Traders",
+    "model_name": "Sonalika GT 22",
+    "horse_power": 37,
+    "asset_cost": 650000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.866
+  },
+  {
+    "doc_id": "90019078880_1_v1_pg1",
+    "dealer_name": "Ashwamegh Motors",
+    "model_name": "Mf / Tafe Tractor Model 1035 D2",
+    "horse_power": 39,
+    "asset_cost": 684760,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.666
+  },
+  {
+    "doc_id": "90018882696_OTHERS_v1_pg1",
+    "dealer_name": "Renuka Motors",
+    "model_name": "Eicher 548",
+    "horse_power": 48,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.752
+  },
+  {
+    "doc_id": "90018820019_175153084_1_pg24",
+    "dealer_name": "नेशनल एक्सो सर्विसेज",
+    "model_name": "Mf-855 Di",
+    "horse_power": 78,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.793
+  },
+  {
+    "doc_id": "173177534_1_pg37",
+    "dealer_name": "Auto Union (Jodhpur)",
+    "model_name": "Mf 261 3E Mf",
+    "horse_power": 42,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.744
+  },
+  {
+    "doc_id": "173067949_1_pg17",
+    "dealer_name": "M/S. Friends Agri Tech",
+    "model_name": "Ft-39",
+    "horse_power": 38,
+    "asset_cost": 610000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.651
+  },
+  {
+    "doc_id": "90018772380_OTHERS_v1_pg1",
+    "dealer_name": "समर्थ ट्रॅक्टर्स",
+    "model_name": "स्वराज Target 630 / 625 Diepr",
+    "horse_power": 29,
+    "asset_cost": 598000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.862
+  },
+  {
+    "doc_id": "173481223_2_pg25",
+    "dealer_name": "श्रीव शक्ति ट्रेड्स",
+    "model_name": "Mf 241 Di Sona",
+    "horse_power": null,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.842
+  },
+  {
+    "doc_id": "90019051052_OTHERS_v1_pg1",
+    "dealer_name": "Shree Ram Iron Industries",
+    "model_name": "Swaraj Tractors Model Fh4Xf 50Hp",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.65
+  },
+  {
+    "doc_id": "90018455419_OTHERS_v1_pg1",
+    "dealer_name": "Ajay Tractor And Motors",
+    "model_name": "New Holland T5022322004578X31",
+    "horse_power": null,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.737
+  },
+  {
+    "doc_id": "173642363_3_pg3",
+    "dealer_name": "Maa Sharda Motors",
+    "model_name": "Eicher - 5.5I Prima",
+    "horse_power": 45,
+    "asset_cost": 860000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.827
+  },
+  {
+    "doc_id": "172653968_pg20",
+    "dealer_name": "मे. सरस इव्हॉल्युशन",
+    "model_name": "Farmtrac - 80",
+    "horse_power": 30,
+    "asset_cost": 690000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.899
+  },
+  {
+    "doc_id": "90019539894_OTHERS_v2_pg1",
+    "dealer_name": "Mis. Siyaram Agrotech",
+    "model_name": "Novo 665 Ps 4Wd",
+    "horse_power": 50,
+    "asset_cost": 999000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.826
+  },
+  {
+    "doc_id": "90018465649_OTHERS_v1_pg1",
+    "dealer_name": "Vipin Motors",
+    "model_name": "Digitrac Pp 46 I",
+    "horse_power": 50,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.817
+  },
+  {
+    "doc_id": "173407594_1_pg36",
+    "dealer_name": "K.S.R. Tractors",
+    "model_name": "Powertrac 439 Plus",
+    "horse_power": 45,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.835
+  },
+  {
+    "doc_id": "90018711224_175061697_1_pg9",
+    "dealer_name": "Sharma Tractors",
+    "model_name": "New Holland Ford Tractor Model",
+    "horse_power": null,
+    "asset_cost": 811000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.86
+  },
+  {
+    "doc_id": "90018824033_OTHERS_v1_pg1",
+    "dealer_name": "અમર ટ્રેક્ટર્સ & ફાર્મ યુમલિમેન્ટ",
+    "model_name": "એમિક્સર ઉંડ Nbp માટ્રાઈક",
+    "horse_power": null,
+    "asset_cost": 730115,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.899
+  },
+  {
+    "doc_id": "90019675571_OTHERS_v1_pg1",
+    "dealer_name": "M/S. Shri Ram Tractors",
+    "model_name": "Powertrac 439 Plus",
+    "horse_power": 43,
+    "asset_cost": 500000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.727
+  },
+  {
+    "doc_id": "173078631_1_pg7",
+    "dealer_name": "Sunil Automobiles",
+    "model_name": "Massey Mf 7250 Di V1.1",
+    "horse_power": 50,
+    "asset_cost": 740000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.55
+  },
+  {
+    "doc_id": "173645201_1_pg39",
+    "dealer_name": "Nataraja Tractors",
+    "model_name": "Sonalika International Tractors Dl-32.8X.8000",
+    "horse_power": 32,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.875
+  },
+  {
+    "doc_id": "172934286_2_pg27",
+    "dealer_name": "Hanumat Tractors",
+    "model_name": "John Deere 5075E",
+    "horse_power": 75,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.816
+  },
+  {
+    "doc_id": "90018752764_OTHERS_v1_pg1",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf-241 Di Mahashakti",
+    "horse_power": 75,
+    "asset_cost": 639000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.71
+  },
+  {
+    "doc_id": "173572590_2_pg25",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "Di-42 Hdm",
+    "horse_power": null,
+    "asset_cost": 690453,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.698
+  },
+  {
+    "doc_id": "173654803_1_pg40",
+    "dealer_name": "Hadoti Tractor And Sales",
+    "model_name": "Euro-42 Plu",
+    "horse_power": 45,
+    "asset_cost": 680000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.796
+  },
+  {
+    "doc_id": "90018883186_OTHERS_v1_pg1",
+    "dealer_name": "श्री राधेकृष्ण मोटर्स",
+    "model_name": "1508",
+    "horse_power": null,
+    "asset_cost": 700000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.704
+  },
+  {
+    "doc_id": "90019400339_8_v1_pg1",
+    "dealer_name": "Farmer First",
+    "model_name": "Tg 42 Pp Sc - 8577",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.683
+  },
+  {
+    "doc_id": "90019456877_OTHERS_v1_pg1",
+    "dealer_name": "श्री हरि कृष्ण मोटर्स",
+    "model_name": "Ywo Tech+ 575 Di",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.874
+  },
+  {
+    "doc_id": "90019804134_4_v1_pg1",
+    "dealer_name": "श्री विनायक ट्रेक्स",
+    "model_name": "Excel 4710",
+    "horse_power": 47,
+    "asset_cost": 625000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.814
+  },
+  {
+    "doc_id": "90019302246_6_v1_pg1",
+    "dealer_name": "Auto Union (Jodhpur)",
+    "model_name": "Mf/Tafe Tractor",
+    "horse_power": null,
+    "asset_cost": 525000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.549
+  },
+  {
+    "doc_id": "90019604068_OTHERS_v1_pg1",
+    "dealer_name": "M/S. Dashmesh Automobiles",
+    "model_name": "Swaraj",
+    "horse_power": 48,
+    "asset_cost": 710000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.717
+  },
+  {
+    "doc_id": "90019538715_OTHERS_v1_pg1",
+    "dealer_name": "Shri Balaji Tractors",
+    "model_name": "M&M 575 Di Xp Plus",
+    "horse_power": null,
+    "asset_cost": 615000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.659
+  },
+  {
+    "doc_id": "90019756316_OTHERS_v1_pg1",
+    "dealer_name": "भारत मोटर्स ट्रैक्टर्स",
+    "model_name": "Mf 241 (421P)",
+    "horse_power": null,
+    "asset_cost": 620000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.824
+  },
+  {
+    "doc_id": "172658339_1_pg46",
+    "dealer_name": "M/S. Hiremath Tractors",
+    "model_name": "Eicher 557",
+    "horse_power": null,
+    "asset_cost": 950000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.713
+  },
+  {
+    "doc_id": "90019603202_1_v1_pg1",
+    "dealer_name": "M/S. Shree Ganesh Tractors",
+    "model_name": "Swaraj Tractor",
+    "horse_power": 52,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.673
+  },
+  {
+    "doc_id": "172903213_2_pg27",
+    "dealer_name": "Shree Krushi Tractors",
+    "model_name": "Sonalika Tiger",
+    "horse_power": 45,
+    "asset_cost": 966174,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.745
+  },
+  {
+    "doc_id": "173573770_1_pg38",
+    "dealer_name": "Shivashankar Marketing",
+    "model_name": "2630 Super Plus",
+    "horse_power": 54,
+    "asset_cost": 1000000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.854
+  },
+  {
+    "doc_id": "90018813452_OTHERS_v1_pg1",
+    "dealer_name": "Gaurav Bhanu Tractors",
+    "model_name": "Digitrac Pp 46 I",
+    "horse_power": 30,
+    "asset_cost": 890000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.775
+  },
+  {
+    "doc_id": "90018699258_OTHERS_v1_pg1",
+    "dealer_name": "Singh Farming Solutions",
+    "model_name": "5405 4Wd Gearpro",
+    "horse_power": 63,
+    "asset_cost": 1400000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.885
+  },
+  {
+    "doc_id": "173074584_3_pg12",
+    "dealer_name": "बायक ऑटो क्रेडर",
+    "model_name": "242",
+    "horse_power": 40,
+    "asset_cost": 610000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.89
+  },
+  {
+    "doc_id": "90019543464_OTHERS_v1_pg1",
+    "dealer_name": "आर.एस.ट्रैक्टर हाउस,निफाड",
+    "model_name": "पोवदट्रैक्ट ट्रैक्टर",
+    "horse_power": 50,
+    "asset_cost": 851000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.765
+  },
+  {
+    "doc_id": "173607761_2_pg32",
+    "dealer_name": "M/S Bharat Tractors",
+    "model_name": "Sonalika DI 60",
+    "horse_power": 58,
+    "asset_cost": 880000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.677
+  },
+  {
+    "doc_id": "173104431_2_pg31",
+    "dealer_name": "Maurya Tractors",
+    "model_name": "Tractor Escort Pt Euro Sohc 1.3",
+    "horse_power": 52,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.828
+  },
+  {
+    "doc_id": "90019330794_OTHERS_v1_pg1",
+    "dealer_name": "Hadoti Tractor And Sales",
+    "model_name": "New Escort Self Start Tractor",
+    "horse_power": 50,
+    "asset_cost": 715000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.727
+  },
+  {
+    "doc_id": "172938591_3_pg13",
+    "dealer_name": "Om Motors",
+    "model_name": "John Deere 5050 D",
+    "horse_power": 36,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.815
+  },
+  {
+    "doc_id": "90019423061_1_v1_pg1",
+    "dealer_name": "Gamni Automobiles",
+    "model_name": "Mf 241 Di",
+    "horse_power": 42,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.839
+  },
+  {
+    "doc_id": "172761707_3_pg1",
+    "dealer_name": "Manjeet Motors",
+    "model_name": "Novo 605 Di 2Wd",
+    "horse_power": 57,
+    "asset_cost": 1100000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.772
+  },
+  {
+    "doc_id": "90018912387_OTHERS_v2_pg1",
+    "dealer_name": "जिन्दिया ट्रैक्टर कंपनी",
+    "model_name": "5210 (50Hp) Clear Pro",
+    "horse_power": 50,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.844
+  },
+  {
+    "doc_id": "90018926292_OTHERS_v2_pg1",
+    "dealer_name": "मे.बनकर पाटील ट्रैक्टर्स",
+    "model_name": "Owertrac Tractor",
+    "horse_power": 47,
+    "asset_cost": 761000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.85
+  },
+  {
+    "doc_id": "90019624424_OTHERS_v1_pg1",
+    "dealer_name": "Balaji Borwells",
+    "model_name": "Sonalika DI 60",
+    "horse_power": 35,
+    "asset_cost": 650000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.708
+  },
+  {
+    "doc_id": "173653929_1_pg38",
+    "dealer_name": "Rajarajeshwari Agencies",
+    "model_name": "Eicher 380(2Wd) Prima-673",
+    "horse_power": 40,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.846
+  },
+  {
+    "doc_id": "172814053_pg5",
+    "dealer_name": "मे. मध्वलक्ष्मी ऑटोमोबाइल्स",
+    "model_name": "सोनालिका इंदरनाथल ट्रॅक्टर Gt 22 Gardentrac, 4Wd (डी.आय.सीन) मोडल",
+    "horse_power": 22,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.848
+  },
+  {
+    "doc_id": "90018977960_OTHERS_v1_pg1",
+    "dealer_name": "Pmb Motors",
+    "model_name": "Digitalc-Pp461 16.9(12+3)",
+    "horse_power": 50,
+    "asset_cost": 890000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.882
+  },
+  {
+    "doc_id": "90018389956_OTHERS_v1_pg1",
+    "dealer_name": "दूकान देवकर्स",
+    "model_name": "Tukti Dlefr",
+    "horse_power": 61,
+    "asset_cost": 610000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.775
+  },
+  {
+    "doc_id": "90019292741_OTHERS_v1_pg1",
+    "dealer_name": "Gill Agro",
+    "model_name": "S210 Yud",
+    "horse_power": 50,
+    "asset_cost": 1100000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.673
+  },
+  {
+    "doc_id": "173613183_1_pg38",
+    "dealer_name": "Kubota Escorts Kubota Limited (Farmtarc)",
+    "model_name": "Power Maxx 50Hp",
+    "horse_power": 50,
+    "asset_cost": 795000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.58
+  },
+  {
+    "doc_id": "173463716_pg28",
+    "dealer_name": "कृष्णा ट्रैक्टर हाउस",
+    "model_name": "सोनालिका इंटरनेशनल ट्रैक्टर (ही.आय.इंजिन) मॉडल Rx 32 Baagban हॉर्स पॉवर 32 टायक साइज",
+    "horse_power": 32,
+    "asset_cost": 551000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.903
+  },
+  {
+    "doc_id": "90019526902_1_v1_pg1",
+    "dealer_name": "Kissan Tractor Agency",
+    "model_name": "Swaraj Tractor",
+    "horse_power": 25,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.741
+  },
+  {
+    "doc_id": "90019655984_3_v1_pg1",
+    "dealer_name": "અમર ટ્રેક્ટર્સ & મોટર્સ",
+    "model_name": "યુવો ટેક પલ્સ",
+    "horse_power": 49,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.887
+  },
+  {
+    "doc_id": "90019596700_OTHERS_v1_pg1",
+    "dealer_name": "Shree Tractors",
+    "model_name": "Sonalika DI 750 III",
+    "horse_power": 68,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.811
+  },
+  {
+    "doc_id": "90018874456_OTHERS_v1_pg1",
+    "dealer_name": "Rathi Motors (Shujalpur) Pvt. Ltd.",
+    "model_name": "Mahindra Tractor 585 Xp Plus",
+    "horse_power": null,
+    "asset_cost": 770001,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.912
+  },
+  {
+    "doc_id": "172448470_3_pg15",
+    "dealer_name": "The Orissa Agro Industries Corporation Ltd.",
+    "model_name": "Kubota Mu 5502 4Wd",
+    "horse_power": null,
+    "asset_cost": 1106506,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.752
+  },
+  {
+    "doc_id": "90019031024_1_v2_pg1",
+    "dealer_name": "Kisan Farm Machinery",
+    "model_name": "Sonalika International Tractor Diax60 Sika",
+    "horse_power": 50,
+    "asset_cost": 930000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.619
+  },
+  {
+    "doc_id": "90019632629_OTHERS_v1_pg1",
+    "dealer_name": "आर.प्स.जी. ट्रॅक्टर्स",
+    "model_name": "Df750Iii Power Plus 078Ps",
+    "horse_power": 25,
+    "asset_cost": 870100,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.824
+  },
+  {
+    "doc_id": "172808450_3_pg8",
+    "dealer_name": "M/S. Anand Tractors",
+    "model_name": "Mv 5502",
+    "horse_power": 55,
+    "asset_cost": 1251000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.87
+  },
+  {
+    "doc_id": "173152903_2_pg33",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "Euro 50 E91 (Brand Name - Powertrac) Nxt",
+    "horse_power": 52,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.748
+  },
+  {
+    "doc_id": "90019362965_1_v1_pg1",
+    "dealer_name": "Ram Singh & Sons",
+    "model_name": "Sonalika DI 60",
+    "horse_power": null,
+    "asset_cost": 860000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.829
+  },
+  {
+    "doc_id": "172611860_2_pg24",
+    "dealer_name": "Meenakshi Tractors",
+    "model_name": "4015 E2 Wd 3 Cylinder",
+    "horse_power": 40,
+    "asset_cost": 600000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.814
+  },
+  {
+    "doc_id": "90019755787_1_v1_pg1",
+    "dealer_name": "Kapishwara Tractors",
+    "model_name": "Powertrac 439 Plus",
+    "horse_power": 41,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.685
+  },
+  {
+    "doc_id": "90019269898_OTHERS_v1_pg1",
+    "dealer_name": "Pmb Motors",
+    "model_name": "Digitac Ppy3T 14.9(12+3)",
+    "horse_power": 47,
+    "asset_cost": 790000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.893
+  },
+  {
+    "doc_id": "90018645014_175099338_3_pg9",
+    "dealer_name": "Mahindra M/S Shivnath Tractors",
+    "model_name": "585 Ywd Di",
+    "horse_power": 49,
+    "asset_cost": 885000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.0
+  },
+  {
+    "doc_id": "172934848_2_pg32",
+    "dealer_name": "M/S Skt Traders",
+    "model_name": "New Holland 3230 NX",
+    "horse_power": 47,
+    "asset_cost": 109000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.73
+  },
+  {
+    "doc_id": "90019206687_OTHERS_v1_pg1",
+    "dealer_name": "Dm,Oaiic.Mayurbhanj",
+    "model_name": "Mf 246 4Wd",
+    "horse_power": null,
+    "asset_cost": 980792,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.26
+  },
+  {
+    "doc_id": "90019604664_3_v1_pg1",
+    "dealer_name": "Balaji Automotives",
+    "model_name": "4750L Yuvo Tech Plus Hp-45",
+    "horse_power": 45,
+    "asset_cost": 125000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.739
+  },
+  {
+    "doc_id": "90019232302_2_v1_pg1",
+    "dealer_name": "Sri Rajalakshmi Agency",
+    "model_name": "P.S.A.T.",
+    "horse_power": 49,
+    "asset_cost": 880000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.824
+  },
+  {
+    "doc_id": "90018711224_1_v2_pg1",
+    "dealer_name": "Sharma Tractors",
+    "model_name": "New Holland Ford Tractor Model",
+    "horse_power": 86,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.874
+  },
+  {
+    "doc_id": "172681541_2_pg30",
+    "dealer_name": "Sri Shakthi Tractors",
+    "model_name": "Vst Shakti 939 Di",
+    "horse_power": 36,
+    "asset_cost": 820000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.724
+  },
+  {
+    "doc_id": "173134085_1_pg14",
+    "dealer_name": "M/S. Shri Ram Tractors",
+    "model_name": "Digitrac Pp461",
+    "horse_power": 46,
+    "asset_cost": 890000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.731
+  },
+  {
+    "doc_id": "173070225_1_pg11",
+    "dealer_name": "Shri Basav Motors",
+    "model_name": "Sonalika International Tractor Model: Di-750Ii Powerplus 01B Ps-24Wd",
+    "horse_power": 55,
+    "asset_cost": 930000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.87
+  },
+  {
+    "doc_id": "90019287773_OTHERS_v1_pg1",
+    "dealer_name": "नेशनल ट्रैक्टर सेल्स",
+    "model_name": "Mf 241 Di-J Maha Shakti",
+    "horse_power": 102,
+    "asset_cost": 758200,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.793
+  },
+  {
+    "doc_id": "173579660_1_pg19",
+    "dealer_name": "R.K. Automobiles",
+    "model_name": "Farmtrac 60 Powermaxx",
+    "horse_power": 47,
+    "asset_cost": 690000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.709
+  },
+  {
+    "doc_id": "172813220_3_pg6",
+    "dealer_name": "Raigarh Automobiles (P) Ltd.",
+    "model_name": "Hls Dl Nbp",
+    "horse_power": 60,
+    "asset_cost": 600000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.841
+  },
+  {
+    "doc_id": "172820354_1_pg29",
+    "dealer_name": "Baba Jagannath Tractors",
+    "model_name": "Mf 241 Di",
+    "horse_power": 42,
+    "asset_cost": 640000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.734
+  },
+  {
+    "doc_id": "90019712041_OTHERS_v1_pg1",
+    "dealer_name": "Swaraj",
+    "model_name": "Tractor",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.709
+  },
+  {
+    "doc_id": "90019112228_OTHERS_v1_pg1",
+    "dealer_name": "सोलालिका ट्रेडर्स",
+    "model_name": "P27.400 S Iii Cm",
+    "horse_power": 49,
+    "asset_cost": 773646,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.0
+  },
+  {
+    "doc_id": "172929710_1_pg40",
+    "dealer_name": "Awana Tractors",
+    "model_name": "Sonalika Rx 50 (4W) (50 - Hp)",
+    "horse_power": 50,
+    "asset_cost": 1054000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.857
+  },
+  {
+    "doc_id": "173587365_2_pg25",
+    "dealer_name": "Shri Jodabasaveshwar Tractors",
+    "model_name": "Rx-32 Bagaban",
+    "horse_power": 32,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.893
+  },
+  {
+    "doc_id": "173468705_1_pg35",
+    "dealer_name": "गोविंद मोटर्स",
+    "model_name": "Oja 2124",
+    "horse_power": 25,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.768
+  },
+  {
+    "doc_id": "90019381330_OTHERS_v1_pg1",
+    "dealer_name": "Shri Muralidhar Motors",
+    "model_name": "246 Dynatrack (Massey Ferguson)",
+    "horse_power": 46,
+    "asset_cost": 715000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.0
+  },
+  {
+    "doc_id": "173598485_4_pg17",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "Powertrac 439 Plus",
+    "horse_power": 47,
+    "asset_cost": 929453,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.732
+  },
+  {
+    "doc_id": "90019805709_1_v1_pg1",
+    "dealer_name": "Mk.Motors",
+    "model_name": "Sonalika Dl74511 Power Plus 018 4X4Wd",
+    "horse_power": 49,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.871
+  },
+  {
+    "doc_id": "90018751357_OTHERS_v1_pg1",
+    "dealer_name": "Av Reliable Private Limited",
+    "model_name": "510 Liquid",
+    "horse_power": 50,
+    "asset_cost": 840000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.514
+  },
+  {
+    "doc_id": "172827538_2_pg33",
+    "dealer_name": "Swaraj Selva Motors",
+    "model_name": "Swaraj 744 (4Wd)- 48Hp",
+    "horse_power": 48,
+    "asset_cost": 1000000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.801
+  },
+  {
+    "doc_id": "90019546440_OTHERS_v1_pg1",
+    "dealer_name": "Bandewar Tractors",
+    "model_name": "Mahindra Tractor",
+    "horse_power": 60,
+    "asset_cost": 1075000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.828
+  },
+  {
+    "doc_id": "172921150_3_pg3",
+    "dealer_name": "Sultania Tractors",
+    "model_name": "आयक्वेट्रैक्टर मॉडल 350 +",
+    "horse_power": 40,
+    "asset_cost": 660000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.771
+  },
+  {
+    "doc_id": "90018912387_OTHERS_v1_pg1",
+    "dealer_name": "जीनियस ट्रैक्टर कंपनी",
+    "model_name": "5210 (50Hp) Gear Pro",
+    "horse_power": 50,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.831
+  },
+  {
+    "doc_id": "90019712591_1_v1_pg1",
+    "dealer_name": "Guru Kirpa Tractors",
+    "model_name": "S210E",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.565
+  },
+  {
+    "doc_id": "90018870785_1_v1_pg1",
+    "dealer_name": "Sai Om Tractors",
+    "model_name": "Farmtrac Tractors",
+    "horse_power": 55,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.694
+  },
+  {
+    "doc_id": "90018881950_1_v1_pg1",
+    "dealer_name": "Basava Equipments",
+    "model_name": "5910E",
+    "horse_power": 60,
+    "asset_cost": 980000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.734
+  },
+  {
+    "doc_id": "172723526_1_pg17",
+    "dealer_name": "M/S. Shree Amba Motors",
+    "model_name": "Mf255 Di Hp-49",
+    "horse_power": 49,
+    "asset_cost": 720000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.847
+  },
+  {
+    "doc_id": "90018584435_175639609_pg2",
+    "dealer_name": "M/S Singh Farmtrac",
+    "model_name": "Ft-47 4Wd",
+    "horse_power": null,
+    "asset_cost": 770000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.765
+  },
+  {
+    "doc_id": "90018791585_175400562_1_pg3",
+    "dealer_name": "Shri Gopal Tractor",
+    "model_name": "Mf7235",
+    "horse_power": 35,
+    "asset_cost": 504464,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.636
+  },
+  {
+    "doc_id": "172831872_1_pg4",
+    "dealer_name": "कशिश ऑटोमोबाईल्स",
+    "model_name": "5015",
+    "horse_power": 50,
+    "asset_cost": 865000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.88
+  },
+  {
+    "doc_id": "173470898_1_pg17",
+    "dealer_name": "M/S. Shree Ganesh Tractors",
+    "model_name": "Swaraj 855 FE",
+    "horse_power": 52,
+    "asset_cost": 830000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.651
+  },
+  {
+    "doc_id": "172812976_1_pg17",
+    "dealer_name": "Jai Tractors",
+    "model_name": "856",
+    "horse_power": 42,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.6
+  },
+  {
+    "doc_id": "172930953_3_pg2",
+    "dealer_name": "कर्सा ट्रैक्स",
+    "model_name": "Yuvraj",
+    "horse_power": null,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.825
+  },
+  {
+    "doc_id": "90018723959_175116426_3_pg8",
+    "dealer_name": "Agrimet Automobiles Pvt. Ltd.",
+    "model_name": "S8.5 Yama Tech+",
+    "horse_power": 49,
+    "asset_cost": 840000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.734
+  },
+  {
+    "doc_id": "90019622433_OTHERS_v1_pg1",
+    "dealer_name": "Swaraj",
+    "model_name": "744 E.E.",
+    "horse_power": 48,
+    "asset_cost": 653000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.579
+  },
+  {
+    "doc_id": "172585685_3_pg1",
+    "dealer_name": "Jai Kudargarhi Tractors",
+    "model_name": "Yuva Tech+ 405.05",
+    "horse_power": 39,
+    "asset_cost": 770000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.767
+  },
+  {
+    "doc_id": "90018512084_175159349_2_pg32",
+    "dealer_name": "M/S. Bhavani Agro Engg. Services",
+    "model_name": "Target 620 Single/Double Clutch Tractor With Super Deluxe Seat",
+    "horse_power": 29,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.73
+  },
+  {
+    "doc_id": "90018747361_175254055_1_pg6",
+    "dealer_name": "Shree Traders",
+    "model_name": "Sonalika GT 22",
+    "horse_power": 27,
+    "asset_cost": 650000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.805
+  },
+  {
+    "doc_id": "90019482141_OTHERS_v1_pg1",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf-245 Di-J Mahashakti",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.759
+  },
+  {
+    "doc_id": "172589759_3_pg6",
+    "dealer_name": "श्री शिव शक्ति एग्रो",
+    "model_name": "स्वराज 855 Fe",
+    "horse_power": 55,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.76
+  },
+  {
+    "doc_id": "172752186_1_pg9",
+    "dealer_name": "Maa Tractor Wheels",
+    "model_name": "महिंद्रा ट्रैक्टर 655 Di Uwd Crdi",
+    "horse_power": 65,
+    "asset_cost": 1325000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.875
+  },
+  {
+    "doc_id": "90019564591_OTHERS_v1_pg1",
+    "dealer_name": "Krishna Tractors",
+    "model_name": "Ft U.S.P.R.A.Maxx... Hp",
+    "horse_power": 50,
+    "asset_cost": 725000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.802
+  },
+  {
+    "doc_id": "90018855987_OTHERS_v1_pg1",
+    "dealer_name": "नेशनल ट्रैकर सेल्स",
+    "model_name": "Mf - 1035 Di",
+    "horse_power": 72,
+    "asset_cost": 132776,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.859
+  },
+  {
+    "doc_id": "173638911_3_pg1",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd., Baripada",
+    "model_name": "Mahindra Yuvo 415 DI",
+    "horse_power": 47,
+    "asset_cost": 925039,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.763
+  },
+  {
+    "doc_id": "90018773075_OTHERS_v1_pg1",
+    "dealer_name": "शिवराज ट्रैक्टर्स",
+    "model_name": "S18 - 49 Hp",
+    "horse_power": 49,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.823
+  },
+  {
+    "doc_id": "172929532_1_pg7",
+    "dealer_name": "M/S. Hemkunt Tractors",
+    "model_name": "Sonalika Tractor Model Di-75011(Coibps-55)",
+    "horse_power": 55,
+    "asset_cost": 810000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.539
+  },
+  {
+    "doc_id": "172926676_2_pg34",
+    "dealer_name": "એ.બી.સી. કોર્પોરેશન",
+    "model_name": "Solis Yanmar - 4015 2Wd (41 Hp)",
+    "horse_power": 41,
+    "asset_cost": 820000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.621
+  },
+  {
+    "doc_id": "90018229277_2_v1_pg1",
+    "dealer_name": "चिमनदास व्हीलीयस",
+    "model_name": "'स्वराज' ट्रैक्टर मोडल ७५५ Fe",
+    "horse_power": 50,
+    "asset_cost": 820000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.0
+  },
+  {
+    "doc_id": "173608870_2_pg32",
+    "dealer_name": "M/S R.S. Automobiles",
+    "model_name": "Digitrac Pp 4Gi 50 Hp",
+    "horse_power": 50,
+    "asset_cost": 950000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.823
+  },
+  {
+    "doc_id": "90019571048_2_v1_pg1",
+    "dealer_name": "मनोरमा ट्रैक्टर्स",
+    "model_name": "D135Lx 39",
+    "horse_power": null,
+    "asset_cost": 690000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.796
+  },
+  {
+    "doc_id": "90019399023_OTHERS_v1_pg1",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf-1035 Di",
+    "horse_power": null,
+    "asset_cost": 561800,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.696
+  },
+  {
+    "doc_id": "172823551_2_pg21",
+    "dealer_name": "कशिश ऑटोमोबाईल्स",
+    "model_name": "5015",
+    "horse_power": 50,
+    "asset_cost": 865000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.903
+  },
+  {
+    "doc_id": "173734055_1_pg29",
+    "dealer_name": "M'S Om Tractors",
+    "model_name": "Di 55 Sikandar Dc 018 Ps",
+    "horse_power": 55,
+    "asset_cost": 880000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.772
+  },
+  {
+    "doc_id": "90019597614_1_v2_pg1",
+    "dealer_name": "Sharma Tractors",
+    "model_name": "8630 Tx",
+    "horse_power": 55,
+    "asset_cost": 870000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.83
+  },
+  {
+    "doc_id": "90019616205_OTHERS_v1_pg1",
+    "dealer_name": "M/S Kishan Tractors",
+    "model_name": "Farmtrac 60 Powermaxx",
+    "horse_power": 50,
+    "asset_cost": 710000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.503
+  },
+  {
+    "doc_id": "173064332_3_pg4",
+    "dealer_name": "Fatehgharh Sahib Tractors",
+    "model_name": "Mahindra Tractor",
+    "horse_power": 49,
+    "asset_cost": 870000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.661
+  },
+  {
+    "doc_id": "90018455419_175105661_2_pg25",
+    "dealer_name": "Ajay Tractors And Motors",
+    "model_name": "New Holland Ford Tractor Model 3600",
+    "horse_power": 50,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.803
+  },
+  {
+    "doc_id": "172685774_2_pg31",
+    "dealer_name": "Jay Ranchhod Tractor",
+    "model_name": "Powertrac 439 Plus",
+    "horse_power": 39,
+    "asset_cost": 722800,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.79
+  },
+  {
+    "doc_id": "90019571048_1_v1_pg1",
+    "dealer_name": "मनोरमा ट्रैक्टर्स",
+    "model_name": "D135Lx",
+    "horse_power": 39,
+    "asset_cost": 690000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.796
+  },
+  {
+    "doc_id": "173615098_2_pg29",
+    "dealer_name": "S. L. Agarwal & Co.",
+    "model_name": "Farmtrac Champion Xp41",
+    "horse_power": 42,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.733
+  },
+  {
+    "doc_id": "90018900543_None_v1_pg1",
+    "dealer_name": "Vishwakarma Tractors",
+    "model_name": "605 Novo",
+    "horse_power": 49,
+    "asset_cost": 825000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.846
+  },
+  {
+    "doc_id": "172963098_2_pg33",
+    "dealer_name": "Agrawal Trolley And Pumps",
+    "model_name": "Sonalika Tractor Di 730 Till",
+    "horse_power": 26,
+    "asset_cost": 520000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.822
+  },
+  {
+    "doc_id": "90019348125_OTHERS_v1_pg1",
+    "dealer_name": "Shivashankar Marketing",
+    "model_name": "3630 Super Plus",
+    "horse_power": 49,
+    "asset_cost": 1005000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.848
+  },
+  {
+    "doc_id": "90019597614_OTHERS_v1_pg1",
+    "dealer_name": "Sharma Tractors",
+    "model_name": "3630 Ty",
+    "horse_power": 55,
+    "asset_cost": 870000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.713
+  },
+  {
+    "doc_id": "90019365452_1_v1_pg1",
+    "dealer_name": "Sanjivani Traders",
+    "model_name": "3630 Special Edition",
+    "horse_power": 55,
+    "asset_cost": 1080000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.8
+  },
+  {
+    "doc_id": "90019553222_1_v1_pg1",
+    "dealer_name": "Goyat Tractors",
+    "model_name": "F150 Powermaxx",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.685
+  },
+  {
+    "doc_id": "173649319_1_pg35",
+    "dealer_name": "Shri Ganesh Motors",
+    "model_name": "Swaraj 717/724/834/735/843/742/744/855/963 Tractor",
+    "horse_power": 50,
+    "asset_cost": 250000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.853
+  },
+  {
+    "doc_id": "90018680919_175122286_1_pg20",
+    "dealer_name": "Sri Raj Agri Farm Equipment",
+    "model_name": "Massey Ferguson 1035 DI",
+    "horse_power": 49,
+    "asset_cost": 1028000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.634
+  },
+  {
+    "doc_id": "90019347483_1_v1_pg1",
+    "dealer_name": "Jai Kissan Tractors",
+    "model_name": "D1-35",
+    "horse_power": 35,
+    "asset_cost": 535000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.771
+  },
+  {
+    "doc_id": "172922192_2_pg35",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "Tractor Pto 46Hp",
+    "horse_power": 50,
+    "asset_cost": 823870,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.836
+  },
+  {
+    "doc_id": "173473985_1_pg21",
+    "dealer_name": "Sai Om Tractors",
+    "model_name": "Farstrac Super Delux Driver Seat",
+    "horse_power": 47,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.75
+  },
+  {
+    "doc_id": "172818806_3_pg4",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "744 Fe 4X4 N1",
+    "horse_power": null,
+    "asset_cost": 923637,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.791
+  },
+  {
+    "doc_id": "90019153691_OTHERS_v1_pg1",
+    "dealer_name": "M/S. Shri Ram Agency",
+    "model_name": "Farmtrac Tractor Model: Ft 264 Wd-26 Hp",
+    "horse_power": 26,
+    "asset_cost": 650000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.829
+  },
+  {
+    "doc_id": "172903815_1_pg6",
+    "dealer_name": "सोनालिका ट्रैक्टर्स",
+    "model_name": "Di - 42 Rx U2 Hp",
+    "horse_power": null,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.58
+  },
+  {
+    "doc_id": "172427893_3_pg11",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "Swaraj 744 FE",
+    "horse_power": 48,
+    "asset_cost": 801815,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.756
+  },
+  {
+    "doc_id": "172904174_pg2",
+    "dealer_name": "Shinde Tractors",
+    "model_name": "Swaraj 724 Xm Orchard",
+    "horse_power": 24,
+    "asset_cost": 630000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.86
+  },
+  {
+    "doc_id": "90019540351_OTHERS_v1_pg1",
+    "dealer_name": "New Ganja Beej Bhandar",
+    "model_name": "Digitrac Pp03I",
+    "horse_power": 50,
+    "asset_cost": 850000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.657
+  },
+  {
+    "doc_id": "90018824033_175118795_2_pg33",
+    "dealer_name": "Mahindra And Mahindra Ltd.",
+    "model_name": "275 Nbp",
+    "horse_power": 31,
+    "asset_cost": 730115,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.905
+  },
+  {
+    "doc_id": "90019564591_None_v1_pg1",
+    "dealer_name": "Krishna Tractors",
+    "model_name": "Ft U.S.P.R.A.Maxx Hp",
+    "horse_power": 45,
+    "asset_cost": 725000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.822
+  },
+  {
+    "doc_id": "172962352_3_pg9",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "Swaraj 744 FE",
+    "horse_power": 48,
+    "asset_cost": 933754,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.707
+  },
+  {
+    "doc_id": "90019214976_1_v1_pg1",
+    "dealer_name": "Jay Ranchhod Tractor",
+    "model_name": "Powerful-1139 Plus, Hp-41",
+    "horse_power": 41,
+    "asset_cost": 797000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.747
+  },
+  {
+    "doc_id": "172964354_1_pg40",
+    "dealer_name": "मुक्तकाय ट्रैक्सर्स",
+    "model_name": "स्वराज 630 ट्रैक्टर",
+    "horse_power": 21,
+    "asset_cost": 880000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.9
+  },
+  {
+    "doc_id": "172689968_1_pg14",
+    "dealer_name": "श्री देव कृषि इंप्लीमेंट्स",
+    "model_name": "New Holland 3230 NX",
+    "horse_power": 45,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.413
+  },
+  {
+    "doc_id": "172969750_2_pg32",
+    "dealer_name": "Krishna Traders",
+    "model_name": "Powertrac 439 Plus",
+    "horse_power": 45,
+    "asset_cost": 815000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.735
+  },
+  {
+    "doc_id": "90019495644_OTHERS_v1_pg1",
+    "dealer_name": "M/S Akal Purkh Automobiles",
+    "model_name": "Swaraj Tractors",
+    "horse_power": null,
+    "asset_cost": 870000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.697
+  },
+  {
+    "doc_id": "90018818219_Proforma_pg1",
+    "dealer_name": "Mk.Motors",
+    "model_name": "Sonalika International Tractors",
+    "horse_power": null,
+    "asset_cost": 820000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.844
+  },
+  {
+    "doc_id": "90019257491_OTHERS_v1_pg1",
+    "dealer_name": "Maa Tractors",
+    "model_name": "Sonalki Tractot L Dt 55 Vii With Hitch, Deluxe Seat, Hoot, Amber Topline With Service Kit",
+    "horse_power": 55,
+    "asset_cost": 790000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.843
+  },
+  {
+    "doc_id": "90018603703_VEHICLE QUOTATION_pg1",
+    "dealer_name": "Mk.Motors",
+    "model_name": "Dirttth Dooorplusab...Zl......Hp",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.735
+  },
+  {
+    "doc_id": "90019103671_1_v1_pg1",
+    "dealer_name": "Kaushik Automobiles",
+    "model_name": "Ft-60 Powers Maxx",
+    "horse_power": 55,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.575
+  },
+  {
+    "doc_id": "90018884704_OTHERS_v1_pg1",
+    "dealer_name": "Balkrishna Tractors",
+    "model_name": "Eicher Model 495 To 495 H.P Tractor",
+    "horse_power": null,
+    "asset_cost": 845000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.767
+  },
+  {
+    "doc_id": "90018721003_OTHERS_v1_pg1",
+    "dealer_name": "Shubham Motors And Tractors",
+    "model_name": "5210",
+    "horse_power": 50,
+    "asset_cost": 300000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.847
+  },
+  {
+    "doc_id": "90019490936_1_v2_pg1",
+    "dealer_name": "Shirram Tractor",
+    "model_name": "Tiger-55 4Wd",
+    "horse_power": 50,
+    "asset_cost": 1000000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.794
+  },
+  {
+    "doc_id": "173247946_3_pg10",
+    "dealer_name": "M/S. Anand Tractors",
+    "model_name": "V Mv 4501 Vudd 45 Hp",
+    "horse_power": 45,
+    "asset_cost": 1060000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.89
+  },
+  {
+    "doc_id": "90019297167_OTHERS_v1_pg1",
+    "dealer_name": "Sandeep Eicher",
+    "model_name": "Trailer Wheel 4/2",
+    "horse_power": null,
+    "asset_cost": 775000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.864
+  },
+  {
+    "doc_id": "90018416542_1_v1_pg1",
+    "dealer_name": "धरती ट्रैक्स",
+    "model_name": "3620 Special Edition",
+    "horse_power": 50,
+    "asset_cost": 880000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.869
+  },
+  {
+    "doc_id": "90019317135_OTHERS_v1_pg1",
+    "dealer_name": "Nagaur Motors & Tractors",
+    "model_name": "Massey-Ferguson 1035 Di Tractor With Flat Top Fenders",
+    "horse_power": null,
+    "asset_cost": 531900,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.8
+  },
+  {
+    "doc_id": "172749341_2_pg28",
+    "dealer_name": "Sonalika International",
+    "model_name": "Ths Di",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.898
+  },
+  {
+    "doc_id": "90018948531_OTHERS_v1_pg1",
+    "dealer_name": "Suhas Automotives",
+    "model_name": "Mahindra Diesel Agricultural Tractor ...60.5 Dlm...",
+    "horse_power": 60,
+    "asset_cost": 875000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.788
+  },
+  {
+    "doc_id": "90018750491_175077953_1_pg9",
+    "dealer_name": "स्वराज ट्रेक्सर",
+    "model_name": "Swaraj Tractor Model 855 Re",
+    "horse_power": 52,
+    "asset_cost": 830000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.841
+  },
+  {
+    "doc_id": "173145686_1_pg16",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "मैसी-फर्गुसन ट्रैक्टर मॉडल Mf245 Di J- Mahashakti",
+    "horse_power": 50,
+    "asset_cost": 879488,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.784
+  },
+  {
+    "doc_id": "90019006575_OTHERS_v2_pg1",
+    "dealer_name": "सोनालिका इंटरनॅशनल",
+    "model_name": "Sonalika DI 745 III",
+    "horse_power": null,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.781
+  },
+  {
+    "doc_id": "173613227_1_pg39",
+    "dealer_name": "Auto Union (Jodhpur)",
+    "model_name": "Mf/Tafe Tractor Mf 241 Di Ms",
+    "horse_power": null,
+    "asset_cost": 590000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.826
+  },
+  {
+    "doc_id": "90018725471_OTHERS_v1_pg1",
+    "dealer_name": "M/S. Shree Balaji Tractors",
+    "model_name": "Powertrac Tractor",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.75
+  },
+  {
+    "doc_id": "90018583433_175443681_2_pg23",
+    "dealer_name": "Dm,Oaijharsuguda",
+    "model_name": "Di-745 Iii Hdm+ 4Wd",
+    "horse_power": null,
+    "asset_cost": 911769,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.6
+  },
+  {
+    "doc_id": "173444014_3_pg6",
+    "dealer_name": "नायक ऑटो केयर",
+    "model_name": "Eicher Tractor",
+    "horse_power": null,
+    "asset_cost": 820000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.876
+  },
+  {
+    "doc_id": "90019301646_OTHERS_v1_pg1",
+    "dealer_name": "Vijayshree Motors",
+    "model_name": "Mf 6028 Di",
+    "horse_power": 28,
+    "asset_cost": 380000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.868
+  },
+  {
+    "doc_id": "90019288399_OTHERS_v1_pg1",
+    "dealer_name": "सत्यनारायण ट्रेक्स",
+    "model_name": "485 सीएस68",
+    "horse_power": 49,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.89
+  },
+  {
+    "doc_id": "90018591220_None_v1_pg1",
+    "dealer_name": "M/S. Jasman Tractors",
+    "model_name": "245 Di Nbp",
+    "horse_power": 39,
+    "asset_cost": 438000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.729
+  },
+  {
+    "doc_id": "90019864562_OTHERS_v1_pg1",
+    "dealer_name": "Shri Ganga Tractors",
+    "model_name": "Swaraj-742 Xt(45Hp)",
+    "horse_power": 45,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.849
+  },
+  {
+    "doc_id": "90019156509_OTHERS_v1_pg1",
+    "dealer_name": "विराज ऑग्योटेक",
+    "model_name": "Mf9500",
+    "horse_power": null,
+    "asset_cost": 880000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.885
+  },
+  {
+    "doc_id": "172901606_1_pg23",
+    "dealer_name": "Bidhan Tractors",
+    "model_name": "Model Di",
+    "horse_power": 35,
+    "asset_cost": 560000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.849
+  },
+  {
+    "doc_id": "90018752764_175224265_1_pg15",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf - 241 Di Mahashakti",
+    "horse_power": null,
+    "asset_cost": 639000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.755
+  },
+  {
+    "doc_id": "90019261828_OTHERS_v1_pg1",
+    "dealer_name": "आर.एस.जी. ट्रैक्टर्स",
+    "model_name": "सोनालिका इंटरनेशनल ट्रैक्टर Ds-750 Jj Powerplus Oib",
+    "horse_power": 55,
+    "asset_cost": 930000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.863
+  },
+  {
+    "doc_id": "90019260135_OTHERS_v1_pg1",
+    "dealer_name": "Vipin Motors",
+    "model_name": "Digitrac-Pp43T",
+    "horse_power": 50,
+    "asset_cost": 950000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.733
+  },
+  {
+    "doc_id": "90019370158_OTHERS_v1_pg1",
+    "dealer_name": "Shree Traders Authorized Tractor Dealership",
+    "model_name": "Sonalika Tiger",
+    "horse_power": 42,
+    "asset_cost": 670000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.815
+  },
+  {
+    "doc_id": "90018926292_OTHERS_v1_pg1",
+    "dealer_name": "मे.बनकर पाटील ट्रैक्टर्स",
+    "model_name": "Powertrac Tractor",
+    "horse_power": 47,
+    "asset_cost": 761000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.779
+  },
+  {
+    "doc_id": "173689357_2_pg27",
+    "dealer_name": "Patidar Tractors",
+    "model_name": "Swaraj 744 FE",
+    "horse_power": null,
+    "asset_cost": 550000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.84
+  },
+  {
+    "doc_id": "173570479_1_pg26",
+    "dealer_name": "Gs Automobile",
+    "model_name": "Sonalika-121-35",
+    "horse_power": 29,
+    "asset_cost": 580000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.686
+  },
+  {
+    "doc_id": "173692726_2_pg26",
+    "dealer_name": "Raj Auto Traders Pvt. Ltd.",
+    "model_name": "275 Di Xp Plus",
+    "horse_power": 39,
+    "asset_cost": 765000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.774
+  },
+  {
+    "doc_id": "90019423955_OTHERS_v1_pg1",
+    "dealer_name": "Singh Tractors",
+    "model_name": "Dj60Dcrx 08Bpsw060Hp",
+    "horse_power": null,
+    "asset_cost": 999000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.644
+  },
+  {
+    "doc_id": "90019236119_OTHERS_v2_pg1",
+    "dealer_name": "Ak.. Tractors",
+    "model_name": "Mahindra 265 DI",
+    "horse_power": 21,
+    "asset_cost": 633000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.881
+  },
+  {
+    "doc_id": "90018736250_175197828_2_pg31",
+    "dealer_name": "Jeevan & Company",
+    "model_name": "Sonalika Tractors Model Di-745M Powerplus",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.64
+  },
+  {
+    "doc_id": "172823208_1_pg45",
+    "dealer_name": "M/S. Krishna Agro",
+    "model_name": "Mahindra Diesel Agricultural Tractor.605 Novo 4Wd-67Hp.Model Of.57......Hp Including Excise Duty & Local Sales Tax)",
+    "horse_power": 57,
+    "asset_cost": 1160000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.863
+  },
+  {
+    "doc_id": "90019355085_OTHERS_v1_pg1",
+    "dealer_name": "Suhas Automotives",
+    "model_name": "Mahindra Diesel Agricultural Tractor",
+    "horse_power": null,
+    "asset_cost": 770000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.821
+  },
+  {
+    "doc_id": "90019353834_OTHERS_v2_pg1",
+    "dealer_name": "Guru Kirpa Automobiles",
+    "model_name": "Swaraj 855 FE",
+    "horse_power": 49,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.928
+  },
+  {
+    "doc_id": "173152811_1_pg9",
+    "dealer_name": "S.D. Trading Corporation",
+    "model_name": "12.40 Bensley",
+    "horse_power": 49,
+    "asset_cost": 500000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.664
+  },
+  {
+    "doc_id": "90019397354_OTHERS_v1_pg1",
+    "dealer_name": "Sandeep Eicher",
+    "model_name": "24 Hp/242 Extra Premium",
+    "horse_power": 24,
+    "asset_cost": 720000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.841
+  },
+  {
+    "doc_id": "90018894484_OTHERS_v1_pg1",
+    "dealer_name": "M/S Venkatesh Motors",
+    "model_name": "Pro Max",
+    "horse_power": 47,
+    "asset_cost": 975000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.569
+  },
+  {
+    "doc_id": "90019675571_OTHERS_v2_pg1",
+    "dealer_name": "M/S. Shri Ram Tractors",
+    "model_name": "Powertrac 439 Plus",
+    "horse_power": 43,
+    "asset_cost": 500000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.728
+  },
+  {
+    "doc_id": "173308285_1_pg21",
+    "dealer_name": "Kaler & Gill Tractors",
+    "model_name": "Swaraj 744 FE",
+    "horse_power": null,
+    "asset_cost": 788000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.594
+  },
+  {
+    "doc_id": "172810373_2_pg34",
+    "dealer_name": "Vikas Tractors",
+    "model_name": "Eicher 485 Super Plus",
+    "horse_power": null,
+    "asset_cost": 849717,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.76
+  },
+  {
+    "doc_id": "172960227_2_pg30",
+    "dealer_name": "The Odisha Agro Industries Corporation Ltd.",
+    "model_name": "Mf 7235 Di",
+    "horse_power": null,
+    "asset_cost": 666469,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.717
+  },
+  {
+    "doc_id": "173695530_3_pg10",
+    "dealer_name": "Mahindra",
+    "model_name": "Mahindra Yuvo 415 DI",
+    "horse_power": 39,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.86
+  },
+  {
+    "doc_id": "173430097_3_pg4",
+    "dealer_name": "Kissan Tractor Agency",
+    "model_name": "Swaraj Tractor",
+    "horse_power": 29,
+    "asset_cost": 680000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.756
+  },
+  {
+    "doc_id": "90019573521_OTHERS_v2_pg1",
+    "dealer_name": "Sri Guru Tractor Enterprises",
+    "model_name": "Di-42 Tiger",
+    "horse_power": 42,
+    "asset_cost": 708000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.82
+  },
+  {
+    "doc_id": "90019125910_OTHERS_v1_pg1",
+    "dealer_name": "मे.बनकर पाटील ट्रैक्टर्स",
+    "model_name": "Powertrac Tractor Pt Euro 4F",
+    "horse_power": 47,
+    "asset_cost": 765000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.864
+  },
+  {
+    "doc_id": "173681264_1_pg26",
+    "dealer_name": "Balaji Tractors",
+    "model_name": "Sonalika International Tractor Model Dt-55 Dc Oib Ps 2 Wd-55Hp",
+    "horse_power": 55,
+    "asset_cost": 730000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.467
+  },
+  {
+    "doc_id": "90018750491_OTHERS_v2_pg1",
+    "dealer_name": "राजु मशीनरी एण्ड ट्रेक्स",
+    "model_name": "Swaraj 855 FE",
+    "horse_power": 52,
+    "asset_cost": 820000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.831
+  },
+  {
+    "doc_id": "90019738914_OTHERS_v1_pg1",
+    "dealer_name": "Aradhya Tractors",
+    "model_name": "Pt-Euro 50 Ph",
+    "horse_power": 50,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.846
+  },
+  {
+    "doc_id": "90019661354_OTHERS_v1_pg1",
+    "dealer_name": "M/S Shyam Tractors",
+    "model_name": "Solis/Yanmar",
+    "horse_power": 48,
+    "asset_cost": 725000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.888
+  },
+  {
+    "doc_id": "172927572_1_pg18",
+    "dealer_name": "Dharani Motors",
+    "model_name": "Mahindra Tractor 585 Yuvo-Tech+",
+    "horse_power": 49,
+    "asset_cost": 105000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.818
+  },
+  {
+    "doc_id": "173685104_3_pg4",
+    "dealer_name": "Mahindra",
+    "model_name": "Mahindra S45 Yuvo Tech",
+    "horse_power": 43,
+    "asset_cost": 900001,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.788
+  },
+  {
+    "doc_id": "90019073224_1_v1_pg1",
+    "dealer_name": "Ram Singh & Sons",
+    "model_name": "Sonalika DI 60",
+    "horse_power": null,
+    "asset_cost": 915000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.853
+  },
+  {
+    "doc_id": "173175521_3_pg2",
+    "dealer_name": "Jmj Tractor & Equipments",
+    "model_name": "Eicher Tractor Model 557 Prima",
+    "horse_power": 50,
+    "asset_cost": 1100000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.864
+  },
+  {
+    "doc_id": "90019587109_OTHERS_v1_pg1",
+    "dealer_name": "स्वराज टेक्स्टर सेल्स सर्विस स्पेस",
+    "model_name": "Swaraj 855 FE",
+    "horse_power": 52,
+    "asset_cost": 100000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.767
+  },
+  {
+    "doc_id": "90018777756_OTHERS_v1_pg1",
+    "dealer_name": "महिंद्रा ट्रैक्टर्स",
+    "model_name": "S75 Sp Plus",
+    "horse_power": 49,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.854
+  },
+  {
+    "doc_id": "90019664623_OTHERS_v1_pg1",
+    "dealer_name": "Shree Sai Automobiles",
+    "model_name": "Farmtrac Champion 60",
+    "horse_power": 55,
+    "asset_cost": 750000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.858
+  },
+  {
+    "doc_id": "172927528_pg22",
+    "dealer_name": "Yash Tractors",
+    "model_name": "Rx 32 Baagban",
+    "horse_power": 32,
+    "asset_cost": 620000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.842
+  },
+  {
+    "doc_id": "172679320_3_pg18",
+    "dealer_name": "Jay Bhagwati Tractors",
+    "model_name": "Steeltrac 18",
+    "horse_power": null,
+    "asset_cost": 373400,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.75
+  },
+  {
+    "doc_id": "173661108_1_pg38",
+    "dealer_name": "Sri Kalleshwara Tractors",
+    "model_name": "Pt Euro 42 Plus - 45Hp",
+    "horse_power": 45,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.902
+  },
+  {
+    "doc_id": "90018407639_175335053_1_pg16",
+    "dealer_name": "Suhas Automotives",
+    "model_name": "Mahindra Diesel Agricultural Tractor",
+    "horse_power": null,
+    "asset_cost": 875000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.879
+  },
+  {
+    "doc_id": "90018769506_OTHERS_v1_pg1",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf-891 (24 Hp)",
+    "horse_power": 24,
+    "asset_cost": 799652,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.789
+  },
+  {
+    "doc_id": "90018862558_175238148_2_pg33",
+    "dealer_name": "Orissa Agro Industries Corporation Ltd",
+    "model_name": "Saaraj",
+    "horse_power": 48,
+    "asset_cost": 923637,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.35
+  },
+  {
+    "doc_id": "173673066_3_pg5",
+    "dealer_name": "Raj Auto Traders Pvt. Ltd.",
+    "model_name": "Mahindra Model No.275 Nb10 Mico Hp Diesel Engine Agricultural Tractor With Hook & Hood C39 H.P.)",
+    "horse_power": 39,
+    "asset_cost": 730000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.818
+  },
+  {
+    "doc_id": "172938736_1_pg21",
+    "dealer_name": "Chowdhary Tractor",
+    "model_name": "Farmtrac 60 Powermaxx",
+    "horse_power": 55,
+    "asset_cost": 840000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.843
+  },
+  {
+    "doc_id": "90019355736_OTHERS_v1_pg1",
+    "dealer_name": "योग ट्रॅक्टर्स",
+    "model_name": "डी.आय.सिंजन सार्वजनिक हार्म पावर 50 Hp Dt Ht Iii Powerplus 2Wd",
+    "horse_power": 50,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.811
+  },
+  {
+    "doc_id": "172861131_pg6",
+    "dealer_name": "Sai Wheels",
+    "model_name": "John Deere 5050 D",
+    "horse_power": null,
+    "asset_cost": 302000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.77
+  },
+  {
+    "doc_id": "90018407639_OTHERS_v2_pg1",
+    "dealer_name": "Suhas Automotives",
+    "model_name": "Mahindra Diesel Agricultural Tractor 555",
+    "horse_power": 50,
+    "asset_cost": 875000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.873
+  },
+  {
+    "doc_id": "90019377570_4_v1_pg1",
+    "dealer_name": "Vamshi Enterprises",
+    "model_name": "Eicher Air Cooled 24 Hp 242 Model Diesel Tractor",
+    "horse_power": 24,
+    "asset_cost": 800000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.783
+  },
+  {
+    "doc_id": "90018820326_OTHERS_v1_pg1",
+    "dealer_name": "M/S Kidhi Sidhi Motors",
+    "model_name": "F135 Champion",
+    "horse_power": 34,
+    "asset_cost": 540000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.751
+  },
+  {
+    "doc_id": "173601204_1_pg10",
+    "dealer_name": "Jaswant Singh & Sons",
+    "model_name": "One Mahindra 575 Di X800W. Di Diesel",
+    "horse_power": null,
+    "asset_cost": 680000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.801
+  },
+  {
+    "doc_id": "172676445_3_pg6",
+    "dealer_name": "Fatehghar Sahib Tractors",
+    "model_name": "One Mahindra Tractor",
+    "horse_power": 49,
+    "asset_cost": null,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.727
+  },
+  {
+    "doc_id": "172939577_3_pg7",
+    "dealer_name": "Raigarh Automobiles (P) Ltd.",
+    "model_name": "Mahindra Tractor H15 Dl Nbp",
+    "horse_power": 40,
+    "asset_cost": 710001,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.819
+  },
+  {
+    "doc_id": "173431576_1_pg15",
+    "dealer_name": "नेशनल मोटर्स",
+    "model_name": "Mf-1035 Di",
+    "horse_power": null,
+    "asset_cost": 620000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.745
+  },
+  {
+    "doc_id": "90019327563_1_v1_pg1",
+    "dealer_name": "Dharti Tractors",
+    "model_name": "235 02",
+    "horse_power": 39,
+    "asset_cost": 730115,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.772
+  },
+  {
+    "doc_id": "90019716976_OTHERS_v1_pg1",
+    "dealer_name": "Chandra Agencies",
+    "model_name": "Eicher 188, 242 Xtract, 330, 333, 380, 485, E51 S.D.I.",
+    "horse_power": null,
+    "asset_cost": 790000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.814
+  },
+  {
+    "doc_id": "172939172_2_pg34",
+    "dealer_name": "मनप्रीत ट्रेक्स",
+    "model_name": "सोनालिका ट्रैक्स D1.35 Rx Ps",
+    "horse_power": 39,
+    "asset_cost": 755000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.773
+  },
+  {
+    "doc_id": "90019232302_1_v1_pg1",
+    "dealer_name": "Sri Rajalakshmi Agency",
+    "model_name": "Rajsl",
+    "horse_power": 50,
+    "asset_cost": 840000,
+    "region": null,
+    "invoice_date": null,
+    "confidence": 0.866
+  }
+]
