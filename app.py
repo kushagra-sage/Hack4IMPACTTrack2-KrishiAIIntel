@@ -207,6 +207,23 @@ async def extract_invoice(
         # Process invoice
         result = InferenceProcessor.process_invoice(temp_file, doc_id, enhance_image, reasoning_mode)
         
+        # Ingest into RAG knowledge base (non-blocking, fail-safe)
+        try:
+            fields = result.get("fields", {})
+            normalized = normalize_fields(fields)
+            rag_engine.ingest_invoice({
+                "doc_id": doc_id,
+                "dealer_name": normalized.get("dealer_name"),
+                "model_name": normalized.get("model_name"),
+                "horse_power": normalized.get("horse_power"),
+                "asset_cost": normalized.get("asset_cost"),
+                "region": normalized.get("region"),
+                "invoice_date": normalized.get("invoice_date"),
+                "confidence": result.get("confidence", 0),
+            })
+        except Exception:
+            pass  # RAG ingestion is best-effort — never fail the extraction
+        
         # Add total request time (includes file I/O)
         result['total_request_time_sec'] = round(time.time() - request_start, 2)
         result['file_io_time_sec'] = io_time
@@ -282,6 +299,22 @@ async def process_invoice(
         fields = result.get("fields", {})
         signature_info = fields.get("signature", {})
         stamp_info = fields.get("stamp", {})
+        
+        # Ingest into RAG knowledge base (non-blocking, fail-safe)
+        try:
+            normalized = normalize_fields(fields)
+            rag_engine.ingest_invoice({
+                "doc_id": result.get("doc_id", doc_id),
+                "dealer_name": normalized.get("dealer_name"),
+                "model_name": normalized.get("model_name"),
+                "horse_power": normalized.get("horse_power"),
+                "asset_cost": normalized.get("asset_cost"),
+                "region": normalized.get("region"),
+                "invoice_date": normalized.get("invoice_date"),
+                "confidence": result.get("confidence", 0),
+            })
+        except Exception:
+            pass  # RAG ingestion is best-effort — never fail the extraction
         
         # Build text representation of extracted fields
         extracted_text_parts = []

@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sqlite3
+import threading
 from typing import Dict, List, Optional, Tuple
 
 # ─── Lazy imports (heavy libs loaded only when needed) ──────────────────────
@@ -143,6 +144,7 @@ class InvoiceKnowledgeBase:
         self.embed_model = None
         self.sqlite_conn: Optional[sqlite3.Connection] = None
         self._ready = False
+        self._lock = threading.Lock()  # Thread safety for concurrent ingestion
 
     # ─── Initialization ──────────────────────────────────────────────────
 
@@ -163,9 +165,12 @@ class InvoiceKnowledgeBase:
 
     def _load_invoices(self):
         if not os.path.exists(self.db_path):
-            # Try to generate seed data
-            from generate_invoice_db import ensure_invoice_db
-            ensure_invoice_db(self.db_path)
+            # Do NOT auto-process images on startup — just create an empty DB
+            print(f"⚠️  Invoice DB not found at {self.db_path}")
+            print("   Run `python generate_invoice_db.py` offline to populate it.")
+            os.makedirs(os.path.dirname(self.db_path) or ".", exist_ok=True)
+            with open(self.db_path, "w", encoding="utf-8") as f:
+                json.dump([], f)
 
         with open(self.db_path, "r", encoding="utf-8") as f:
             self.invoices = json.load(f)
@@ -194,14 +199,27 @@ class InvoiceKnowledgeBase:
 
     def _build_embeddings(self):
         """Build FAISS index from invoice texts using sentence-transformers."""
-        faiss = _ensure_faiss()
         SentenceTransformer = _ensure_st()
 
         print("🧠 Loading sentence-transformer model …")
         self.embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 
-        print("📐 Encoding invoice texts …")
+        self._rebuild_faiss_index()
+
+    def _rebuild_faiss_index(self):
+        """Rebuild the entire FAISS index from current self.texts.
+        Requires self.embed_model to be loaded already."""
         import numpy as np
+        faiss = _ensure_faiss()
+
+        if not self.texts:
+            # No texts to index — create empty index
+            dim = 384  # all-MiniLM-L6-v2 output dimension
+            self.index = faiss.IndexFlatIP(dim)
+            print("✅ FAISS index built — 0 vectors (empty DB)")
+            return
+
+        print("📐 Encoding invoice texts …")
         embeddings = self.embed_model.encode(self.texts, show_progress_bar=False)
         embeddings = np.array(embeddings, dtype="float32")
 
@@ -247,6 +265,102 @@ class InvoiceKnowledgeBase:
             )
         self.sqlite_conn.commit()
         print(f"✅ SQLite in-memory DB populated — {len(self.invoices)} rows")
+
+    # ─── Dynamic ingestion ───────────────────────────────────────────────
+
+    def ingest_invoice(self, invoice: Dict) -> bool:
+        """
+        Incrementally add a new invoice to the RAG knowledge base.
+        Updates FAISS index, SQLite DB, and persists to invoices_db.json.
+        Thread-safe — can be called from concurrent API requests.
+        If doc_id already exists, updates the record and rebuilds FAISS index.
+
+        Returns True on success, False on failure.
+        """
+        import numpy as np
+
+        doc_id = invoice.get("doc_id")
+        if not doc_id:
+            print("⚠️  Skipping ingestion: invoice has no doc_id")
+            return False
+
+        with self._lock:
+            try:
+                # ── 1. Guard: load embedding model if not yet loaded ──
+                if self.embed_model is None:
+                    SentenceTransformer = _ensure_st()
+                    print("🧠 Loading sentence-transformer model …")
+                    self.embed_model = SentenceTransformer("all-MiniLM-L6-v2")
+
+                # ── 2. Guard: initialize SQLite if not yet created ──
+                if self.sqlite_conn is None:
+                    self._build_sqlite()
+
+                # ── 3. Generate text and validate ──
+                text = self._invoice_to_text(invoice)
+                if not text or not text.strip():
+                    print(f"⚠️  Skipping ingestion for '{doc_id}': empty text")
+                    return False
+
+                # ── 4. Dedup: update in-place if doc_id already exists ──
+                existing_idx = None
+                for i, inv in enumerate(self.invoices):
+                    if inv.get("doc_id") == doc_id:
+                        existing_idx = i
+                        break
+
+                if existing_idx is not None:
+                    # Update existing record
+                    self.invoices[existing_idx] = invoice
+                    self.texts[existing_idx] = text
+                    # Rebuild FAISS index (IndexFlatIP doesn't support update)
+                    print("♻️  Rebuilding FAISS index after update...")
+                    self._rebuild_faiss_index()
+                else:
+                    # New invoice — append and incrementally add to FAISS
+                    self.invoices.append(invoice)
+                    self.texts.append(text)
+
+                    faiss = _ensure_faiss()
+                    embedding = self.embed_model.encode([text], show_progress_bar=False)
+                    embedding = np.array(embedding, dtype="float32")
+                    faiss.normalize_L2(embedding)
+
+                    if self.index is None:
+                        dim = embedding.shape[1]
+                        self.index = faiss.IndexFlatIP(dim)
+
+                    self.index.add(embedding)
+
+                # ── 5. Update SQLite (INSERT OR REPLACE for dedup) ──
+                cur = self.sqlite_conn.cursor()
+                cur.execute(
+                    "INSERT OR REPLACE INTO invoices VALUES (?,?,?,?,?,?,?,?)",
+                    (
+                        doc_id,
+                        invoice.get("dealer_name"),
+                        invoice.get("model_name"),
+                        invoice.get("horse_power"),
+                        invoice.get("asset_cost"),
+                        invoice.get("region"),
+                        invoice.get("invoice_date"),
+                        invoice.get("confidence"),
+                    ),
+                )
+                self.sqlite_conn.commit()
+
+                # ── 6. Persist to JSON file (compact, no indent) ──
+                with open(self.db_path, "w", encoding="utf-8") as f:
+                    json.dump(self.invoices, f, ensure_ascii=False)
+
+                action = "Updated" if existing_idx is not None else "Ingested"
+                print(f"📥 {action} invoice '{doc_id}' in RAG — "
+                      f"total: {len(self.invoices)}, FAISS: {self.index.ntotal}")
+                return True
+
+            except Exception as e:
+                print(f"⚠️  RAG ingestion failed for '{doc_id}': {e}")
+                return False
 
     # ─── Query entry point ───────────────────────────────────────────────
 
