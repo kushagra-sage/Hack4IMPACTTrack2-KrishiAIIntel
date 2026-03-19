@@ -1,0 +1,17 @@
+torch
+transformers
+ultralytics
+pillow
+accelerate
+bitsandbytes
+opencv-python
+pyyaml
+qwen-vl-utils[decord]
+fastapi
+uvicorn[standard]
+python-multipart
+sentence-transformers
+faiss-cpu
+google-generativeai
+rapidfuzz
+pydantic
