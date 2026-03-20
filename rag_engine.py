@@ -17,7 +17,7 @@ _SentenceTransformer = None
 
 # ─── HuggingFace Inference API config ───────────────────────────────────────
 HF_MODEL_ID = "mistralai/Mistral-7B-Instruct-v0.2"
-HF_API_URL = f"https://router.huggingface.co/hf-inference/models/{HF_MODEL_ID}"
+HF_API_URL = "https://router.huggingface.co/hf-inference/v1/chat/completions"
 HF_TIMEOUT_SECONDS = 10
 
 
@@ -477,7 +477,7 @@ class InvoiceKnowledgeBase:
             print("⚠️  HF_TOKEN not set — using fallback answer")
             return self._fallback_answer(context)
 
-        prompt = f"""<s>[INST] You are KrishiIntel AI, an agricultural invoice intelligence assistant.
+        prompt = f"""You are KrishiIntel AI, an agricultural invoice intelligence assistant.
 
 Answer the user's question using ONLY the invoice data provided below.
 
@@ -492,12 +492,14 @@ RULES:
 INVOICE DATA:
 {context}
 
-USER QUESTION: {user_query} [/INST]""" 
+USER QUESTION: {user_query}"""
 
         headers = {
             "Authorization": f"Bearer {hf_token}",
             "Content-Type": "application/json",
         }
+
+        # Router API strictly uses OpenAI message schema
         payload = {
             "inputs": prompt,
             "parameters": {
