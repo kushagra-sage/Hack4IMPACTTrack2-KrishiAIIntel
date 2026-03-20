@@ -1,6 +1,7 @@
 """
 RAG Engine for KrishiIntel AI — Portfolio Intelligence
-FAISS vector store + SQLite aggregation + HuggingFace LLM answer generation.
+FAISS vector store + SQLite aggregation + Groq LLM answer generation.
+Falls back to full-dataset statistical analysis when API is unavailable.
 """
 
 import json
@@ -10,15 +11,13 @@ import sqlite3
 import threading
 import requests
 from typing import Dict, List, Optional, Tuple
+from collections import Counter
+
+from config import GROQ_MODEL, GROQ_API_URL, GROQ_TIMEOUT_SECONDS
 
 # ─── Lazy imports (heavy libs loaded only when needed) ──────────────────────
 _faiss = None
 _SentenceTransformer = None
-
-# ─── HuggingFace Inference API config ───────────────────────────────────────
-HF_MODEL_ID = "mistralai/Mistral-7B-Instruct-v0.2"
-HF_API_URL = "https://router.huggingface.co/hf-inference/v1/chat/completions"
-HF_TIMEOUT_SECONDS = 10
 
 
 def _ensure_faiss():
@@ -36,6 +35,13 @@ def _ensure_st():
         _SentenceTransformer = SentenceTransformer
     return _SentenceTransformer
 
+
+# ─── Query classification keywords ──────────────────────────────────────────
+AGGREGATE_KEYWORDS = [
+    "average", "total", "summary", "portfolio", "trend", "all",
+    "overall", "statistics", "stats", "overview", "report",
+    "count", "how many", "sum", "min", "max",
+]
 
 # ─── SQL keyword routing ─────────────────────────────────────────────────────
 SQL_KEYWORDS = ["average", "count", "total", "sum", "min", "max", "how many"]
@@ -126,8 +132,14 @@ def _detect_sql_intent(query: str) -> Optional[str]:
     return None
 
 
+def _is_aggregate_query(query: str) -> bool:
+    """Determine if a query needs the full dataset (aggregate) or top-K retrieval."""
+    q = query.lower()
+    return any(kw in q for kw in AGGREGATE_KEYWORDS)
+
+
 class InvoiceKnowledgeBase:
-    """FAISS + SQLite + HuggingFace knowledge base over processed invoices."""
+    """FAISS + SQLite + Groq LLM knowledge base over processed invoices."""
 
     def __init__(self, db_path: str = "data/invoices_db.json"):
         self.db_path = db_path
@@ -228,7 +240,7 @@ class InvoiceKnowledgeBase:
 
     def _build_sqlite(self):
         """Populate an in-memory SQLite database with invoice records."""
-        self.sqlite_conn = sqlite3.connect(":memory:")
+        self.sqlite_conn = sqlite3.connect(":memory:", check_same_thread=False)
         cur = self.sqlite_conn.cursor()
         cur.execute("""
             CREATE TABLE invoices (
@@ -359,21 +371,25 @@ class InvoiceKnowledgeBase:
 
     def query(self, user_query: str) -> Dict:
         """
-        Route a user query to SQL or RAG path.
-        Returns: { "answer": str, "sources": list[str] }
+        Route a user query to SQL, full-dataset RAG, or top-K RAG path.
+        Returns: { "answer": str, "sources": list[str], "query_type": str }
         """
         if not self._ready:
-            return {"answer": "RAG engine is not initialized yet.", "sources": []}
+            return {"answer": "RAG engine is not initialized yet.", "sources": [], "query_type": "error"}
 
         q_lower = user_query.lower()
 
-        # Check for SQL keyword routing
+        # 1. Check for SQL keyword routing (exact aggregation)
         if any(kw in q_lower for kw in SQL_KEYWORDS):
             intent = _detect_sql_intent(user_query)
             if intent:
                 return self._run_sql(intent)
 
-        # Fallback to vector retrieval + LLM
+        # 2. Classify: aggregate queries use FULL dataset, specific queries use FAISS
+        if _is_aggregate_query(user_query):
+            return self._aggregate_query(user_query)
+
+        # 3. Specific queries: FAISS top-K retrieval
         return self._rag_query(user_query)
 
     # ─── SQL path ────────────────────────────────────────────────────────
@@ -382,7 +398,7 @@ class InvoiceKnowledgeBase:
         """Execute a predefined SQL query and format the answer."""
         template = _SQL_TEMPLATES.get(intent)
         if not template:
-            return {"answer": "Not enough data available", "sources": []}
+            return {"answer": "Not enough data available", "sources": [], "query_type": "sql"}
 
         sql, answer_fmt = template
         cur = self.sqlite_conn.cursor()
@@ -390,16 +406,16 @@ class InvoiceKnowledgeBase:
             cur.execute(sql)
             rows = cur.fetchall()
         except Exception as e:
-            return {"answer": f"Query error: {str(e)}", "sources": []}
+            return {"answer": f"Query error: {str(e)}", "sources": [], "query_type": "error"}
 
         if not rows:
-            return {"answer": "Not enough data available", "sources": []}
+            return {"answer": "Not enough data available", "sources": [], "query_type": "sql"}
 
         # Single-value result
         if answer_fmt and len(rows) == 1 and len(rows[0]) == 1:
             result = rows[0][0]
             if result is None:
-                return {"answer": "Not enough data available", "sources": []}
+                return {"answer": "Not enough data available", "sources": [], "query_type": "sql"}
             return {
                 "answer": answer_fmt.format(result=result),
                 "sources": [],
@@ -428,13 +444,44 @@ class InvoiceKnowledgeBase:
             "intent": intent,
         }
 
-    # ─── RAG path ────────────────────────────────────────────────────────
+    # ─── Aggregate RAG path (full dataset) ───────────────────────────────
 
-    def _rag_query(self, user_query: str, top_k: int = 7) -> Dict:
+    def _aggregate_query(self, user_query: str) -> Dict:
+        """Use ALL invoices as context for aggregate/summary queries."""
+        if not self.invoices:
+            return {"answer": "No invoice data available in the portfolio.", "sources": [], "query_type": "aggregate"}
+
+        # Build context from ALL invoices
+        context_parts = []
+        source_ids = []
+        for inv in self.invoices:
+            context_parts.append(json.dumps(inv, ensure_ascii=False))
+            source_ids.append(inv.get("doc_id", "unknown"))
+        context = "\n---\n".join(context_parts)
+
+        # Call Groq LLM with full context
+        answer = self._call_llm(user_query, context)
+
+        return {
+            "answer": answer,
+            "sources": source_ids[:10],  # limit source list display
+            "query_type": "aggregate",
+            "total_invoices_analyzed": len(self.invoices),
+        }
+
+    # ─── Top-K RAG path (FAISS retrieval) ────────────────────────────────
+
+    def _rag_query(self, user_query: str, top_k: int = 10) -> Dict:
         """Retrieve top-k invoices via FAISS and generate answer with LLM."""
         import numpy as np
 
         faiss = _ensure_faiss()
+
+        if self.index is None or self.index.ntotal == 0:
+            return {"answer": "No invoice data available.", "sources": [], "query_type": "rag"}
+
+        # Clamp top_k to available invoices
+        actual_k = min(top_k, self.index.ntotal)
 
         # Encode query
         query_vec = self.embed_model.encode([user_query])
@@ -442,7 +489,7 @@ class InvoiceKnowledgeBase:
         faiss.normalize_L2(query_vec)
 
         # Search
-        scores, indices = self.index.search(query_vec, top_k)
+        scores, indices = self.index.search(query_vec, actual_k)
         retrieved = []
         source_ids = []
         for idx in indices[0]:
@@ -451,7 +498,7 @@ class InvoiceKnowledgeBase:
                 source_ids.append(self.invoices[idx].get("doc_id", "unknown"))
 
         if not retrieved:
-            return {"answer": "Not enough data available", "sources": []}
+            return {"answer": "Not enough data available", "sources": [], "query_type": "rag"}
 
         # Build context
         context_parts = []
@@ -459,7 +506,7 @@ class InvoiceKnowledgeBase:
             context_parts.append(json.dumps(inv, ensure_ascii=False))
         context = "\n---\n".join(context_parts)
 
-        # Call LLM (HuggingFace) with automatic fallback
+        # Call LLM (Groq) with automatic fallback
         answer = self._call_llm(user_query, context)
 
         return {
@@ -468,14 +515,16 @@ class InvoiceKnowledgeBase:
             "query_type": "rag",
         }
 
+    # ─── Groq LLM Integration ───────────────────────────────────────────
+
     def _call_llm(self, user_query: str, context: str) -> str:
-        """Generate a grounded answer using HuggingFace Inference API.
+        """Generate a grounded answer using Groq API (llama3-70b-8192).
         Falls back to _fallback_answer on any failure."""
 
-        hf_token = os.environ.get("HF_TOKEN")
-        if not hf_token:
-            print("⚠️  HF_TOKEN not set — using fallback answer")
-            return self._fallback_answer(context)
+        groq_key = os.environ.get("GROQ_API_KEY")
+        if not groq_key:
+            print("⚠️  GROQ_API_KEY not set — using fallback answer")
+            return self._fallback_answer(user_query)
 
         prompt = f"""You are KrishiIntel AI, an agricultural invoice intelligence assistant.
 
@@ -488,6 +537,7 @@ RULES:
 4. Be concise and professional.
 5. When mentioning costs, use ₹ symbol and Indian number formatting.
 6. Reference specific invoice IDs when relevant.
+7. Provide structured insights when answering summary/portfolio questions.
 
 INVOICE DATA:
 {context}
@@ -495,89 +545,131 @@ INVOICE DATA:
 USER QUESTION: {user_query}"""
 
         headers = {
-            "Authorization": f"Bearer {hf_token}",
+            "Authorization": f"Bearer {groq_key}",
             "Content-Type": "application/json",
         }
 
-        # Router API strictly uses OpenAI message schema
         payload = {
-            "inputs": prompt,
-            "parameters": {
-                "max_new_tokens": 300
-            }
+            "model": GROQ_MODEL,
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "You are KrishiIntel AI, an expert agricultural invoice intelligence assistant. Answer concisely using only provided data."
+                },
+                {
+                    "role": "user",
+                    "content": prompt,
+                }
+            ],
+            "max_tokens": 500,
+            "temperature": 0.3,
         }
 
         try:
             response = requests.post(
-                HF_API_URL,
+                GROQ_API_URL,
                 headers=headers,
                 json=payload,
-                timeout=HF_TIMEOUT_SECONDS,
+                timeout=GROQ_TIMEOUT_SECONDS,
             )
 
-            if response.status_code != 200:
-                print(f"⚠️  HF API returned {response.status_code}: {response.text[:200]}")
-                return self._fallback_answer(context)
+            if response.status_code == 429:
+                print("⚠️  Groq API rate limited — using fallback")
+                return self._fallback_answer(user_query)
+
+            if response.status_code >= 500:
+                print(f"⚠️  Groq API server error {response.status_code} — using fallback")
+                return self._fallback_answer(user_query)
+
+            if response.status_code >= 400:
+                print(f"⚠️  Groq API client error {response.status_code}: {response.text[:200]} — using fallback")
+                return self._fallback_answer(user_query)
 
             result = response.json()
-            if isinstance(result, list) and len(result) > 0:
-                answer = result[0].get("generated_text", "").strip()
-            elif isinstance(result, dict):
-                answer = result.get("generated_text", "").strip()
+
+            # OpenAI-compatible response format
+            choices = result.get("choices", [])
+            if choices and len(choices) > 0:
+                answer = choices[0].get("message", {}).get("content", "").strip()
             else:
                 answer = ""
 
             if not answer:
-                return self._fallback_answer(context)
+                print("⚠️  Groq API returned empty response — using fallback")
+                return self._fallback_answer(user_query)
+
             return answer
 
+        except requests.exceptions.Timeout:
+            print("⚠️  Groq API timed out — using fallback")
+            return self._fallback_answer(user_query)
+        except requests.exceptions.ConnectionError:
+            print("⚠️  Groq API connection error — using fallback")
+            return self._fallback_answer(user_query)
         except Exception as e:
-            print(f"⚠️  HF API error: {e}")
-            return self._fallback_answer(context)
+            print(f"⚠️  Groq API unexpected error: {e} — using fallback")
+            return self._fallback_answer(user_query)
 
-    def _fallback_answer(self, context: str) -> str:
-        """Generate a meaningful answer from raw context when the LLM API is unavailable.
-        Parses invoice JSON blocks and computes basic statistics."""
+    # ─── Fallback: Full-dataset statistical answer ───────────────────────
+
+    def _fallback_answer(self, user_query: str) -> str:
+        """Generate a meaningful answer from the FULL dataset when Groq API is unavailable.
+        Analyzes ALL invoices and computes comprehensive statistics."""
         try:
-            # Parse individual invoice JSON blocks separated by ---
-            blocks = context.split("\n---\n")
-            invoices = []
-            for block in blocks:
-                block = block.strip()
-                if not block:
-                    continue
-                try:
-                    invoices.append(json.loads(block))
-                except json.JSONDecodeError:
-                    continue
+            all_invoices = self.invoices if self.invoices else []
 
-            if not invoices:
-                return "Not enough data available"
+            if not all_invoices:
+                return "No invoice data is currently available in the portfolio."
 
-            count = len(invoices)
-            costs = [inv.get("asset_cost") for inv in invoices if inv.get("asset_cost")]
-            models = [inv.get("model_name") for inv in invoices if inv.get("model_name")]
-            dealers = [inv.get("dealer_name") for inv in invoices if inv.get("dealer_name")]
+            count = len(all_invoices)
+            costs = [inv.get("asset_cost") for inv in all_invoices if inv.get("asset_cost") and inv.get("asset_cost") > 0]
+            models = [inv.get("model_name") for inv in all_invoices if inv.get("model_name")]
+            dealers = [inv.get("dealer_name") for inv in all_invoices if inv.get("dealer_name")]
+            hps = [inv.get("horse_power") for inv in all_invoices if inv.get("horse_power") and inv.get("horse_power") > 0]
 
-            parts = [f"I analyzed {count} invoice{'s' if count != 1 else ''} from the portfolio."]
+            parts = [f"Based on analysis of {count} invoice{'s' if count != 1 else ''} in the portfolio:\n"]
 
+            # Cost statistics
             if costs:
                 avg_cost = sum(costs) / len(costs)
-                parts.append(f"The average asset cost is ₹{avg_cost:,.0f}.")
-                parts.append(f"Cost range: ₹{min(costs):,.0f} – ₹{max(costs):,.0f}.")
+                parts.append(f"📊 **Cost Overview:**")
+                parts.append(f"  • Average asset cost: ₹{avg_cost:,.0f}")
+                parts.append(f"  • Cost range: ₹{min(costs):,.0f} – ₹{max(costs):,.0f}")
+                parts.append(f"  • Total portfolio value: ₹{sum(costs):,.0f}")
 
+            # Horse power statistics
+            if hps:
+                avg_hp = sum(hps) / len(hps)
+                parts.append(f"\n🔧 **Horse Power:**")
+                parts.append(f"  • Average HP: {avg_hp:.1f}")
+                parts.append(f"  • Range: {min(hps):.0f} – {max(hps):.0f} HP")
+
+            # Top models
             if models:
-                unique_models = list(set(models))
-                parts.append(f"Tractor models found: {', '.join(unique_models[:5])}.")
+                model_counts = Counter(models).most_common(5)
+                parts.append(f"\n🚜 **Top Tractor Models:**")
+                for model, cnt in model_counts:
+                    parts.append(f"  • {model}: {cnt} invoice{'s' if cnt != 1 else ''}")
 
+            # Top dealers
             if dealers:
-                unique_dealers = list(set(dealers))
-                parts.append(f"Dealers: {', '.join(unique_dealers[:5])}.")
+                dealer_counts = Counter(dealers).most_common(5)
+                parts.append(f"\n🏢 **Top Dealers:**")
+                for dealer, cnt in dealer_counts:
+                    parts.append(f"  • {dealer}: {cnt} invoice{'s' if cnt != 1 else ''}")
 
-            return " ".join(parts)
+            # Insights
+            parts.append(f"\n💡 **Insights:**")
+            if costs and len(costs) >= 2:
+                median_cost = sorted(costs)[len(costs) // 2]
+                parts.append(f"  • Median asset cost is ₹{median_cost:,.0f}, suggesting a mid-range portfolio.")
+            if models:
+                parts.append(f"  • {len(set(models))} unique tractor models across {count} invoices.")
+
+            return "\n".join(parts)
 
         except Exception:
-            return "Not enough data available"
+            return "I analyzed the portfolio but encountered an issue generating the summary. Please try a more specific query."
 
     # ─── Portfolio stats ─────────────────────────────────────────────────
 

@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 const StatCard = ({ icon: Icon, label, value, sub, color = 'primary', delay = 0 }) => {
   const colorMap = {
-    primary: { bg: 'bg-primary-900/20', border: 'border-primary-500/30', text: 'text-primary-400', glow: 'shadow-[0_0_15px_rgba(14,165,233,0.15)]' },
+    primary: { bg: 'bg-green-400/20', border: 'border-green-500/30', text: 'text-agri-accent', glow: 'shadow-[0_0_15px_rgba(14,165,233,0.15)]' },
     green: { bg: 'bg-emerald-900/20', border: 'border-emerald-500/30', text: 'text-emerald-400', glow: 'shadow-[0_0_15px_rgba(16,185,129,0.15)]' },
-    accent: { bg: 'bg-accent-900/20', border: 'border-accent-500/30', text: 'text-accent-400', glow: 'shadow-[0_0_15px_rgba(168,85,247,0.15)]' },
+    accent: { bg: 'bg-green-600/20', border: 'border-agri-accent/30', text: 'text-green-300', glow: 'shadow-[0_0_15px_rgba(168,85,247,0.15)]' },
     amber: { bg: 'bg-amber-900/20', border: 'border-amber-500/30', text: 'text-amber-400', glow: 'shadow-[0_0_15px_rgba(245,158,11,0.15)]' },
   };
   const c = colorMap[color] || colorMap.primary;
@@ -35,10 +35,10 @@ const RankList = ({ title, items, labelKey, valueKey, icon: Icon, delay = 0 }) =
     initial={{ opacity: 0, y: 15 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.4, delay }}
-    className="bg-dark-800/60 border border-dark-600 rounded-xl p-5"
+    className="bg-finance-dark/60 border border-finance-dark rounded-xl p-5"
   >
     <div className="flex items-center gap-2 mb-4">
-      <Icon className="w-4 h-4 text-primary-400" />
+      <Icon className="w-4 h-4 text-agri-accent" />
       <h4 className="text-xs font-bold text-gray-300 uppercase tracking-wider">{title}</h4>
     </div>
     <div className="space-y-2.5">
@@ -49,14 +49,14 @@ const RankList = ({ title, items, labelKey, valueKey, icon: Icon, delay = 0 }) =
           <div key={i}>
             <div className="flex justify-between text-xs mb-1">
               <span className="text-gray-300 truncate max-w-[180px]">{item[labelKey]}</span>
-              <span className="text-primary-400 font-mono font-bold">{item[valueKey]}</span>
+              <span className="text-agri-accent font-mono font-bold">{item[valueKey]}</span>
             </div>
-            <div className="h-1.5 bg-dark-900 rounded-full overflow-hidden">
+            <div className="h-1.5 bg-finance-dark rounded-full overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${pct}%` }}
                 transition={{ duration: 0.6, delay: delay + i * 0.1 }}
-                className="h-full bg-gradient-to-r from-primary-500 to-accent-500 rounded-full"
+                className="h-full bg-gradient-to-r from-green-500 to-agri-accent rounded-full"
               />
             </div>
           </div>
@@ -70,7 +70,7 @@ const PortfolioStats = ({ stats, isLoading }) => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center py-20">
-        <Loader2 className="w-8 h-8 text-primary-400 animate-spin" />
+        <Loader2 className="w-8 h-8 text-agri-accent animate-spin" />
         <span className="ml-3 text-gray-400">Loading portfolio data…</span>
       </div>
     );

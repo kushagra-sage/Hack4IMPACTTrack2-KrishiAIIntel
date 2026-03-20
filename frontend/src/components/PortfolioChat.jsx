@@ -67,15 +67,15 @@ const PortfolioChat = ({ onSendQuery }) => {
   };
 
   return (
-    <div className="flex flex-col h-full min-h-[600px] bg-dark-900/60 rounded-2xl border border-primary-500/20 overflow-hidden backdrop-blur-md">
+    <div className="flex flex-col h-full min-h-[600px] bg-finance-dark/60 rounded-2xl border border-green-500/20 overflow-hidden backdrop-blur-md">
       {/* Header */}
-      <div className="px-6 py-4 bg-gradient-to-r from-primary-900/40 to-accent-900/20 border-b border-primary-500/20 flex items-center gap-3">
-        <div className="p-2 bg-primary-500/20 rounded-xl border border-primary-500/30">
-          <MessageSquare className="w-5 h-5 text-primary-400" />
+      <div className="px-6 py-4 bg-gradient-to-r from-green-400/40 to-green-600/20 border-b border-green-500/20 flex items-center gap-3">
+        <div className="p-2 bg-green-500/20 rounded-xl border border-green-500/30">
+          <MessageSquare className="w-5 h-5 text-agri-accent" />
         </div>
         <div>
           <h3 className="text-sm font-bold text-white uppercase tracking-wider">Portfolio Intelligence</h3>
-          <p className="text-[11px] text-primary-300/60">Ask questions about your invoice portfolio</p>
+          <p className="text-[11px] text-green-400/60">Ask questions about your invoice portfolio</p>
         </div>
       </div>
 
@@ -87,8 +87,8 @@ const PortfolioChat = ({ onSendQuery }) => {
             animate={{ opacity: 1 }}
             className="flex flex-col items-center justify-center h-full text-center py-10"
           >
-            <div className="p-4 bg-primary-500/10 rounded-2xl border border-primary-500/20 mb-5">
-              <Sparkles className="w-10 h-10 text-primary-400" />
+            <div className="p-4 bg-green-500/10 rounded-2xl border border-green-500/20 mb-5">
+              <Sparkles className="w-10 h-10 text-agri-accent" />
             </div>
             <h4 className="text-lg font-bold text-gray-200 mb-2">Ask KrishiIntel AI</h4>
             <p className="text-sm text-gray-500 max-w-md mb-6">
@@ -99,7 +99,7 @@ const PortfolioChat = ({ onSendQuery }) => {
                 <button
                   key={i}
                   onClick={() => handleSend(q)}
-                  className="px-3 py-1.5 text-xs bg-dark-800 border border-dark-600 rounded-full text-gray-400 hover:text-primary-300 hover:border-primary-500/40 transition-all hover:bg-primary-900/20"
+                  className="px-3 py-1.5 text-xs bg-finance-dark border border-finance-dark rounded-full text-gray-400 hover:text-green-400 hover:border-green-500/40 transition-all hover:bg-green-400/20"
                 >
                   {q}
                 </button>
@@ -118,19 +118,18 @@ const PortfolioChat = ({ onSendQuery }) => {
               className={`flex gap-3 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               {msg.role === 'assistant' && (
-                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary-500/20 border border-primary-500/30 flex items-center justify-center mt-1">
-                  <Bot className="w-4 h-4 text-primary-400" />
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-green-500/20 border border-green-500/30 flex items-center justify-center mt-1">
+                  <Bot className="w-4 h-4 text-agri-accent" />
                 </div>
               )}
               <div className={`max-w-[75%] ${msg.role === 'user' ? 'order-1' : ''}`}>
                 <div
-                  className={`rounded-2xl px-4 py-3 text-sm leading-relaxed ${
-                    msg.role === 'user'
-                      ? 'bg-primary-600/30 border border-primary-500/30 text-primary-100'
-                      : msg.isError
+                  className={`rounded-2xl px-4 py-3 text-sm leading-relaxed ${msg.role === 'user'
+                    ? 'bg-green-400/30 border border-green-500/30 text-green-400'
+                    : msg.isError
                       ? 'bg-red-900/20 border border-red-500/30 text-red-200'
-                      : 'bg-dark-800/80 border border-dark-600 text-gray-200'
-                  }`}
+                      : 'bg-finance-dark/80 border border-finance-dark text-gray-200'
+                    }`}
                 >
                   <p className="whitespace-pre-wrap">{msg.content}</p>
                 </div>
@@ -141,7 +140,7 @@ const PortfolioChat = ({ onSendQuery }) => {
                     {msg.sources.map((src, j) => (
                       <span
                         key={j}
-                        className="text-[10px] font-mono px-2 py-0.5 bg-dark-800 border border-dark-600 rounded-full text-gray-400"
+                        className="text-[10px] font-mono px-2 py-0.5 bg-finance-dark border border-finance-dark rounded-full text-gray-400"
                       >
                         {src}
                       </span>
@@ -151,19 +150,18 @@ const PortfolioChat = ({ onSendQuery }) => {
                 {/* Query type badge */}
                 {msg.queryType && msg.role === 'assistant' && (
                   <div className="mt-1.5 px-1">
-                    <span className={`text-[9px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full ${
-                      msg.queryType === 'sql'
-                        ? 'bg-emerald-900/30 text-emerald-400 border border-emerald-500/30'
-                        : 'bg-accent-900/30 text-accent-400 border border-accent-500/30'
-                    }`}>
+                    <span className={`text-[9px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full ${msg.queryType === 'sql'
+                      ? 'bg-emerald-900/30 text-emerald-400 border border-emerald-500/30'
+                      : 'bg-green-600/30 text-green-300 border border-agri-accent/30'
+                      }`}>
                       {msg.queryType === 'sql' ? '⚡ SQL Query' : '🧠 RAG + AI'}
                     </span>
                   </div>
                 )}
               </div>
               {msg.role === 'user' && (
-                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-accent-500/20 border border-accent-500/30 flex items-center justify-center mt-1 order-2">
-                  <User className="w-4 h-4 text-accent-400" />
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-agri-accent/20 border border-agri-accent/30 flex items-center justify-center mt-1 order-2">
+                  <User className="w-4 h-4 text-green-300" />
                 </div>
               )}
             </motion.div>
@@ -177,14 +175,14 @@ const PortfolioChat = ({ onSendQuery }) => {
             animate={{ opacity: 1 }}
             className="flex gap-3"
           >
-            <div className="w-8 h-8 rounded-lg bg-primary-500/20 border border-primary-500/30 flex items-center justify-center">
-              <Bot className="w-4 h-4 text-primary-400 animate-pulse" />
+            <div className="w-8 h-8 rounded-lg bg-green-500/20 border border-green-500/30 flex items-center justify-center">
+              <Bot className="w-4 h-4 text-agri-accent animate-pulse" />
             </div>
-            <div className="bg-dark-800/80 border border-dark-600 rounded-2xl px-4 py-3">
+            <div className="bg-finance-dark/80 border border-finance-dark rounded-2xl px-4 py-3">
               <div className="flex gap-1.5">
-                <div className="w-2 h-2 bg-primary-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                <div className="w-2 h-2 bg-primary-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                <div className="w-2 h-2 bg-primary-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                <div className="w-2 h-2 bg-agri-accent rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                <div className="w-2 h-2 bg-agri-accent rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                <div className="w-2 h-2 bg-agri-accent rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
               </div>
             </div>
           </motion.div>
@@ -194,7 +192,7 @@ const PortfolioChat = ({ onSendQuery }) => {
       </div>
 
       {/* Input Area */}
-      <div className="p-4 border-t border-primary-500/20 bg-dark-800/60">
+      <div className="p-4 border-t border-green-500/20 bg-finance-dark/60">
         <div className="flex gap-3">
           <input
             ref={inputRef}
@@ -204,12 +202,12 @@ const PortfolioChat = ({ onSendQuery }) => {
             onKeyDown={handleKeyDown}
             placeholder="Ask about your invoice portfolio..."
             disabled={isLoading}
-            className="flex-1 bg-dark-900/80 border border-dark-600 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/30 transition-all disabled:opacity-50"
+            className="flex-1 bg-finance-dark/80 border border-finance-dark rounded-xl px-4 py-3 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-green-500/50 focus:ring-1 focus:ring-green-500/30 transition-all disabled:opacity-50"
           />
           <button
             onClick={() => handleSend()}
             disabled={!input.trim() || isLoading}
-            className="px-4 py-3 bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white rounded-xl transition-all disabled:opacity-30 disabled:cursor-not-allowed shadow-[0_0_15px_rgba(14,165,233,0.2)] hover:shadow-[0_0_20px_rgba(14,165,233,0.4)]"
+            className="px-4 py-3 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-agri-accent text-white rounded-xl transition-all disabled:opacity-30 disabled:cursor-not-allowed shadow-[0_0_15px_rgba(14,165,233,0.2)] hover:shadow-[0_0_20px_rgba(14,165,233,0.4)]"
           >
             <Send className="w-5 h-5" />
           </button>

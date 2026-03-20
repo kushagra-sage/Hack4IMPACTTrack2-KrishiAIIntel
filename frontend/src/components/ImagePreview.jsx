@@ -22,7 +22,7 @@ const ImagePreview = ({ imageData, fileName, onResolutionChange, onEnhanceToggle
       // Calculate new dimensions based on resolution
       const newWidth = Math.floor(img.width * (resolution / 100));
       const newHeight = Math.floor(img.height * (resolution / 100));
-      
+
       setCurrentDimensions({ width: newWidth, height: newHeight });
 
       // Set display size (max 400px width for preview)
@@ -56,33 +56,32 @@ const ImagePreview = ({ imageData, fileName, onResolutionChange, onEnhanceToggle
   };
 
   return (
-    <div className="glass-morphism-card p-5 space-y-4 hover:border-primary-500/30 transition-colors duration-300">
+    <div className="glass-morphism-card p-5 space-y-4 hover:border-green-500/30 transition-colors duration-300">
       <div className="flex items-center justify-between">
         <h4 className="text-sm font-semibold text-gray-200 truncate pr-2">Preview: {fileName}</h4>
-        <span className="text-xs font-mono text-primary-400 bg-dark-800 px-2 py-1 rounded-full border border-dark-600">
+        <span className="text-xs font-mono text-agri-accent bg-finance-dark px-2 py-1 rounded-full border border-finance-dark">
           {currentDimensions.width} × {currentDimensions.height}px
         </span>
       </div>
 
-      <div className="bg-dark-900/50 rounded-xl p-3 flex justify-center border border-dark-600">
+      <div className="bg-finance-dark/50 rounded-xl p-3 flex justify-center border border-finance-dark">
         <canvas ref={canvasRef} className="rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.5)]" />
       </div>
 
       {/* Enhance Button */}
       <button
         onClick={() => onEnhanceToggle && onEnhanceToggle()}
-        className={`w-full py-2.5 px-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 text-sm ${
-          isEnhanced
-            ? 'bg-accent-600/20 border border-accent-500 text-accent-300 shadow-[0_0_15px_rgba(168,85,247,0.2)]'
-            : 'bg-dark-800 border border-dark-600 hover:border-accent-500/50 hover:bg-dark-700 text-gray-300'
-        }`}
+        className={`w-full py-2.5 px-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 text-sm ${isEnhanced
+          ? 'bg-green-600/20 border border-agri-accent text-green-600 shadow-[0_0_15px_rgba(168,85,247,0.2)]'
+          : 'bg-finance-dark border border-finance-dark hover:border-agri-accent/50 hover:bg-finance-dark text-gray-300'
+          }`}
       >
-        <Sparkles className={`w-4 h-4 ${isEnhanced ? 'text-accent-400' : ''}`} />
+        <Sparkles className={`w-4 h-4 ${isEnhanced ? 'text-green-300' : ''}`} />
         {isEnhanced ? 'Enhanced Mode Active' : 'Enhance Image'}
       </button>
 
       {isEnhanced && (
-        <div className="bg-accent-900/20 border border-accent-500/30 rounded-lg p-3 text-xs text-accent-200 leading-relaxed">
+        <div className="bg-green-600/20 border border-agri-accent/30 rounded-lg p-3 text-xs text-green-600 leading-relaxed">
           <span className="mr-1">✨</span> Image will be enhanced with OpenCV (CLAHE, denoising, sharpening) before processing
         </div>
       )}
@@ -90,18 +89,17 @@ const ImagePreview = ({ imageData, fileName, onResolutionChange, onEnhanceToggle
       {/* Reasoning Mode Toggle */}
       <button
         onClick={() => onReasoningModeToggle && onReasoningModeToggle()}
-        className={`w-full py-2.5 px-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 text-sm ${
-          useReasoning
-            ? 'bg-primary-600/20 border border-primary-500 text-primary-300 shadow-[0_0_15px_rgba(14,165,233,0.2)]'
-            : 'bg-dark-800 border border-dark-600 hover:border-primary-500/50 hover:bg-dark-700 text-gray-300'
-        }`}
+        className={`w-full py-2.5 px-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 text-sm ${useReasoning
+          ? 'bg-green-400/20 border border-green-500 text-green-400 shadow-[0_0_15px_rgba(14,165,233,0.2)]'
+          : 'bg-finance-dark border border-finance-dark hover:border-green-500/50 hover:bg-finance-dark text-gray-300'
+          }`}
       >
-        <Brain className={`w-4 h-4 ${useReasoning ? 'text-primary-400' : ''}`} />
+        <Brain className={`w-4 h-4 ${useReasoning ? 'text-agri-accent' : ''}`} />
         {useReasoning ? 'Reasoning Analysis Active' : 'Simple Analysis Mode'}
       </button>
 
       {useReasoning && (
-        <div className="bg-primary-900/20 border border-primary-500/30 rounded-lg p-3 text-xs text-primary-200 leading-relaxed">
+        <div className="bg-green-400/20 border border-green-500/30 rounded-lg p-3 text-xs text-green-400 leading-relaxed">
           <span className="mr-1">🧠</span> VLM will use 2-step reasoning: analyze document structure, then extract fields
         </div>
       )}
@@ -109,25 +107,25 @@ const ImagePreview = ({ imageData, fileName, onResolutionChange, onEnhanceToggle
       <div className="space-y-3 pt-2">
         <div className="flex items-center justify-between">
           <label className="text-sm font-medium text-gray-300 flex items-center gap-2">
-            <SlidersHorizontal className="w-4 h-4 text-primary-400" />
+            <SlidersHorizontal className="w-4 h-4 text-agri-accent" />
             Processing Resolution
           </label>
-          <span className="text-sm font-bold text-primary-400">{resolution}%</span>
+          <span className="text-sm font-bold text-agri-accent">{resolution}%</span>
         </div>
-        
+
         <input
-            type="range"
-            min="10"
-            max="100"
-            value={resolution}
-            onChange={handleResolutionChange}
-            className="w-full h-2 rounded-lg cursor-pointer bg-dark-600 appearance-none"
-            style={{ 
-              background: `linear-gradient(to right, #0ea5e9 0%, #0ea5e9 ${resolution}%, #374151 ${resolution}%, #374151 100%)`
-            }}
+          type="range"
+          min="10"
+          max="100"
+          value={resolution}
+          onChange={handleResolutionChange}
+          className="w-full h-2 rounded-lg cursor-pointer bg-finance-dark appearance-none"
+          style={{
+            background: `linear-gradient(to right, #0ea5e9 0%, #0ea5e9 ${resolution}%, #374151 ${resolution}%, #374151 100%)`
+          }}
         />
 
-        
+
         <div className="flex justify-between text-xs text-gray-500 font-medium">
           <span>Speed Optimized</span>
           <span>Quality Optimized</span>
@@ -140,16 +138,16 @@ const ImagePreview = ({ imageData, fileName, onResolutionChange, onEnhanceToggle
         )}
       </div>
 
-      <div className="text-xs text-gray-400 space-y-2 pt-2 border-t border-dark-600/50">
+      <div className="text-xs text-gray-400 space-y-2 pt-2 border-t border-finance-dark/50">
         <div className="flex justify-between items-center">
           <span>Original Size:</span>
-          <span className="font-mono bg-dark-800 px-2 py-0.5 rounded border border-dark-700 text-gray-300">
+          <span className="font-mono bg-finance-dark px-2 py-0.5 rounded border border-finance-dark text-gray-300">
             {originalDimensions.width} × {originalDimensions.height}px
           </span>
         </div>
         <div className="flex justify-between items-center">
           <span>Processing Size:</span>
-          <span className="font-mono bg-primary-900/20 px-2 py-0.5 rounded border border-primary-500/30 text-primary-400">
+          <span className="font-mono bg-green-400/20 px-2 py-0.5 rounded border border-green-500/30 text-agri-accent">
             {currentDimensions.width} × {currentDimensions.height}px
           </span>
         </div>

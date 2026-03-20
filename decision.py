@@ -2,6 +2,8 @@
 Decision Support Module for KrishiIntel AI
 Computes EMI options, recommends a plan, and classifies loan eligibility
 based on extracted invoice fields (asset_cost, horse_power, model_name).
+
+Supports Smart Mode (auto-configured) and Manual Mode (user-specified).
 """
 
 from typing import Dict, Optional, Any
@@ -31,8 +33,9 @@ def compute_emi(principal: float, annual_rate: float, tenure_months: int) -> flo
     r = annual_rate / (12 * 100)  # monthly rate as decimal
     if r == 0:
         return round(principal / tenure_months, 2)
-    factor = math.pow(1 + r, tenure_months)
-    emi = (principal * r * factor) / (factor - 1)
+    # math.pow((1 + r), n)
+    factor = math.pow((1 + r), tenure_months)
+    emi = principal * r * (factor / (factor - 1))
     return round(emi, 2)
 
 
@@ -41,6 +44,141 @@ def get_emi_options(asset_cost: float, annual_rate: float = DEFAULT_ANNUAL_RATE)
     return {
         label: compute_emi(asset_cost, annual_rate, months)
         for label, months in TENURE_OPTIONS.items()
+    }
+
+
+# ─── Smart Mode ─────────────────────────────────────────────────────────────
+
+def compute_emi_smart(asset_cost: float) -> Dict[str, Any]:
+    """
+    Smart Mode: auto-set interest rate and tenure based on asset cost bracket.
+
+    Cost Brackets:
+        ≤ ₹5L   → 9.5% rate, recommend 5-year tenure
+        ≤ ₹10L  → 10.5% rate, recommend 7-year tenure
+        > ₹10L  → 12.0% rate, recommend 9-year tenure
+
+    Returns dict with EMI value, total payable, explanation, and all options.
+    """
+    if asset_cost <= 0:
+        return {
+            "emi": 0,
+            "total_payable": 0,
+            "explanation": "Invalid asset cost. Please provide a positive value.",
+            "rate": 0,
+            "tenure_months": 0,
+            "all_options": {},
+        }
+
+    # Auto-select rate and tenure based on cost bracket
+    if asset_cost <= 500_000:
+        rate = 9.5
+        recommended_tenure = "5_years"
+        bracket = "Economy (≤ ₹5L)"
+    elif asset_cost <= 1_000_000:
+        rate = 10.5
+        recommended_tenure = "7_years"
+        bracket = "Standard (₹5L – ₹10L)"
+    else:
+        rate = 12.0
+        recommended_tenure = "9_years"
+        bracket = "Premium (> ₹10L)"
+
+    tenure_months = TENURE_OPTIONS[recommended_tenure]
+    emi = compute_emi(asset_cost, rate, tenure_months)
+    total_payable = round(emi * tenure_months, 2)
+    total_interest = round(total_payable - asset_cost, 2)
+
+    # Compute all options at the auto-selected rate
+    all_options = {}
+    for label, months in TENURE_OPTIONS.items():
+        opt_emi = compute_emi(asset_cost, rate, months)
+        opt_total = round(opt_emi * months, 2)
+        all_options[label] = {
+            "emi": opt_emi,
+            "total_payable": opt_total,
+            "total_interest": round(opt_total - asset_cost, 2),
+        }
+
+    explanation = (
+        f"For an asset cost of ₹{asset_cost:,.0f} ({bracket}), "
+        f"the recommended plan is {recommended_tenure.replace('_', ' ')} "
+        f"at {rate}% p.a. interest. "
+        f"Monthly EMI: ₹{emi:,.0f}. "
+        f"Total payable: ₹{total_payable:,.0f} "
+        f"(interest component: ₹{total_interest:,.0f})."
+    )
+
+    return {
+        "emi": emi,
+        "total_payable": total_payable,
+        "total_interest": total_interest,
+        "rate": rate,
+        "tenure_months": tenure_months,
+        "recommended_tenure": recommended_tenure,
+        "bracket": bracket,
+        "explanation": explanation,
+        "all_options": all_options,
+    }
+
+
+# ─── Manual Mode ────────────────────────────────────────────────────────────
+
+def compute_emi_manual(
+    principal: float,
+    annual_rate: float,
+    tenure_months: int,
+) -> Dict[str, Any]:
+    """
+    Manual Mode: user specifies principal, rate, and tenure.
+
+    Returns dict with EMI value, total payable, and explanation.
+    """
+    if principal <= 0:
+        return {
+            "emi": 0,
+            "total_payable": 0,
+            "total_interest": 0,
+            "explanation": "Invalid principal amount. Please provide a positive value.",
+        }
+
+    if tenure_months <= 0:
+        return {
+            "emi": 0,
+            "total_payable": 0,
+            "total_interest": 0,
+            "explanation": "Invalid tenure. Please provide a positive number of months.",
+        }
+
+    if annual_rate < 0 or annual_rate > 50:
+        return {
+            "emi": 0,
+            "total_payable": 0,
+            "total_interest": 0,
+            "explanation": "Interest rate must be between 0% and 50%.",
+        }
+
+    emi = compute_emi(principal, annual_rate, tenure_months)
+    total_payable = round(emi * tenure_months, 2)
+    total_interest = round(total_payable - principal, 2)
+    years = tenure_months / 12
+
+    explanation = (
+        f"For a principal of ₹{principal:,.0f} at {annual_rate}% p.a. "
+        f"over {tenure_months} months ({years:.1f} years): "
+        f"Monthly EMI is ₹{emi:,.0f}. "
+        f"Total payable: ₹{total_payable:,.0f}. "
+        f"Total interest: ₹{total_interest:,.0f}."
+    )
+
+    return {
+        "emi": emi,
+        "total_payable": total_payable,
+        "total_interest": total_interest,
+        "principal": principal,
+        "annual_rate": annual_rate,
+        "tenure_months": tenure_months,
+        "explanation": explanation,
     }
 
 

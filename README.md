@@ -111,12 +111,12 @@ KrishiAIIntel is an **end-to-end AI pipeline** that converts raw invoice images 
 | ✍️ **Signature & Stamp Detection** | YOLO-based object detection with bounding box coordinates for authenticity verification |
 | 🧠 **Vision-Language Understanding** | Qwen2.5-VL-7B processes complex, noisy, and handwritten invoice images with chain-of-thought reasoning |
 | 🔄 **Real-Time Normalization** | Fuzzy matching and rule-based validation standardize extracted fields against known entities |
-| 💬 **RAG-Powered Portfolio Chat** | Ask natural-language questions about your invoice corpus — routed to SQL aggregation or FAISS + LLM retrieval |
+| 💬 **RAG-Powered Portfolio Chat** | Ask natural-language questions about your invoice corpus — routed to SQL aggregation or FAISS + **Groq Llama-3** retrieval |
 | 📊 **Portfolio Analytics Dashboard** | Real-time stats: total invoices, average cost, top models, top dealers, regional distribution |
-| 🏦 **Loan Decision Support** | Instant EMI calculations across 5/7/9-year tenures, eligibility classification, and downloadable reports |
-| 📥 **Incremental Learning** | Every new invoice processed is automatically ingested into the knowledge base — the system grows smarter with use |
-| 🖼️ **Resolution & Enhancement Controls** | Adjust image resolution and apply OpenCV preprocessing before inference for optimal extraction |
-| ⚡ **Chain-of-Thought Mode** | Optional "reason" mode activates step-by-step VLM reasoning for complex or ambiguous invoices |
+| 🏦 **Loan Decision Support** | Instant EMI calculations (Smart & Manual Modes), eligibility classification, and structured PDF reports |
+| 📥 **Incremental Learning** | Every new invoice processed is automatically ingested into the FAISS/SQLite knowledge base — the system grows smarter instantly |
+| 🖼️ **Resolution & Enhancement Controls** | Adjust image resolution and apply OpenCV preprocessing before inference |
+| ⚡ **Fail-Safe Processing** | Global exception handling ensures the API never crashes, instantly falling back to statistical analytics if the LLM API fails |
 
 ---
 
@@ -130,9 +130,9 @@ KrishiAIIntel is an **end-to-end AI pipeline** that converts raw invoice images 
 │   │ Invoice       │   │ Portfolio         │   │ Loan Decision          │  │
 │   │ Analysis Tab  │   │ Intelligence Tab  │   │ Support Cards          │  │
 │   │              │   │                  │   │                        │  │
-│   │ • Upload     │   │ • Stats Dashboard│   │ • EMI Calculator       │  │
-│   │ • Preview    │   │ • Chat Interface │   │ • Eligibility Status   │  │
-│   │ • Results    │   │ • Example Queries│   │ • Report Download      │  │
+│   │ • Upload     │   │ • Stats Dashboard│   │ • Smart EMI Calculator   │  │
+│   │ • Preview    │   │ • Chat Interface │   │ • Eligibility Status     │  │
+│   │ • Results    │   │ • Example Queries│   │ • PDF Report Generation  │  │
 │   └──────┬───────┘   └────────┬─────────┘   └───────────┬────────────┘  │
 │          │                    │                          │                │
 └──────────┼────────────────────┼──────────────────────────┼────────────────┘
@@ -145,18 +145,22 @@ KrishiAIIntel is an **end-to-end AI pipeline** that converts raw invoice images 
 │   /process-invoice ─┤                                                    │
 │   /extract_batch ───┤  ┌────────────────────────────────────────────┐    │
 │                     ├─▶│  Inference Engine                          │    │
-│                     │  │  YOLO → Qwen2.5-VL → Normalization        │    │
+│                     │  │  YOLO → Qwen2.5-VL → Normalization         │    │
 │                     │  └───────────────┬────────────────────────────┘    │
-│                     │                  │                                  │
-│                     │                  ▼  (auto-ingest)                   │
+│                     │                  │                                 │
+│                     │                  ▼  (auto-ingest)                  │
 │   /chat ────────────┤  ┌────────────────────────────────────────────┐    │
-│   /portfolio/stats ─┤─▶│  RAG Engine                               │    │
-│                     │  │  FAISS + SQLite + Mistral 7B (HF API)     │    │
+│   /portfolio/stats ─┤─▶│  RAG Engine                                │    │
+│   /add-to-portfolio │  │  FAISS + SQLite + Groq (Llama-3-70B)       │    │
 │                     │  └────────────────────────────────────────────┘    │
 │   /decision-support ┤  ┌────────────────────────────────────────────┐    │
-│                     ├─▶│  Decision Engine                          │    │
-│   /generate-report ─┘  │  EMI calc + Eligibility + Report gen      │    │
-│                        └────────────────────────────────────────────┘    │
+│   /emi/smart        ├─▶│  Decision Engine                           │    │
+│   /emi/manual       │  │  EMI calc + Eligibility                    │    │
+│                     │  └───────────────┬────────────────────────────┘    │
+│                     │                  ▼                                 │
+│   /generate-report-pdf ┌────────────────────────────────────────────┐    │
+│   /generate-batch-report-pdf │  PDF Generator (ReportLab)              │    │
+│                     │  └────────────────────────────────────────────┘    │
 │                                                                          │
 └──────────────────────────────────────────────────────────────────────────┘
 ```
@@ -189,19 +193,17 @@ The processed invoice is **automatically ingested** into the RAG knowledge base:
 - Structured fields are inserted/updated in the **in-memory SQLite** database
 - The JSON persistence layer is updated for durability
 
-Duplicate `doc_id` entries are detected and updated in-place — the FAISS index is rebuilt to prevent stale vectors.
-
 ### Step 5 — Query & Analyze
 Users switch to the **Portfolio Intelligence** tab to:
 - View **real-time dashboard** stats (total invoices, average cost, top models, regional distribution)
 - Ask **natural-language questions** via the chat interface (e.g., _"What is the average cost of Mahindra tractors?"_)
-- The query router intelligently selects between **SQL aggregation** (for COUNT/AVG/SUM queries) and **FAISS retrieval + LLM generation** (for semantic questions)
+- The query router intelligently selects between **aggregate routing** (analyzing the full 495+ invoice dataset) and **FAISS retrieval** (for specific questions). Answers are generated in under 3 seconds via the **Groq API**.
 
-### Step 6 — Loan Decision Support
-For each processed invoice, the system calculates:
-- **EMI options** across 5, 7, and 9-year tenures at 10.5% annual interest
-- **Eligibility classification**: High / Moderate / Review Required
-- **Downloadable HTML report** with all extracted data and recommendations
+### Step 6 — Loan Decision Support & PDF Generation
+For each processed invoice, the system acts as a financial analyst:
+- Calculates **EMI options** using mathematically precise formulas (supports Smart bracket auto-selection or Manual override).
+- Classifies loan **Eligibility**: High / Moderate / Review Required based on HP and Cost rules.
+- Generates a **professional, structured PDF document** via `reportlab`, fully styled with data tables and verification checks. This is available for both single invoices and merged batches.
 
 ---
 
@@ -215,14 +217,11 @@ For each processed invoice, the system calculates:
 | **Quantization** | BitsAndBytes (NF4, 4-bit) | Reduces VRAM from ~28GB to ~8GB without quality loss |
 | **Embeddings** | Sentence-Transformers (`all-MiniLM-L6-v2`) | Convert invoice text to dense vectors for retrieval |
 | **Vector Store** | FAISS (IndexFlatIP) | Cosine-similarity search over invoice embeddings |
-| **Aggregation DB** | SQLite (in-memory) | SQL-based portfolio analytics (COUNT, AVG, SUM) |
-| **LLM Generation** | Mistral-7B-Instruct (HuggingFace API) | Grounded answer generation from retrieved context + offline fallback |
+| **Aggregation DB** | SQLite (in-memory) | High-speed portfolio analytics (COUNT, AVG, SUM) |
+| **LLM Generation** | Groq API (Llama-3-70B) | Ultra-fast inference with deterministic offline fallback |
+| **PDF Generation** | ReportLab + PyPDF2 | Professional document and batch report rendering |
 | **Normalization** | RapidFuzz + rule engine | Fuzzy matching and field validation |
-| **Image Processing** | OpenCV + Pillow | Optional enhancement preprocessing |
 | **Frontend** | React 18 + Vite | Modern SPA with tab-based navigation |
-| **UI Framework** | Tailwind CSS + Framer Motion | Dark themed UI with glassmorphism and animations |
-| **3D Visuals** | Three.js / React Three Fiber | Ambient 3D particle background |
-| **Deployment** | Docker + HuggingFace Spaces | Containerized deployment with GPU support |
 
 ---
 
@@ -232,14 +231,14 @@ For each processed invoice, the system calculates:
 - Python 3.10+
 - CUDA-capable GPU with ≥10 GB VRAM
 - Node.js 18+
-- HuggingFace API token (for LLM generation — system works offline via fallback)
+- Groq API token (for LLM generation — system works offline via fallback)
 
 ### Backend
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/KrishiAIIntel.git
-cd KrishiAIIntel
+git clone https://github.com/KrishiAIIntel/invoice-vision.git
+cd invoice-vision
 
 # Create virtual environment
 python -m venv venv
@@ -249,8 +248,8 @@ source venv/bin/activate        # Linux/macOS
 # Install dependencies
 pip install -r requirements.txt
 
-# Set environment variable for HuggingFace LLM (optional — fallback works without it)
-export HF_TOKEN="your-huggingface-token"
+# Set environment variable for Groq Fast LLM
+export GROQ_API_KEY="your-groq-api-key"
 
 # (Optional) Pre-build the RAG database from existing invoices
 python build_rag_db.py

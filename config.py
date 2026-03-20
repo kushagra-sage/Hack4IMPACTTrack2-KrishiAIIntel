@@ -47,3 +47,8 @@ Extract structured information from Indian tractor invoices using AI.
 - Provides confidence scores and cost estimates
 """
 API_VERSION = "1.0.0"
+
+# ─── Groq LLM Configuration ────────────────────────────────────────────────
+GROQ_MODEL = "llama3-70b-8192"
+GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
+GROQ_TIMEOUT_SECONDS = 10

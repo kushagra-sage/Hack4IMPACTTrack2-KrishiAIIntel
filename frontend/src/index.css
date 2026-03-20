@@ -10,7 +10,9 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0B0F19; /* Dark futuristic background */
+  background: linear-gradient(135deg, #0B3D2E, #1E293B);
+  background-attachment: fixed;
+  /* Keeps gradient full-screen when scrolling */
   color: #e2e8f0;
   min-height: 100vh;
 }
@@ -18,11 +20,12 @@ body {
 /* Glassmorphism Panel styles */
 .glass-morphism {
   background: rgba(17, 24, 39, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
 }
 
 .glass-morphism-card {
@@ -145,6 +148,7 @@ input[type="range"].slider::-moz-range-thumb:hover {
     opacity: 0;
     transform: translateY(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -152,9 +156,12 @@ input[type="range"].slider::-moz-range-thumb:hover {
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 10px rgba(14, 165, 233, 0.2);
   }
+
   50% {
     box-shadow: 0 0 20px rgba(14, 165, 233, 0.4), 0 0 30px rgba(14, 165, 233, 0.15);
   }
@@ -171,5 +178,29 @@ input[type="range"].slider::-moz-range-thumb:hover {
 /* Tab transition */
 .tab-indicator {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth scroll for auto-scroll after processing */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Step pulse animation for Under the Hood */
+@keyframes stepPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.step-pulse {
+  animation: stepPulse 2.5s ease-in-out infinite;
 }

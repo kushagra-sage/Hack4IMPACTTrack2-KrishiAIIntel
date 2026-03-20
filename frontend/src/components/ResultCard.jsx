@@ -16,23 +16,23 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
   // Function to crop image regions
   const cropRegion = (img, coords, scaleX, scaleY) => {
     if (!coords || coords.length === 0) return null;
-    
+
     const [x1, y1, x2, y2] = coords[0];
     const width = (x2 - x1) * scaleX;
     const height = (y2 - y1) * scaleY;
-    
+
     const cropCanvas = document.createElement('canvas');
     cropCanvas.width = width;
     cropCanvas.height = height;
     const cropCtx = cropCanvas.getContext('2d');
-    
+
     // Draw the cropped region
     cropCtx.drawImage(
       img,
       x1, y1, x2 - x1, y2 - y1,
       0, 0, width, height
     );
-    
+
     return cropCanvas.toDataURL();
   };
 
@@ -94,7 +94,7 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
         ctx.strokeStyle = '#ef4444';
         ctx.lineWidth = 3;
         ctx.setLineDash([5, 5]);
-        
+
         result.signature_coords.forEach(coords => {
           const [x1, y1, x2, y2] = coords;
           ctx.strokeRect(
@@ -116,7 +116,7 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
         ctx.strokeStyle = '#3b82f6';
         ctx.lineWidth = 3;
         ctx.setLineDash([5, 5]);
-        
+
         result.stamp_coords.forEach(coords => {
           const [x1, y1, x2, y2] = coords;
           ctx.strokeRect(
@@ -155,11 +155,11 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
       setPreviewDimensions({ width: newWidth, height: newHeight });
 
       ctx.drawImage(img, 0, 0, newWidth, newHeight);
-      
+
       // Generate adjusted data URL
       const adjustedUrl = canvas.toDataURL('image/jpeg', 0.95);
       setAdjustedDataUrl(adjustedUrl);
-      
+
       // Update the current image data to reflect resolution change
       setCurrentImageData(adjustedUrl);
     };
@@ -191,19 +191,19 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
   return (
     <div className="glass-morphism overflow-hidden mb-8 group">
       {/* Header */}
-      <div className="bg-dark-800/80 border-b border-primary-500/20 px-6 py-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/10 to-accent-600/10 pointer-events-none" />
+      <div className="bg-finance-dark/80 border-b border-green-500/20 px-6 py-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-green-600/10 pointer-events-none" />
         <div className="flex items-center justify-between relative z-10">
           <div>
             <h3 className="text-lg font-bold text-white flex items-center text-glow">
-              <svg className="w-5 h-5 mr-3 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-5 h-5 mr-3 text-agri-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               {result.filename}
             </h3>
             {result.pageNumber && (
-              <p className="text-primary-300 text-sm mt-1 flex items-center">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent-400 mr-2 shadow-[0_0_5px_#a855f7]" />
+              <p className="text-green-400 text-sm mt-1 flex items-center">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-300 mr-2 shadow-[0_0_5px_#a855f7]" />
                 Page {result.pageNumber}
               </p>
             )}
@@ -212,7 +212,7 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
             <button
               onClick={() => onReprocess(result, resolution, adjustedDataUrl)}
               disabled={isProcessing}
-              className="bg-primary-500/20 hover:bg-primary-500/30 text-primary-200 border border-primary-500/30 px-4 py-2 rounded-lg text-sm font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-[0_0_15px_rgba(14,165,233,0.15)] hover:shadow-[0_0_20px_rgba(14,165,233,0.25)]"
+              className="bg-green-500/20 hover:bg-green-500/30 text-green-400 border border-green-500/30 px-4 py-2 rounded-lg text-sm font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-[0_0_15px_rgba(14,165,233,0.15)] hover:shadow-[0_0_20px_rgba(14,165,233,0.25)]"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -230,20 +230,20 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
         {/* Image with bounding boxes */}
         <div className="space-y-5 relative z-10">
           <h4 className="text-lg font-bold text-gray-200 flex items-center tracking-wide">
-            <svg className="w-5 h-5 mr-3 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 mr-3 text-agri-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             Document Preview
           </h4>
-          
+
           {/* Resolution Slider */}
-          <div className="bg-dark-800/80 rounded-xl p-5 border border-dark-600 shadow-inner">
+          <div className="bg-finance-dark/80 rounded-xl p-5 border border-finance-dark shadow-inner">
             <div className="flex items-center justify-between mb-4">
               <label className="text-sm font-semibold text-gray-300 flex items-center gap-2">
-                <SlidersHorizontal className="w-4 h-4 text-primary-400" />
+                <SlidersHorizontal className="w-4 h-4 text-agri-accent" />
                 Adjust Resolution
               </label>
-              <span className="text-sm font-bold text-primary-400 bg-primary-900/40 px-2 py-1 rounded border border-primary-500/20">{resolution}%</span>
+              <span className="text-sm font-bold text-agri-accent bg-green-400/40 px-2 py-1 rounded border border-green-500/20">{resolution}%</span>
             </div>
             <input
               type="range"
@@ -252,21 +252,21 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
               step="5"
               value={resolution}
               onChange={(e) => setResolution(parseInt(e.target.value))}
-              className="w-full h-2 rounded-lg appearance-none cursor-pointer bg-dark-600"
+              className="w-full h-2 rounded-lg appearance-none cursor-pointer bg-finance-dark"
               style={{ background: `linear-gradient(to right, #0ea5e9 0%, #0ea5e9 ${resolution}%, #374151 ${resolution}%, #374151 100%)` }}
               disabled={isProcessing}
             />
             <div className="flex justify-between text-xs text-gray-500 mt-3 font-medium">
               <span>Fast Analysis</span>
-              <span className="text-gray-400 font-mono text-[10px] uppercase border border-dark-600 px-1 rounded">{previewDimensions.width} × {previewDimensions.height}px</span>
+              <span className="text-gray-400 font-mono text-[10px] uppercase border border-finance-dark px-1 rounded">{previewDimensions.width} × {previewDimensions.height}px</span>
               <span>High Precision</span>
             </div>
           </div>
 
-          <div className="relative bg-dark-900/60 rounded-xl p-4 flex justify-center items-center border border-dark-600/50 shadow-[0_0_20px_rgba(0,0,0,0.5)_inset]">
+          <div className="relative bg-finance-dark/60 rounded-xl p-4 flex justify-center items-center border border-finance-dark/50 shadow-[0_0_20px_rgba(0,0,0,0.5)_inset]">
             <canvas ref={canvasRef} className="max-w-full h-auto rounded-lg shadow-lg" />
             {isProcessing && (
-              <div className="absolute inset-0 flex items-center justify-center bg-dark-900/50 backdrop-blur-[2px] rounded-xl">
+              <div className="absolute inset-0 flex items-center justify-center bg-finance-dark/50 backdrop-blur-[2px] rounded-xl">
                 <div className="scanning-line"></div>
               </div>
             )}
@@ -281,8 +281,8 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
             )}
             {result.stamp_coords && result.stamp_coords.length > 0 && (
               <div className="flex items-center bg-blue-900/20 px-3 py-1.5 rounded-full border border-blue-500/30">
-                <div className="w-3 h-3 rounded-full bg-primary-500 mr-2 shadow-[0_0_8px_#0ea5e9]"></div>
-                <span className="text-primary-200">Stamp Detected</span>
+                <div className="w-3 h-3 rounded-full bg-green-500 mr-2 shadow-[0_0_8px_#0ea5e9]"></div>
+                <span className="text-green-400">Stamp Detected</span>
               </div>
             )}
           </div>
@@ -291,71 +291,71 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
         {/* Extracted Information */}
         <div className="space-y-5 relative z-10">
           <h4 className="text-lg font-bold text-gray-200 flex items-center tracking-wide">
-            <svg className="w-5 h-5 mr-3 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 mr-3 text-agri-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
             Extracted Intelligence
           </h4>
-          
-          <div className="bg-dark-900/40 rounded-xl p-5 border border-dark-600 shadow-inner space-y-4">
+
+          <div className="bg-finance-dark/40 rounded-xl p-5 border border-finance-dark shadow-inner space-y-4">
             {/* Performance Metrics */}
             <div className="grid grid-cols-3 gap-3">
               {result.processing_time !== undefined && (
-                <div className="bg-dark-800 rounded-xl p-3 shadow-md border border-dark-600 text-center hover:border-primary-500/30 transition-colors">
+                <div className="bg-finance-dark rounded-xl p-3 shadow-md border border-finance-dark text-center hover:border-green-500/30 transition-colors">
                   <div className="text-[10px] uppercase tracking-wider font-semibold text-gray-400 mb-1">Time Elapsed</div>
-                  <div className="text-lg font-bold text-primary-400 font-mono">{result.processing_time.toFixed(2)}s</div>
+                  <div className="text-lg font-bold text-agri-accent font-mono">{result.processing_time.toFixed(2)}s</div>
                 </div>
               )}
               {result.confidence !== undefined && (
-                <div className="bg-dark-800 rounded-xl p-3 shadow-md border border-dark-600 text-center hover:border-green-500/30 transition-colors">
+                <div className="bg-finance-dark rounded-xl p-3 shadow-md border border-finance-dark text-center hover:border-green-500/30 transition-colors">
                   <div className="text-[10px] uppercase tracking-wider font-semibold text-gray-400 mb-1">Confidence Score</div>
                   <div className="text-lg font-bold text-green-400 font-mono text-glow">{(result.confidence * 100).toFixed(1)}%</div>
                 </div>
               )}
               {result.cost_estimate_usd !== undefined && (
-                <div className="bg-dark-800 rounded-xl p-3 shadow-md border border-dark-600 text-center hover:border-accent-500/30 transition-colors">
+                <div className="bg-finance-dark rounded-xl p-3 shadow-md border border-finance-dark text-center hover:border-agri-accent/30 transition-colors">
                   <div className="text-[10px] uppercase tracking-wider font-semibold text-gray-400 mb-1">API Cost Estimate</div>
-                  <div className="text-lg font-bold text-accent-400 font-mono underline decoration-accent-500/30 underline-offset-2">${result.cost_estimate_usd.toFixed(4)}</div>
+                  <div className="text-lg font-bold text-green-300 font-mono underline decoration-agri-accent/30 underline-offset-2">${result.cost_estimate_usd.toFixed(4)}</div>
                 </div>
               )}
             </div>
 
-            <div className="bg-dark-800 rounded-xl p-4 shadow-md border border-dark-600/80">
-              <div className="flex items-center gap-2 mb-3 border-b border-dark-600 pb-2">
-                <FileOutput className="w-4 h-4 text-primary-400" />
+            <div className="bg-finance-dark rounded-xl p-4 shadow-md border border-finance-dark/80">
+              <div className="flex items-center gap-2 mb-3 border-b border-finance-dark pb-2">
+                <FileOutput className="w-4 h-4 text-agri-accent" />
                 <h5 className="text-[11px] font-bold text-gray-300 uppercase tracking-widest">Structured Output</h5>
               </div>
-              <div className="text-sm text-gray-300 whitespace-pre-wrap max-h-96 overflow-y-auto font-mono bg-dark-900/80 p-4 rounded-lg border border-dark-700 custom-scrollbar shadow-inner leading-relaxed">
+              <div className="text-sm text-gray-300 whitespace-pre-wrap max-h-96 overflow-y-auto font-mono bg-finance-dark/80 p-4 rounded-lg border border-finance-dark custom-scrollbar shadow-inner leading-relaxed">
                 {result.extracted_text || 'No text extracted'}
               </div>
             </div>
 
             {/* Reasoning Output (Chain of Thought) */}
             {result.timing_breakdown?.reasoning_output && (
-              <div className="bg-primary-900/10 rounded-xl border border-primary-500/20 overflow-hidden text-glow">
+              <div className="bg-green-400/10 rounded-xl border border-green-500/20 overflow-hidden text-glow">
                 <button
                   onClick={() => setShowReasoning(!showReasoning)}
-                  className="w-full px-4 py-3 flex items-center justify-between hover:bg-primary-900/20 transition-colors"
+                  className="w-full px-4 py-3 flex items-center justify-between hover:bg-green-400/20 transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <Brain className="w-5 h-5 text-primary-400 drop-shadow-[0_0_8px_#38bdf8]" />
-                    <h5 className="text-[11px] font-bold text-primary-300 uppercase tracking-widest">
+                    <Brain className="w-5 h-5 text-agri-accent drop-shadow-[0_0_8px_#38bdf8]" />
+                    <h5 className="text-[11px] font-bold text-green-400 uppercase tracking-widest">
                       VLM Neural Reasoning Analysis
                     </h5>
                   </div>
                   {showReasoning ? (
-                    <ChevronUp className="w-5 h-5 text-primary-400" />
+                    <ChevronUp className="w-5 h-5 text-agri-accent" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-primary-400" />
+                    <ChevronDown className="w-5 h-5 text-agri-accent" />
                   )}
                 </button>
                 {showReasoning && (
                   <div className="px-5 pb-5">
-                    <div className="text-[11px] text-primary-400/80 mb-3 uppercase tracking-wider">
+                    <div className="text-[11px] text-agri-accent/80 mb-3 uppercase tracking-wider">
                       Internal processing steps before structured output generation
                     </div>
-                    <div className="text-sm text-primary-100/90 whitespace-pre-wrap max-h-96 overflow-y-auto font-mono bg-dark-900/60 p-4 rounded-lg border border-primary-500/20 shadow-inner custom-scrollbar relative">
-                      <div className="absolute top-0 left-0 w-1 h-full bg-primary-500/50" />
+                    <div className="text-sm text-green-400/90 whitespace-pre-wrap max-h-96 overflow-y-auto font-mono bg-finance-dark/60 p-4 rounded-lg border border-green-500/20 shadow-inner custom-scrollbar relative">
+                      <div className="absolute top-0 left-0 w-1 h-full bg-green-500/50" />
                       {result.timing_breakdown.reasoning_output}
                     </div>
                   </div>
@@ -365,7 +365,7 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
 
             {/* Detection Status */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-dark-800 rounded-xl p-4 shadow-md border border-dark-600">
+              <div className="bg-finance-dark rounded-xl p-4 shadow-md border border-finance-dark">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-gray-300 tracking-wide">Signature</span>
                   {result.signature_coords && result.signature_coords.length > 0 ? (
@@ -374,23 +374,23 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
                       Detected
                     </span>
                   ) : (
-                    <span className="inline-flex items-center px-2.5 py-1 rounded bg-dark-700 text-[11px] font-bold text-gray-400 border border-dark-600 uppercase tracking-wider opacity-70">
+                    <span className="inline-flex items-center px-2.5 py-1 rounded bg-finance-dark text-[11px] font-bold text-gray-400 border border-finance-dark uppercase tracking-wider opacity-70">
                       Not Found
                     </span>
                   )}
                 </div>
               </div>
 
-              <div className="bg-dark-800 rounded-xl p-4 shadow-md border border-dark-600">
+              <div className="bg-finance-dark rounded-xl p-4 shadow-md border border-finance-dark">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-gray-300 tracking-wide">Stamp</span>
                   {result.stamp_coords && result.stamp_coords.length > 0 ? (
-                    <span className="inline-flex items-center px-2.5 py-1 rounded bg-primary-900/20 text-[11px] font-bold text-primary-400 border border-primary-500/30 uppercase tracking-wider text-glow">
+                    <span className="inline-flex items-center px-2.5 py-1 rounded bg-green-400/20 text-[11px] font-bold text-agri-accent border border-green-500/30 uppercase tracking-wider text-glow">
                       <CheckCircle2 className="w-3.5 h-3.5 mr-1" />
                       Detected
                     </span>
                   ) : (
-                    <span className="inline-flex items-center px-2.5 py-1 rounded bg-dark-700 text-[11px] font-bold text-gray-400 border border-dark-600 uppercase tracking-wider opacity-70">
+                    <span className="inline-flex items-center px-2.5 py-1 rounded bg-finance-dark text-[11px] font-bold text-gray-400 border border-finance-dark uppercase tracking-wider opacity-70">
                       Not Found
                     </span>
                   )}
@@ -400,8 +400,8 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
 
             {/* Cropped Signature and Stamp */}
             {(signatureCrop || stampCrop) && (
-              <div className="bg-dark-800 rounded-xl p-5 shadow-md border border-dark-600">
-                <h5 className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-4 border-b border-dark-600 pb-2">Isolated Visual Elements</h5>
+              <div className="bg-finance-dark rounded-xl p-5 shadow-md border border-finance-dark">
+                <h5 className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-4 border-b border-finance-dark pb-2">Isolated Visual Elements</h5>
                 <div className="grid grid-cols-2 gap-5">
                   {signatureCrop && (
                     <div className="space-y-3">
@@ -409,18 +409,18 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
                         <span className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-[0_0_5px_#ef4444]" />
                         Signature Region
                       </div>
-                      <div className="border border-red-500/20 rounded-xl p-2 bg-dark-900/50 shadow-inner group overflow-hidden">
+                      <div className="border border-red-500/20 rounded-xl p-2 bg-finance-dark/50 shadow-inner group overflow-hidden">
                         <img src={signatureCrop} alt="Signature" className="w-full h-auto filter grayscale group-hover:grayscale-0 transition-all duration-500 hover:scale-105" />
                       </div>
                     </div>
                   )}
                   {stampCrop && (
                     <div className="space-y-3">
-                      <div className="text-[10px] font-bold text-primary-400 uppercase tracking-widest flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary-500 shadow-[0_0_5px_#0ea5e9]" />
+                      <div className="text-[10px] font-bold text-agri-accent uppercase tracking-widest flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#0ea5e9]" />
                         Stamp Region
                       </div>
-                      <div className="border border-primary-500/20 rounded-xl p-2 bg-dark-900/50 shadow-inner group overflow-hidden">
+                      <div className="border border-green-500/20 rounded-xl p-2 bg-finance-dark/50 shadow-inner group overflow-hidden">
                         <img src={stampCrop} alt="Stamp" className="w-full h-auto filter grayscale group-hover:grayscale-0 transition-all duration-500 hover:scale-105" />
                       </div>
                     </div>
@@ -431,21 +431,21 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
 
             {/* Coordinates Info */}
             {(result.signature_coords?.length > 0 || result.stamp_coords?.length > 0) && (
-              <div className="bg-dark-800 rounded-xl p-4 shadow-md border border-dark-600 opacity-80 hover:opacity-100 transition-opacity">
+              <div className="bg-finance-dark rounded-xl p-4 shadow-md border border-finance-dark opacity-80 hover:opacity-100 transition-opacity">
                 <h5 className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-3">Bounding Box Coordinates</h5>
                 <div className="text-xs space-y-2 font-mono">
                   {result.signature_coords?.length > 0 && (
                     <div className="flex gap-2 items-start">
                       <span className="font-semibold text-red-500 bg-red-900/20 px-1 rounded">SIG:</span>
-                      <code className="text-gray-400 break-all bg-dark-900/50 px-2 py-0.5 rounded border border-dark-700 shadow-inner flex-1">
+                      <code className="text-gray-400 break-all bg-finance-dark/50 px-2 py-0.5 rounded border border-finance-dark shadow-inner flex-1">
                         {JSON.stringify(result.signature_coords)}
                       </code>
                     </div>
                   )}
                   {result.stamp_coords?.length > 0 && (
                     <div className="flex gap-2 items-start mt-2">
-                      <span className="font-semibold text-primary-500 bg-primary-900/20 px-1 rounded">STM:</span>
-                      <code className="text-gray-400 break-all bg-dark-900/50 px-2 py-0.5 rounded border border-dark-700 shadow-inner flex-1">
+                      <span className="font-semibold text-green-500 bg-green-400/20 px-1 rounded">STM:</span>
+                      <code className="text-gray-400 break-all bg-finance-dark/50 px-2 py-0.5 rounded border border-finance-dark shadow-inner flex-1">
                         {JSON.stringify(result.stamp_coords)}
                       </code>
                     </div>
@@ -456,7 +456,7 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
           </div>
         </div>
       </div>
-      
+
       {/* Hidden canvas for resolution preview generation */}
       <canvas ref={previewCanvasRef} style={{ display: 'none' }} />
     </div>

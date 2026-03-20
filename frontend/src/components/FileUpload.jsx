@@ -67,9 +67,8 @@ const FileUpload = ({ onFilesSelected, disabled }) => {
     <div className="w-full space-y-6">
       {/* Upload Zone */}
       <div
-        className={`upload-zone relative rounded-2xl p-10 text-center cursor-pointer ${
-          dragActive ? 'drag-active' : ''
-        } ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+        className={`upload-zone relative rounded-2xl p-6 text-center cursor-pointer ${dragActive ? 'drag-active' : ''
+          } ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
         onDragEnter={handleDrag}
         onDragLeave={handleDrag}
         onDragOver={handleDrag}
@@ -85,22 +84,22 @@ const FileUpload = ({ onFilesSelected, disabled }) => {
           className="hidden"
           disabled={disabled}
         />
-        
+
         <div className="flex flex-col items-center justify-center space-y-4 relative z-10">
-          <div className="p-5 bg-primary-500/10 rounded-full border border-primary-500/30 group-hover:scale-110 transition-transform duration-300">
-            <Upload className="w-12 h-12 text-primary-400" />
+          <div className="p-5 bg-green-500/10 rounded-full border border-green-500/30 group-hover:scale-110 transition-transform duration-300">
+            <Upload className="w-12 h-12 text-agri-accent" />
           </div>
-          
+
           <div>
             <p className="text-xl font-bold text-gray-200 mb-2 tracking-wide">
               Drop Document Here
             </p>
-            <p className="text-sm text-primary-200/60 font-medium">
+            <p className="text-sm text-green-400/60 font-medium">
               Click to browse or drag and drop
             </p>
           </div>
 
-          <div className="flex items-center gap-3 text-xs text-primary-300/50 mt-4 bg-dark-800/50 px-4 py-2 rounded-full border border-dark-600">
+          <div className="flex items-center gap-3 text-xs text-green-400/50 mt-4 bg-finance-dark/50 px-4 py-2 rounded-full border border-finance-dark">
             <ImageIcon className="w-4 h-4" />
             <span>Images & PDF</span>
             <span>•</span>
@@ -114,7 +113,7 @@ const FileUpload = ({ onFilesSelected, disabled }) => {
       {selectedFiles.length > 0 && (
         <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
           <div className="flex items-center justify-between px-2">
-            <h3 className="text-sm font-semibold text-primary-200 uppercase tracking-widest">
+            <h3 className="text-sm font-semibold text-green-400 uppercase tracking-widest">
               Queued Documents ({selectedFiles.length})
             </h3>
             <button
@@ -129,18 +128,18 @@ const FileUpload = ({ onFilesSelected, disabled }) => {
             {selectedFiles.map((file, index) => (
               <div
                 key={index}
-                className="flex items-center justify-between bg-dark-800/60 backdrop-blur-md p-4 rounded-xl border border-primary-500/20 hover:border-primary-400/50 hover:bg-dark-800/80 transition-all group"
+                className="flex items-center justify-between bg-finance-dark/60 backdrop-blur-md p-4 rounded-xl border border-green-500/20 hover:border-agri-accent/50 hover:bg-finance-dark/80 transition-all group"
               >
                 <div className="flex items-center space-x-4 flex-1 min-w-0">
-                  <div className="flex-shrink-0 p-2 bg-dark-700/50 rounded-lg">
+                  <div className="flex-shrink-0 p-2 bg-finance-dark/50 rounded-lg">
                     {file.type === 'application/pdf' ? (
-                      <FileText className="w-6 h-6 text-accent-400" />
+                      <FileText className="w-6 h-6 text-green-300" />
                     ) : (
-                      <ImageIcon className="w-6 h-6 text-primary-400" />
+                      <ImageIcon className="w-6 h-6 text-agri-accent" />
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-gray-200 truncate group-hover:text-primary-300 transition-colors">
+                    <p className="text-sm font-medium text-gray-200 truncate group-hover:text-green-400 transition-colors">
                       {file.name}
                     </p>
                     <p className="text-xs text-gray-500 mt-1">
@@ -163,9 +162,9 @@ const FileUpload = ({ onFilesSelected, disabled }) => {
           <button
             onClick={handleProcess}
             disabled={disabled}
-            className="w-full relative group overflow-hidden bg-dark-800 border border-primary-500/30 text-white font-bold py-4 px-6 rounded-xl transition-all shadow-[0_0_20px_rgba(14,165,233,0.15)] hover:shadow-[0_0_30px_rgba(14,165,233,0.3)] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3 mt-4"
+            className="w-full relative group overflow-hidden bg-finance-dark border border-green-500/30 text-white font-bold py-4 px-6 rounded-xl transition-all shadow-[0_0_20px_rgba(14,165,233,0.15)] hover:shadow-[0_0_30px_rgba(14,165,233,0.3)] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3 mt-4"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-accent-600 opacity-80 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 opacity-80 group-hover:opacity-100 transition-opacity" />
             <Upload className="w-5 h-5 relative z-10" />
             <span className="relative z-10 tracking-widest uppercase text-sm">Initiate Analysis ({selectedFiles.length})</span>
           </button>
