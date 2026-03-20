@@ -139,3 +139,32 @@ export async function generateReport(fields, decisionSupport, docId) {
   return response.data;
 }
 
+/**
+ * Generate an invoice analysis report (PDF).
+ * Returns a Blob.
+ */
+export async function generateReportPDF(fields, decisionSupport, docId) {
+  const response = await api.post('/generate-report-pdf', {
+    fields,
+    decision_support: decisionSupport,
+    doc_id: docId,
+  }, {
+    responseType: 'blob'
+  });
+  return response.data;
+}
+
+/**
+ * Generate a merged batch PDF for multiple invoices.
+ * Returns a Blob.
+ */
+export async function generateBatchReportPDF(invoices) {
+    // invoices: Array of { fields, decision_support, doc_id }
+    const response = await api.post('/generate-batch-report-pdf', {
+      invoices
+    }, {
+      responseType: 'blob'
+    });
+    return response.data;
+  }
+

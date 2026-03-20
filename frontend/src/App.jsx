@@ -17,7 +17,8 @@ import { convertFileToImages, dataUrlToBlob } from './utils/fileConverter';
 import {
   processSingleInvoice,
   getDecisionSupport,
-  generateReport,
+  generateReportPDF,
+  generateBatchReportPDF,
   getPortfolioStats,
   chatQuery
 } from './utils/api';
@@ -291,14 +292,11 @@ function App() {
     }
   };
 
-  const handleDownloadReport = async (fields, decisionData) => {
+  const handleDownloadReport = async (fields, decisionData, docId) => {
     try {
-      const responseData = await generateReport(fields, decisionData?.decision_support, "doc_id_placeholder");
+      const blob = await generateReportPDF(fields, decisionData?.decision_support, docId);
 
-      let blob;
-      if (responseData instanceof Blob) {
-        blob = responseData;
-      } else {
+      if (!(blob instanceof Blob)) {
         console.warn("Backend didn't return a Blob for the report.");
         return;
       }
@@ -306,14 +304,45 @@ function App() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `Loan_Report_${fields.dealer_name || 'Dealer'}.pdf`;
+      a.download = `KrishiIntel_Report_${docId || 'Invoice'}.pdf`;
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
     } catch (err) {
       console.error('Report generation error:', err);
-      setError('Failed to generate report');
+      setError('Failed to generate PDF report');
+    }
+  };
+
+  const handleDownloadBatchReport = async () => {
+    try {
+      // Collect results that have fields
+      const validResults = results.filter(r => r.success && r.fields);
+      if (validResults.length === 0) {
+        setError("No processed invoices to include in batch report.");
+        return;
+      }
+
+      const invoices = validResults.map(r => ({
+        fields: r.fields,
+        decision_support: decisionDataMap[r.key]?.decision_support,
+        doc_id: r.doc_id || r.key
+      }));
+
+      const blob = await generateBatchReportPDF(invoices);
+
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `KrishiIntel_Batch_Report.pdf`;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (err) {
+      console.error('Batch report generation error:', err);
+      setError('Failed to generate batch PDF report');
     }
   };
 
@@ -321,7 +350,6 @@ function App() {
   const appTabs = [
     { id: 'home', label: 'Home Page', icon: null },
     { id: 'processing', label: 'Invoice Processing', icon: UploadCloud },
-    { id: 'analytics', label: 'Decision Support', icon: BarChart3 },
     { id: 'portfolio', label: 'Portfolio Insights', icon: Briefcase },
   ];
 
@@ -544,7 +572,10 @@ function App() {
                         {results.length} {results.length === 1 ? 'Record' : 'Records'} Processed
                       </span>
                       {isBatchMode && (
-                        <button className="bg-white text-finance-dark hover:bg-agri-accent border border-agri-accent/50 px-4 py-2 rounded-full font-bold text-sm shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-colors flex items-center gap-2">
+                        <button 
+                          onClick={handleDownloadBatchReport}
+                          className="bg-white text-finance-dark hover:bg-agri-accent border border-agri-accent/50 px-4 py-2 rounded-full font-bold text-sm shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-colors flex items-center gap-2"
+                        >
                           <Download className="w-4 h-4" /> Download Batch PDF
                         </button>
                       )}
@@ -575,7 +606,7 @@ function App() {
                             fields={result.fields}
                             decisionData={decisionDataMap[result.key]}
                             onRequestDecision={(fields) => handleRequestDecision(fields, result.key)}
-                            onDownloadReport={handleDownloadReport}
+                            onDownloadReport={(fields, decision) => handleDownloadReport(fields, decision, result.doc_id || result.key)}
                             isLoading={decisionLoadingMap[result.key]}
                           />
                         )}
@@ -587,25 +618,6 @@ function App() {
             </motion.div>
           )}
 
-          {/* FALLBACK DECISION SUPPORT WITHOUT UPLOAD */}
-          {activeTab === 'analytics' && (
-            <motion.div
-              key="analytics"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              className="text-center py-32 max-w-7xl mx-auto px-6"
-            >
-              <div className="p-8 bg-finance-dark/50 border border-agri-accent/20 rounded-full inline-block mb-8 shadow-[0_0_50px_rgba(46,204,113,0.1)]">
-                <Shield className="w-20 h-20 text-agri-accent/50 drop-shadow-[0_0_15px_#2ECC71]" />
-              </div>
-              <h2 className="text-3xl font-black text-white mb-4 tracking-tight">No Data for Decision Support</h2>
-              <p className="text-gray-400 font-medium text-lg mb-10">Please process an invoice first to view the Smart EMI & Loan Recommendation analytics.</p>
-              <button onClick={() => setActiveTab('processing')} className="px-10 py-4 bg-agri-dark border border-agri-accent/40 rounded-full hover:bg-agri-accent hover:text-finance-dark transition-all text-white font-black tracking-widest shadow-lg uppercase hover:scale-105">
-                Go to Invoice Processing
-              </button>
-            </motion.div>
-          )}
 
           {/* PORTFOLIO STATS & CHAT */}
           {activeTab === 'portfolio' && (

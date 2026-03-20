@@ -410,6 +410,8 @@ async def extract_batch(
                 with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temp:
                     temp_file = temp.name
                     temp_files.append(temp_file)
+                    # Reset pointer to start before copying
+                    await file.seek(0)
                     shutil.copyfileobj(file.file, temp)
 
                 doc_id = os.path.splitext(file.filename)[0] if file.filename else "invoice"
