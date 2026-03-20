@@ -515,7 +515,7 @@ function App() {
                       </div>
                       <h3 className="font-bold text-gray-100 mb-2 text-lg">Portfolio Intelligence</h3>
                       <p className="text-sm text-gray-400 leading-relaxed">
-                        Ask natural language questions about your invoice portfolio powered by RAG + Gemini.
+                        Ask natural language questions about your invoice portfolio powered by RAG + AI.
                       </p>
                     </div>
                   </div>

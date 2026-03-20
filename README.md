@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Domain-AI%20%2B%20Agriculture%20%2B%20FinTech-brightgreen?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Stack-FastAPI%20%7C%20YOLO%20%7C%20Qwen2.5--VL%20%7C%20FAISS%20%7C%20Gemini-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Stack-FastAPI%20%7C%20YOLO%20%7C%20Qwen2.5--VL%20%7C%20FAISS%20%7C%20Mistral-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" />
 </p>
 
@@ -84,7 +84,7 @@ KrishiAIIntel is an **end-to-end AI pipeline** that converts raw invoice images 
 │   ┌─────────────────────────────────────────────────────┐           │
 │   │  RAG Knowledge Base                                  │           │
 │   │  ┌──────────┐  ┌──────────┐  ┌──────────────────┐  │           │
-│   │  │  FAISS   │  │  SQLite  │  │  Gemini 2.0      │  │           │
+│   │  │  FAISS   │  │  SQLite  │  │  Mistral 7B      │  │           │
 │   │  │  Vectors │  │  Agg DB  │  │  Flash LLM       │  │           │
 │   │  └──────────┘  └──────────┘  └──────────────────┘  │           │
 │   └─────────────────────────────────────────────────────┘           │
@@ -111,7 +111,7 @@ KrishiAIIntel is an **end-to-end AI pipeline** that converts raw invoice images 
 | ✍️ **Signature & Stamp Detection** | YOLO-based object detection with bounding box coordinates for authenticity verification |
 | 🧠 **Vision-Language Understanding** | Qwen2.5-VL-7B processes complex, noisy, and handwritten invoice images with chain-of-thought reasoning |
 | 🔄 **Real-Time Normalization** | Fuzzy matching and rule-based validation standardize extracted fields against known entities |
-| 💬 **RAG-Powered Portfolio Chat** | Ask natural-language questions about your invoice corpus — routed to SQL aggregation or FAISS + Gemini retrieval |
+| 💬 **RAG-Powered Portfolio Chat** | Ask natural-language questions about your invoice corpus — routed to SQL aggregation or FAISS + LLM retrieval |
 | 📊 **Portfolio Analytics Dashboard** | Real-time stats: total invoices, average cost, top models, top dealers, regional distribution |
 | 🏦 **Loan Decision Support** | Instant EMI calculations across 5/7/9-year tenures, eligibility classification, and downloadable reports |
 | 📥 **Incremental Learning** | Every new invoice processed is automatically ingested into the knowledge base — the system grows smarter with use |
@@ -151,7 +151,7 @@ KrishiAIIntel is an **end-to-end AI pipeline** that converts raw invoice images 
 │                     │                  ▼  (auto-ingest)                   │
 │   /chat ────────────┤  ┌────────────────────────────────────────────┐    │
 │   /portfolio/stats ─┤─▶│  RAG Engine                               │    │
-│                     │  │  FAISS + SQLite + Gemini 2.0 Flash        │    │
+│                     │  │  FAISS + SQLite + Mistral 7B (HF API)     │    │
 │                     │  └────────────────────────────────────────────┘    │
 │   /decision-support ┤  ┌────────────────────────────────────────────┐    │
 │                     ├─▶│  Decision Engine                          │    │
@@ -195,7 +195,7 @@ Duplicate `doc_id` entries are detected and updated in-place — the FAISS index
 Users switch to the **Portfolio Intelligence** tab to:
 - View **real-time dashboard** stats (total invoices, average cost, top models, regional distribution)
 - Ask **natural-language questions** via the chat interface (e.g., _"What is the average cost of Mahindra tractors?"_)
-- The query router intelligently selects between **SQL aggregation** (for COUNT/AVG/SUM queries) and **FAISS retrieval + Gemini generation** (for semantic questions)
+- The query router intelligently selects between **SQL aggregation** (for COUNT/AVG/SUM queries) and **FAISS retrieval + LLM generation** (for semantic questions)
 
 ### Step 6 — Loan Decision Support
 For each processed invoice, the system calculates:
@@ -216,7 +216,7 @@ For each processed invoice, the system calculates:
 | **Embeddings** | Sentence-Transformers (`all-MiniLM-L6-v2`) | Convert invoice text to dense vectors for retrieval |
 | **Vector Store** | FAISS (IndexFlatIP) | Cosine-similarity search over invoice embeddings |
 | **Aggregation DB** | SQLite (in-memory) | SQL-based portfolio analytics (COUNT, AVG, SUM) |
-| **LLM Generation** | Google Gemini 2.0 Flash | Grounded answer generation from retrieved context |
+| **LLM Generation** | Mistral-7B-Instruct (HuggingFace API) | Grounded answer generation from retrieved context + offline fallback |
 | **Normalization** | RapidFuzz + rule engine | Fuzzy matching and field validation |
 | **Image Processing** | OpenCV + Pillow | Optional enhancement preprocessing |
 | **Frontend** | React 18 + Vite | Modern SPA with tab-based navigation |
@@ -232,7 +232,7 @@ For each processed invoice, the system calculates:
 - Python 3.10+
 - CUDA-capable GPU with ≥10 GB VRAM
 - Node.js 18+
-- Google API key (for Gemini LLM)
+- HuggingFace API token (for LLM generation — system works offline via fallback)
 
 ### Backend
 
@@ -249,8 +249,8 @@ source venv/bin/activate        # Linux/macOS
 # Install dependencies
 pip install -r requirements.txt
 
-# Set environment variable for Gemini API
-export GOOGLE_API_KEY="your-gemini-api-key"
+# Set environment variable for HuggingFace LLM (optional — fallback works without it)
+export HF_TOKEN="your-huggingface-token"
 
 # (Optional) Pre-build the RAG database from existing invoices
 python build_rag_db.py
@@ -380,7 +380,7 @@ KrishiAIIntel/
 ├── model_manager.py          # YOLO + Qwen2.5-VL loading and lifecycle
 ├── inference.py              # Two-stage processing pipeline + validation
 ├── decision.py               # EMI calculator + eligibility classifier
-├── rag_engine.py             # FAISS + SQLite + Gemini RAG engine
+├── rag_engine.py             # FAISS + SQLite + HuggingFace RAG engine
 ├── report_generator.py       # HTML report generation
 ├── build_rag_db.py           # Offline script to pre-populate RAG DB
 ├── generate_invoice_db.py    # Dataset processing utility

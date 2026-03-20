@@ -462,7 +462,7 @@ async def decision_support(request: DecisionSupportRequest):
 async def chat(request: ChatRequest):
     """
     Portfolio intelligence chat endpoint.
-    Routes to SQL aggregation or RAG retrieval + Gemini generation.
+    Routes to SQL aggregation or RAG retrieval + LLM generation.
     """
     if not rag_engine.is_ready:
         raise HTTPException(status_code=503, detail="RAG engine not initialized")

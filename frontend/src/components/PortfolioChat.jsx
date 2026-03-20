@@ -156,7 +156,7 @@ const PortfolioChat = ({ onSendQuery }) => {
                         ? 'bg-emerald-900/30 text-emerald-400 border border-emerald-500/30'
                         : 'bg-accent-900/30 text-accent-400 border border-accent-500/30'
                     }`}>
-                      {msg.queryType === 'sql' ? '⚡ SQL Query' : '🧠 RAG + Gemini'}
+                      {msg.queryType === 'sql' ? '⚡ SQL Query' : '🧠 RAG + AI'}
                     </span>
                   </div>
                 )}

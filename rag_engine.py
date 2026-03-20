@@ -1,6 +1,6 @@
 """
 RAG Engine for KrishiIntel AI — Portfolio Intelligence
-FAISS vector store + SQLite aggregation + Gemini LLM answer generation.
+FAISS vector store + SQLite aggregation + HuggingFace LLM answer generation.
 """
 
 import json
@@ -8,12 +8,17 @@ import os
 import re
 import sqlite3
 import threading
+import requests
 from typing import Dict, List, Optional, Tuple
 
 # ─── Lazy imports (heavy libs loaded only when needed) ──────────────────────
 _faiss = None
 _SentenceTransformer = None
-_genai = None
+
+# ─── HuggingFace Inference API config ───────────────────────────────────────
+HF_MODEL_ID = "mistralai/Mistral-7B-Instruct-v0.2"
+HF_API_URL = f"https://api-inference.huggingface.co/models/{HF_MODEL_ID}"
+HF_TIMEOUT_SECONDS = 30
 
 
 def _ensure_faiss():
@@ -30,18 +35,6 @@ def _ensure_st():
         from sentence_transformers import SentenceTransformer
         _SentenceTransformer = SentenceTransformer
     return _SentenceTransformer
-
-
-def _ensure_genai():
-    global _genai
-    if _genai is None:
-        import google.generativeai as genai
-        api_key = os.environ.get("GOOGLE_API_KEY")
-        if not api_key:
-            raise RuntimeError("GOOGLE_API_KEY not set. Export it before starting the server.")
-        genai.configure(api_key=api_key)
-        _genai = genai
-    return _genai
 
 
 # ─── SQL keyword routing ─────────────────────────────────────────────────────
@@ -134,7 +127,7 @@ def _detect_sql_intent(query: str) -> Optional[str]:
 
 
 class InvoiceKnowledgeBase:
-    """FAISS + SQLite + Gemini knowledge base over processed invoices."""
+    """FAISS + SQLite + HuggingFace knowledge base over processed invoices."""
 
     def __init__(self, db_path: str = "data/invoices_db.json"):
         self.db_path = db_path
@@ -380,7 +373,7 @@ class InvoiceKnowledgeBase:
             if intent:
                 return self._run_sql(intent)
 
-        # Fallback to vector retrieval + Gemini
+        # Fallback to vector retrieval + LLM
         return self._rag_query(user_query)
 
     # ─── SQL path ────────────────────────────────────────────────────────
@@ -438,7 +431,7 @@ class InvoiceKnowledgeBase:
     # ─── RAG path ────────────────────────────────────────────────────────
 
     def _rag_query(self, user_query: str, top_k: int = 7) -> Dict:
-        """Retrieve top-k invoices via FAISS and generate answer with Gemini."""
+        """Retrieve top-k invoices via FAISS and generate answer with LLM."""
         import numpy as np
 
         faiss = _ensure_faiss()
@@ -466,8 +459,8 @@ class InvoiceKnowledgeBase:
             context_parts.append(json.dumps(inv, ensure_ascii=False))
         context = "\n---\n".join(context_parts)
 
-        # Call Gemini
-        answer = self._call_gemini(user_query, context)
+        # Call LLM (HuggingFace) with automatic fallback
+        answer = self._call_llm(user_query, context)
 
         return {
             "answer": answer,
@@ -475,11 +468,16 @@ class InvoiceKnowledgeBase:
             "query_type": "rag",
         }
 
-    def _call_gemini(self, user_query: str, context: str) -> str:
-        """Generate a grounded answer using Gemini."""
-        genai = _ensure_genai()
+    def _call_llm(self, user_query: str, context: str) -> str:
+        """Generate a grounded answer using HuggingFace Inference API.
+        Falls back to _fallback_answer on any failure."""
 
-        prompt = f"""You are KrishiIntel AI, an agricultural invoice intelligence assistant.
+        hf_token = os.environ.get("HF_TOKEN")
+        if not hf_token:
+            print("⚠️  HF_TOKEN not set — using fallback answer")
+            return self._fallback_answer(context)
+
+        prompt = f"""<s>[INST] You are KrishiIntel AI, an agricultural invoice intelligence assistant.
 
 Answer the user's question using ONLY the invoice data provided below.
 
@@ -494,20 +492,92 @@ RULES:
 INVOICE DATA:
 {context}
 
-USER QUESTION: {user_query}
+USER QUESTION: {user_query} [/INST]""" 
 
-ANSWER:"""
+        headers = {
+            "Authorization": f"Bearer {hf_token}",
+            "Content-Type": "application/json",
+        }
+        payload = {
+            "inputs": prompt,
+            "parameters": {
+                "max_new_tokens": 512,
+                "temperature": 0.3,
+                "return_full_text": False,
+            },
+        }
 
         try:
-            model = genai.GenerativeModel("gemini-2.0-flash")
-            response = model.generate_content(prompt)
-            answer = response.text.strip()
+            response = requests.post(
+                HF_API_URL,
+                headers=headers,
+                json=payload,
+                timeout=HF_TIMEOUT_SECONDS,
+            )
+
+            if response.status_code != 200:
+                print(f"⚠️  HF API returned {response.status_code}: {response.text[:200]}")
+                return self._fallback_answer(context)
+
+            result = response.json()
+            if isinstance(result, list) and len(result) > 0:
+                answer = result[0].get("generated_text", "").strip()
+            elif isinstance(result, dict):
+                answer = result.get("generated_text", "").strip()
+            else:
+                answer = ""
+
             if not answer:
-                return "Not enough data available"
+                return self._fallback_answer(context)
             return answer
+
         except Exception as e:
-            print(f"❌ Gemini API error: {e}")
-            return f"Error generating answer: {str(e)}"
+            print(f"⚠️  HF API error: {e}")
+            return self._fallback_answer(context)
+
+    def _fallback_answer(self, context: str) -> str:
+        """Generate a meaningful answer from raw context when the LLM API is unavailable.
+        Parses invoice JSON blocks and computes basic statistics."""
+        try:
+            # Parse individual invoice JSON blocks separated by ---
+            blocks = context.split("\n---\n")
+            invoices = []
+            for block in blocks:
+                block = block.strip()
+                if not block:
+                    continue
+                try:
+                    invoices.append(json.loads(block))
+                except json.JSONDecodeError:
+                    continue
+
+            if not invoices:
+                return "Not enough data available"
+
+            count = len(invoices)
+            costs = [inv.get("asset_cost") for inv in invoices if inv.get("asset_cost")]
+            models = [inv.get("model_name") for inv in invoices if inv.get("model_name")]
+            dealers = [inv.get("dealer_name") for inv in invoices if inv.get("dealer_name")]
+
+            parts = [f"I analyzed {count} invoice{'s' if count != 1 else ''} from the portfolio."]
+
+            if costs:
+                avg_cost = sum(costs) / len(costs)
+                parts.append(f"The average asset cost is ₹{avg_cost:,.0f}.")
+                parts.append(f"Cost range: ₹{min(costs):,.0f} – ₹{max(costs):,.0f}.")
+
+            if models:
+                unique_models = list(set(models))
+                parts.append(f"Tractor models found: {', '.join(unique_models[:5])}.")
+
+            if dealers:
+                unique_dealers = list(set(dealers))
+                parts.append(f"Dealers: {', '.join(unique_dealers[:5])}.")
+
+            return " ".join(parts)
+
+        except Exception:
+            return "Not enough data available"
 
     # ─── Portfolio stats ─────────────────────────────────────────────────
 
