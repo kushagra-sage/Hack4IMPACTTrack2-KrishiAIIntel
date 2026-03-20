@@ -1,8 +1,10 @@
 import axios from 'axios';
 
-// Backend base URL — set VITE_API_BASE in your .env file.
-// Falls back to empty string (relative paths) only in local dev when the
-// Vite proxy in vite.config.js is active.
+// Backend base URL.
+// In local development, leave this empty — the Vite dev server proxy
+// (configured in vite.config.js) forwards all API calls to localhost:7860.
+// For production / deployed builds, set VITE_API_BASE at build time:
+//   VITE_API_BASE=https://your-backend-url npm run build
 const API_BASE = import.meta.env.VITE_API_BASE || '';
 
 // ─── Shared axios instance ────────────────────────────────────────────────────
