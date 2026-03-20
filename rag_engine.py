@@ -17,8 +17,8 @@ _SentenceTransformer = None
 
 # ─── HuggingFace Inference API config ───────────────────────────────────────
 HF_MODEL_ID = "mistralai/Mistral-7B-Instruct-v0.2"
-HF_API_URL = f"https://api-inference.huggingface.co/models/{HF_MODEL_ID}"
-HF_TIMEOUT_SECONDS = 30
+HF_API_URL = f"https://router.huggingface.co/hf-inference/models/{HF_MODEL_ID}"
+HF_TIMEOUT_SECONDS = 10
 
 
 def _ensure_faiss():
@@ -501,10 +501,8 @@ USER QUESTION: {user_query} [/INST]"""
         payload = {
             "inputs": prompt,
             "parameters": {
-                "max_new_tokens": 512,
-                "temperature": 0.3,
-                "return_full_text": False,
-            },
+                "max_new_tokens": 300
+            }
         }
 
         try:

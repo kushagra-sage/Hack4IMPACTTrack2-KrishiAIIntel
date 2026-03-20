@@ -16,7 +16,7 @@
 |---|---|
 | **Team Name** | **KrishiAIIntel** |
 | Member 1 | Kushagra|
-| Member 2 | [Amit Behera] |
+| Member 2 | Amit Behera |
 
 
 ---
