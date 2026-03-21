@@ -21,6 +21,14 @@
 
 ---
 
+## 🎬 Demo Video
+
+[![Watch the Demo](https://img.shields.io/badge/▶_Watch_Demo-YouTube-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=yBlwGarUdcU)
+
+👉 **[Click here to watch the full demo on YouTube](https://www.youtube.com/watch?v=yBlwGarUdcU)**
+
+---
+
 ## 🏷️ Domain
 
 **Artificial Intelligence × Agriculture × Financial Intelligence**

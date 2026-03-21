@@ -228,12 +228,15 @@ const LandingPage = ({ onStartAnalysis }) => {
              >
                <Zap className="w-6 h-6" /> Start Analysis
              </motion.button>
-             <motion.button 
+             <motion.a 
+               href="https://www.youtube.com/watch?v=yBlwGarUdcU"
+               target="_blank"
+               rel="noopener noreferrer"
                whileHover={{ scale: 1.05 }}
-               className="px-8 py-5 w-full sm:w-auto bg-white/5 border border-white/20 hover:bg-white/10 text-white rounded-full font-black text-lg tracking-widest uppercase transition-all"
+               className="px-8 py-5 w-full sm:w-auto bg-white/5 border border-white/20 hover:bg-white/10 text-white rounded-full font-black text-lg tracking-widest uppercase transition-all flex items-center justify-center gap-3 no-underline"
              >
-               Try Live Demo
-             </motion.button>
+               ▶ Watch Demo Video
+             </motion.a>
            </div>
          </motion.div>
       </section>
