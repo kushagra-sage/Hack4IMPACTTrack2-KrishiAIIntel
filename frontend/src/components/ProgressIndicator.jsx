@@ -4,9 +4,10 @@ import AIPipelineVisualization from './AIPipelineVisualization';
 import { motion } from 'framer-motion';
 
 const ProgressIndicator = ({ total, completed, current, results }) => {
-  const progress = total > 0 ? (completed / total) * 100 : 0;
-  const successCount = results.filter(r => r.success).length;
-  const errorCount = results.filter(r => !r.success).length;
+  const completedCount = Array.isArray(completed) ? completed.length : (completed || 0);
+  const progress = total > 0 ? (completedCount / total) * 100 : 0;
+  const successCount = (results || []).filter(r => r.success).length;
+  const errorCount = (results || []).filter(r => !r.success).length;
 
   return (
     <motion.div
@@ -23,7 +24,7 @@ const ProgressIndicator = ({ total, completed, current, results }) => {
             Processing Documents
           </h3>
           <span className="text-sm font-medium px-3 py-1 bg-finance-dark/80 rounded-full border border-green-500/30 text-green-400 shadow-[0_0_10px_rgba(14,165,233,0.2)]">
-            {completed} / {total}
+            {completedCount} / {total}
           </span>
         </div>
 
@@ -93,7 +94,7 @@ const ProgressIndicator = ({ total, completed, current, results }) => {
                     }`}
                 >
                   <span className="text-sm truncate flex-1 font-medium">
-                    {result.filename}
+                    {result.originalFile || result.key || result.filename}
                   </span>
                   {result.success ? (
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 ml-3" />

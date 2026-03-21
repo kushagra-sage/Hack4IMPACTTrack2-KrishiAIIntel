@@ -153,18 +153,16 @@ function App() {
 
   const processSingleImage = async (imageInfo, index) => {
     setProcessingIndex(index);
-    let blob;
-
-    if (imageInfo.originalDataUrl) {
-      blob = dataUrlToBlob(imageInfo.originalDataUrl);
-    } else {
-      blob = new Blob([imageInfo.file], { type: imageInfo.file.type });
-    }
-
-    const file = new File([blob], imageInfo.filename, { type: 'image/jpeg' });
 
     try {
-      let extractionFile = file;
+      let blob;
+      if (imageInfo.originalDataUrl) {
+        blob = dataUrlToBlob(imageInfo.originalDataUrl);
+      } else {
+        blob = new Blob([imageInfo.file], { type: imageInfo.file.type });
+      }
+
+      let extractionFile = new File([blob], imageInfo.filename, { type: 'image/jpeg' });
       const shouldUseReasoning = reasoningMap[imageInfo.key] || false;
       const isEnhanced = enhancedMap[imageInfo.key] || false;
 
@@ -230,15 +228,20 @@ function App() {
     });
 
     const newResults = [];
-    for (let i = 0; i < previewImages.length; i++) {
-      setProgress(prev => ({ ...prev, current: i + 1 }));
-      const result = await processSingleImage(previewImages[i], i);
-      newResults.push({ ...result, _originalIndex: i });
-      setResults([...newResults]);
+    try {
+      for (let i = 0; i < previewImages.length; i++) {
+        setProgress(prev => ({ ...prev, current: i + 1 }));
+        const result = await processSingleImage(previewImages[i], i);
+        newResults.push({ ...result, _originalIndex: i });
+        setResults([...newResults]);
+      }
+    } catch (err) {
+      console.error('Batch processing error:', err);
+      setError(`Batch processing encountered an error: ${err.message}`);
+    } finally {
+      setProcessingIndex(null);
+      setProcessing(false);
     }
-
-    setProcessingIndex(null);
-    setProcessing(false);
   };
 
   const handleReprocess = async (resultToReprocess, newResolution, newAdjustedDataUrl) => {
