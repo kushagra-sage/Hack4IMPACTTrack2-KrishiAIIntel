@@ -29,6 +29,14 @@
 
 ---
 
+## 🌐 Live Deployment
+
+[![Live App](https://img.shields.io/badge/🚀_Live_App-Vercel-black?style=for-the-badge&logo=vercel)](https://hack4-impact-track2-krishi-ai-intel-lie9b4cpf.vercel.app/)
+
+👉 **[Try the live app on Vercel](https://hack4-impact-track2-krishi-ai-intel-lie9b4cpf.vercel.app/)**
+
+---
+
 ## 🏷️ Domain
 
 **Artificial Intelligence × Agriculture × Financial Intelligence**
