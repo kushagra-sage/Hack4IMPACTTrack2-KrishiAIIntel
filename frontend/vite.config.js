@@ -42,6 +42,22 @@ export default defineConfig({
         target: 'http://localhost:7860',
         changeOrigin: true,
       },
+      '/generate-report-pdf': {
+        target: 'http://localhost:7860',
+        changeOrigin: true,
+      },
+      '/generate-batch-report-pdf': {
+        target: 'http://localhost:7860',
+        changeOrigin: true,
+      },
+      '/emi': {
+        target: 'http://localhost:7860',
+        changeOrigin: true,
+      },
+      '/add-to-portfolio': {
+        target: 'http://localhost:7860',
+        changeOrigin: true,
+      },
     }
   }
 })

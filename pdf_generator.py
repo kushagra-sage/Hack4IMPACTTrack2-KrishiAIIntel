@@ -185,7 +185,7 @@ def generate_single_pdf(
     elements.append(Spacer(1, 12))
 
     # ─── EMI Section (if decision support exists) ────────────────────
-    ds = decision_support.get("decision_support", {}) if decision_support else {}
+    ds = decision_support if decision_support else {}
     emi_options = ds.get("emi_options", {})
 
     if emi_options:

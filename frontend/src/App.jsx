@@ -294,10 +294,18 @@ function App() {
 
   const handleDownloadReport = async (fields, decisionData, docId) => {
     try {
-      const blob = await generateReportPDF(fields, decisionData?.decision_support, docId);
+      const blob = await generateReportPDF(fields, decisionData, docId);
 
       if (!(blob instanceof Blob)) {
         console.warn("Backend didn't return a Blob for the report.");
+        return;
+      }
+
+      // Check if the blob is a JSON error response instead of a PDF
+      if (blob.type && blob.type.includes('application/json')) {
+        const text = await blob.text();
+        const errorData = JSON.parse(text);
+        setError(errorData.answer || 'PDF generation failed on the server.');
         return;
       }
 
@@ -326,11 +334,19 @@ function App() {
 
       const invoices = validResults.map(r => ({
         fields: r.fields,
-        decision_support: decisionDataMap[r.key]?.decision_support,
+        decision_support: decisionDataMap[r.key],
         doc_id: r.doc_id || r.key
       }));
 
       const blob = await generateBatchReportPDF(invoices);
+
+      // Check if the blob is a JSON error response instead of a PDF
+      if (blob.type && blob.type.includes('application/json')) {
+        const text = await blob.text();
+        const errorData = JSON.parse(text);
+        setError(errorData.answer || 'Batch PDF generation failed on the server.');
+        return;
+      }
 
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');

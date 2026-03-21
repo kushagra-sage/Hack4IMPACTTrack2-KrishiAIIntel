@@ -179,7 +179,7 @@ const ResultCard = ({ result, imageData, processedImageData, onReprocess, isProc
           <div className="ml-3">
             <h3 className="text-sm font-medium text-red-200">Processing Error</h3>
             <div className="mt-2 text-sm text-red-300">
-              <p><strong className="text-red-100">File:</strong> {result.filename}</p>
+              <p><strong className="text-red-100">File:</strong> {result.originalFile || result.filename}</p>
               <p><strong className="text-red-100">Error:</strong> {result.error}</p>
             </div>
           </div>
