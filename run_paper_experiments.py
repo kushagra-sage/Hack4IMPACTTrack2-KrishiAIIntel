@@ -145,9 +145,9 @@ def run_experiments():
     print(f"Processing total of {total_invoices} invoices...")
     
     print("\n⏳ Warming up VLM Model...")
-    from model_manager import get_model_manager
-    mm = get_model_manager()
-    mm.ensure_model_loaded()
+    from model_manager import model_manager
+    if not model_manager.is_loaded():
+        model_manager.load_models()
     
     start_time = time.time()
     
