@@ -20,8 +20,10 @@ import {
   generateReportPDF,
   generateBatchReportPDF,
   getPortfolioStats,
-  chatQuery
+  chatQuery,
+  getSystemStatus
 } from './utils/api';
+
 
 function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -40,6 +42,8 @@ function App() {
   const [portfolioStats, setPortfolioStats] = useState({});
   const [portfolioLoading, setPortfolioLoading] = useState(false);
   const [enhancedMap, setEnhancedMap] = useState({});
+  const [systemStatus, setSystemStatus] = useState(null);
+  const [statusLoading, setStatusLoading] = useState(true);
   const resultsRef = useRef(null);
 
   useEffect(() => {
@@ -47,6 +51,20 @@ function App() {
       loadPortfolioStats();
     }
   }, [activeTab]);
+
+  useEffect(() => {
+    const fetchHealth = async () => {
+      try {
+        const stats = await getSystemStatus();
+        setSystemStatus(stats);
+      } catch (err) {
+        console.error("System health fetch failed", err);
+      } finally {
+        setStatusLoading(false);
+      }
+    };
+    fetchHealth();
+  }, []);
 
   // Auto-scroll to results when they first appear
   useEffect(() => {
@@ -393,12 +411,37 @@ function App() {
             <span className="text-xl md:text-2xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-agri-accent to-white drop-shadow-md hidden sm:block">KrishiIntel AI</span>
           </div>
 
-          {/* Institutional Logos (Right Aligned) */}
-          <div className="flex items-center gap-6 md:gap-10 bg-white/5 px-6 py-2.5 rounded-2xl backdrop-blur-md border border-white/10 shadow-inner">
-            <img src="/img/kiit_logo.png" alt="KIIT" className="h-[28px] md:h-[36px] object-contain hidden sm:block hover:scale-105 transition-all" />
-            <img src="/img/logo_SDIS.png" alt="SDIS" className="h-[28px] md:h-[36px] object-contain hover:scale-105 transition-all" />
-            <img src="/img/usc_kiit.png" alt="USC KIIT" className="h-[28px] md:h-[36px] object-contain hidden lg:block hover:scale-105 transition-all" />
+          {/* ⚡ NEURAL PIPELINE MONITOR (Dynamic Intelligence Detection) */}
+          <div className="flex items-center gap-3 md:gap-4 bg-black/40 border border-white/10 rounded-2xl px-3 md:px-5 py-2 backdrop-blur-xl shadow-[0_0_20px_rgba(46,204,113,0.1)] hover:border-agri-accent/30 transition-colors group">
+            {/* Pipeline Status Indicator */}
+            <div className="flex flex-col items-center md:items-end border-r border-white/10 pr-3 md:pr-4">
+              <div className="flex items-center gap-1.5">
+                <span className={`w-1.5 h-1.5 rounded-full animate-pulse shadow-[0_0_8px_#2ECC71] ${
+                  statusLoading ? 'bg-amber-500' : systemStatus?.status === 'error' ? 'bg-red-500' : 'bg-agri-accent'
+                }`}></span>
+                <span className={`text-[9px] md:text-[10px] font-black uppercase tracking-[0.15em] hidden xs:block ${
+                  statusLoading ? 'text-amber-500' : systemStatus?.status === 'error' ? 'text-red-500' : 'text-agri-accent'
+                }`}>
+                  {statusLoading ? 'DETECTING...' : systemStatus?.status === 'active' ? 'PIPELINE ACTIVE' : 'INITIALIZING'}
+                </span>
+              </div>
+              <span className="text-[8px] md:text-[9px] font-bold text-gray-500 uppercase tracking-tighter">
+                {statusLoading ? 'SEARCHING GPU...' : systemStatus?.gpu_name || 'CPU MODE'} {systemStatus?.vram_total ? `· ${systemStatus.vram_used}/${systemStatus.vram_total}GB` : ''}
+              </span>
+            </div>
+            
+            {/* AI Model Details */}
+            <div className="flex flex-col justify-center">
+              <div className="text-[10px] md:text-[11px] font-black text-white tracking-wide uppercase">
+                {statusLoading ? 'LOAD...' : systemStatus?.model_id || 'Qwen2.5-VL'} <span className="text-agri-accent">7B</span>
+              </div>
+              <div className="text-[8px] md:text-[9px] font-bold text-gray-500 uppercase">
+                {statusLoading ? 'WAIT...' : systemStatus?.quantization || '4-bit NF4'}
+              </div>
+            </div>
           </div>
+
+          {/* Institutional Logos (KIIT, SDIS, USC) removed to provide a cleaner research-focused UI */}
         </div>
 
         {/* Dynamic App Tab Navigation — merged tabs */}

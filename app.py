@@ -26,6 +26,8 @@ from rag_engine import InvoiceKnowledgeBase
 from utils.normalization import normalize_fields
 from report_generator import generate_report_html
 from pdf_generator import generate_single_pdf, generate_batch_pdf
+import torch
+import config
 
 # ─── Request models ─────────────────────────────────────────────────────────
 
@@ -194,6 +196,50 @@ async def health_check():
         }
     except Exception as e:
         return _error_response(f"Health check error: {str(e)}")
+
+
+@app.get("/system-status")
+async def system_status():
+    """
+    Get real-time system intelligence telemetry.
+    Detects GPU name, VRAM usage, and active quantization.
+    """
+    try:
+        gpu_active = torch.cuda.is_available()
+        gpu_name = torch.cuda.get_device_name(0) if gpu_active else "CPU Mode"
+        
+        vram_total = 0
+        vram_used = 0
+        if gpu_active:
+            props = torch.cuda.get_device_properties(0)
+            vram_total = round(props.total_memory / (1024**3), 1)
+            vram_used = round(torch.cuda.memory_reserved(0) / (1024**3), 1)
+
+        # Get quantization info from config
+        q_config = config.QUANTIZATION_CONFIG
+        q_bits = "4-bit" if q_config.get("load_in_4bit") else "8-bit" if q_config.get("load_in_8bit") else "None"
+        q_type = q_config.get("bnb_4bit_quant_type", "NF4").upper()
+
+        return {
+            "gpu_active": gpu_active,
+            "gpu_name": gpu_name,
+            "vram_total": vram_total,
+            "vram_used": vram_used,
+            "quantization": f"{q_bits} {q_type}",
+            "model_id": config.VLM_MODEL_ID.split("/")[-1],
+            "status": "active" if model_manager.is_loaded() else "initializing"
+        }
+    except Exception as e:
+        return {
+            "gpu_active": False,
+            "gpu_name": "Detection Failed",
+            "vram_total": 0,
+            "vram_used": 0,
+            "quantization": "Unknown",
+            "model_id": config.VLM_MODEL_ID.split("/")[-1],
+            "status": "error",
+            "error": str(e)
+        }
 
 
 # ─── Invoice Extraction ─────────────────────────────────────────────────────

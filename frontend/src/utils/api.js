@@ -168,3 +168,12 @@ export async function generateBatchReportPDF(invoices) {
     return response.data;
   }
 
+/**
+ * Get real-time system intelligence telemetry (GPU, VRAM, Model).
+ */
+export async function getSystemStatus() {
+  const response = await api.get('/system-status');
+  return response.data;
+}
+
+
