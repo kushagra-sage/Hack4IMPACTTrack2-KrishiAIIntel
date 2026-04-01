@@ -24,7 +24,7 @@ from inference import InferenceProcessor
 from decision import generate_decision_support, compute_emi_smart, compute_emi_manual
 from rag_engine import InvoiceKnowledgeBase
 from utils.normalization import normalize_fields
-from report_generator import generate_report_html
+# Removed report_generator import as requested
 from pdf_generator import generate_single_pdf, generate_batch_pdf
 import torch
 import config
@@ -635,14 +635,20 @@ async def add_to_portfolio(request: PortfolioAddRequest):
 
 @app.post("/generate-report")
 async def generate_report(request: ReportRequest):
-    """Generate a downloadable HTML invoice analysis report."""
+    """Generate a downloadable PDF invoice analysis report (formerly HTML)."""
     try:
-        html = generate_report_html(
+        pdf_bytes = generate_single_pdf(
             fields=request.fields,
             decision_support=request.decision_support,
             doc_id=request.doc_id,
         )
-        return JSONResponse(content={"html": html, "doc_id": request.doc_id})
+        return Response(
+            content=pdf_bytes,
+            media_type="application/pdf",
+            headers={
+                "Content-Disposition": f"attachment; filename=KrishiIntel_Report_{request.doc_id}.pdf",
+            },
+        )
     except Exception as e:
         return _error_response(f"Report generation error: {str(e)}")
 
